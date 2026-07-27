@@ -1,0 +1,77 @@
+{
+  "_comment": "Hand-transcribed from the resort's 'Weekly Programme / Wochenprogramm' PDF by rendering it to an image and reading the grid. The PDF's embedded text layer extracts as character-split, locale-tagged fragments with an ambiguous column-to-weekday mapping, so it is NOT safe to parse automatically. src/scrape/daytime.ts watches the PDF's URL and content hash and warns when the resort publishes a new version -- when that fires, re-render and re-transcribe this file.",
+  "source": {
+    "pdfUrl": "https://kioskcms.biz/storage/88732/Daytime-Activities-2026-from-30.03.pdf",
+    "sha256": "SEE data/daytime-source.json",
+    "transcribedOn": "2026-07-27"
+  },
+  "notes": [
+    "Please arrive 5 minutes earlier to the meeting points.",
+    "For all yoga classes, please remember to bring your own towel.",
+    "In case of unfavourable weather conditions, please contact Reception or Guest Relations for updated locations and arrangements."
+  ],
+  "week": {
+    "monday": [
+      { "time": "09:00", "title": "Beach Yoga", "location": "Beach Lawn" },
+      { "time": "10:30", "title": "Darts", "location": "Pool Bar" },
+      { "time": "11:30", "title": "Aqua Fitness", "location": "Main Pool" },
+      { "time": "12:30", "title": "Boccia", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "16:30", "title": "Pilates", "location": "Residences 2nd Floor" },
+      { "time": "17:00", "title": "Table Tennis", "location": "Gym" },
+      { "time": "17:30", "title": "Restorative Yoga", "location": "Residences 2nd Floor" }
+    ],
+    "tuesday": [
+      { "time": "09:00", "title": "Sun Salutation", "location": "Yoga Deck" },
+      { "time": "10:30", "title": "Kubb", "location": "Pool Bar" },
+      { "time": "11:30", "title": "Aqua Tabata", "location": "Main Pool" },
+      { "time": "12:30", "title": "Shuffleboard", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "16:30", "title": "Mobility", "location": "Residences 2nd Floor" },
+      { "time": "17:00", "title": "Harbour Walk", "location": "Reception" },
+      { "time": "17:30", "title": "Stretching", "location": "Residences 2nd Floor" }
+    ],
+    "wednesday": [
+      { "time": "09:00", "title": "Vinyasa Flow", "location": "Yoga Deck" },
+      { "time": "11:30", "title": "Aqua Cardio", "location": "Main Pool" },
+      { "time": "16:30", "title": "Pilates", "location": "Residences 2nd Floor" },
+      { "time": "17:30", "title": "Deep Stretching", "location": "Residences 2nd Floor" }
+    ],
+    "thursday": [
+      { "time": "09:00", "title": "Beach Yoga", "location": "Beach Lawn" },
+      { "time": "10:30", "title": "Darts", "location": "Pool Bar" },
+      { "time": "11:30", "title": "Aqua Flow", "location": "Main Pool" },
+      { "time": "12:30", "title": "Shuffleboard", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "16:30", "title": "Mobility", "location": "Residences 2nd Floor" },
+      { "time": "17:00", "title": "Table Tennis", "location": "Gym" },
+      { "time": "17:30", "title": "Yin Yoga", "location": "Residences 2nd Floor" }
+    ],
+    "friday": [
+      { "time": "09:00", "title": "Hatha Yoga", "location": "Yoga Deck" },
+      { "time": "10:30", "title": "Kubb", "location": "Pool Bar" },
+      { "time": "11:30", "title": "Aqua Yoga", "location": "Main Pool" },
+      { "time": "12:30", "title": "Boccia", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "16:30", "title": "Pilates", "location": "Residences 2nd Floor" },
+      { "time": "17:00", "title": "Harbour Walk", "location": "Reception" },
+      { "time": "17:30", "title": "Breathwork Meditation", "location": "Residences 2nd Floor" }
+    ],
+    "saturday": [
+      { "time": "09:00", "title": "Vinyasa", "location": "Yoga Deck" },
+      { "time": "10:30", "title": "Darts", "location": "Pool Bar" },
+      { "time": "11:30", "title": "Aqua Rhythm", "location": "Main Pool" },
+      { "time": "12:30", "title": "Shuffleboard", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "16:30", "title": "Mobility", "location": "Residences 2nd Floor" },
+      { "time": "17:00", "title": "Table Tennis", "location": "Gym" },
+      { "time": "17:30", "title": "Meditation Dance", "location": "Residences 2nd Floor" }
+    ],
+    "sunday": [
+      { "time": "10:30", "title": "Kubb", "location": "Gym" },
+      { "time": "12:30", "title": "Boccia", "location": "Pool Bar" },
+      { "time": "15:30", "title": "Quiz", "location": "Pool Bar" },
+      { "time": "17:00", "title": "Harbour Walk", "location": "Reception" }
+    ]
+  }
+}

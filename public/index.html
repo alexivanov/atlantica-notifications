@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Atlantica Events</title>
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+    <meta name="theme-color" content="#1b1f3b" />
+    <!-- iOS home-screen appearance -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Atlantica" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+  </head>
+  <body>
+    <header>
+      <h1>Atlantica</h1>
+      <p class="sub" id="subtitle">Imperial Resort</p>
+    </header>
+
+    <!-- Shown in Safari only: iOS refuses Web Push until the site is installed
+         to the Home Screen, so a permission button here would simply not work. -->
+    <section id="install-hint" class="card hint" hidden>
+      <h2>Add to Home Screen first</h2>
+      <p>
+        iOS only allows notifications from apps on your Home Screen. In Safari,
+        tap the <strong>Share</strong> button, choose
+        <strong>Add to Home Screen</strong>, then open Atlantica from the new
+        icon.
+      </p>
+    </section>
+
+    <section id="notify-card" class="card" hidden>
+      <div class="row">
+        <div>
+          <h2>Reminders</h2>
+          <p class="muted" id="notify-status">Not enabled</p>
+        </div>
+        <button id="enable-btn" class="btn">Enable</button>
+      </div>
+
+      <div id="prefs" hidden>
+        <label class="toggle">
+          <input type="checkbox" id="pref-entertainment" checked />
+          <span>Evening entertainment</span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="pref-daytime" checked />
+          <span>Daytime activities</span>
+        </label>
+        <button id="test-btn" class="btn btn-quiet">Send a test notification</button>
+      </div>
+    </section>
+
+    <div id="banner" class="banner" hidden></div>
+
+    <main id="schedule">
+      <p class="muted loading">Loading schedule…</p>
+    </main>
+
+    <footer>
+      <p class="muted" id="standing-note" hidden>
+        Daytime activities: please arrive 5 minutes early at the meeting point.
+        Yoga classes — bring your own towel. In poor weather, check with
+        Reception for updated locations.
+      </p>
+      <p class="muted" id="footer-note"></p>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
