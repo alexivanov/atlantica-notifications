@@ -1,4 +1,5 @@
-import { NativeModules, Platform } from 'react-native';
+import { Platform } from 'react-native';
+import { requireOptionalNativeModule } from 'expo-modules-core';
 import { ExtensionStorage } from '@bacons/apple-targets';
 import { selectUpcoming, type Occurrence } from '@atlantica/shared';
 import { APP_GROUP } from './config';
@@ -25,10 +26,28 @@ interface LiveActivityBridge {
 /**
  * Resolved lazily and defensively: the native module only exists in a custom
  * dev client or a real build, never in Expo Go, and never on Android.
+ *
+ * Must go through requireOptionalNativeModule, NOT react-native's
+ * `NativeModules`. Expo Modules are not registered on the legacy bridge at all,
+ * so `NativeModules.AtlanticaLiveActivity` is always undefined -- which read
+ * identically to "Live Activities unavailable" and hid the real problem.
+ * The "optional" variant returns null rather than throwing when absent, which
+ * keeps the graceful degradation off-iOS.
  */
+let cached: LiveActivityBridge | null | undefined;
+
 function liveActivities(): LiveActivityBridge | null {
   if (Platform.OS !== 'ios') return null;
-  return (NativeModules.AtlanticaLiveActivity as LiveActivityBridge | undefined) ?? null;
+  if (cached === undefined) {
+    cached = requireOptionalNativeModule<LiveActivityBridge>('AtlanticaLiveActivity');
+    if (!cached) {
+      console.warn(
+        '[liveactivity] native module "AtlanticaLiveActivity" not found -- ' +
+          'this build predates it, or the pod was not linked.',
+      );
+    }
+  }
+  return cached;
 }
 
 export const WIDGET_KEY = 'upcoming';

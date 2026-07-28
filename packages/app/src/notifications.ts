@@ -165,19 +165,62 @@ export async function listScheduled(): Promise<
   if (!NOTIFICATIONS_SUPPORTED) return [];
   try {
     const pending = await Notifications.getAllScheduledNotificationsAsync();
-    return pending.map((n) => {
-      const trigger = n.trigger as { type?: string; value?: number } | null;
-      const raw = trigger && typeof trigger.value === 'number' ? trigger.value : null;
-      return {
-        id: n.identifier,
-        title: n.content.title ?? '(no title)',
-        fireAt: raw ? new Date(raw) : null,
-      };
-    });
+    return pending.map((n) => ({
+      id: n.identifier,
+      title: n.content.title ?? '(no title)',
+      fireAt: triggerDate(n.trigger),
+    }));
   } catch (err) {
     console.warn('[notifications] could not list pending:', (err as Error).message);
     return [];
   }
+}
+
+/**
+ * Recover the fire time from a pending notification.
+ *
+ * The shape differs by platform: a DATE trigger becomes a UNCalendarNotification
+ * on iOS and comes back as `dateComponents`, while Android reports a numeric
+ * `value`. Reading only `value` silently yielded null on iOS, which surfaced in
+ * the UI as "--:--" and made correctly-scheduled reminders look broken.
+ */
+function triggerDate(trigger: unknown): Date | null {
+  if (!trigger || typeof trigger !== 'object') return null;
+  const t = trigger as {
+    value?: number | string;
+    date?: number | string;
+    dateComponents?: {
+      year?: number;
+      month?: number;
+      day?: number;
+      hour?: number;
+      minute?: number;
+      second?: number;
+    };
+  };
+
+  for (const raw of [t.value, t.date]) {
+    if (typeof raw === 'number') return new Date(raw);
+    if (typeof raw === 'string') {
+      const d = new Date(raw);
+      if (!Number.isNaN(d.getTime())) return d;
+    }
+  }
+
+  const c = t.dateComponents;
+  if (c && c.year && c.month && c.day) {
+    // `month` is 1-based here, unlike the Date constructor.
+    return new Date(
+      c.year,
+      c.month - 1,
+      c.day,
+      c.hour ?? 0,
+      c.minute ?? 0,
+      c.second ?? 0,
+    );
+  }
+
+  return null;
 }
 
 export async function cancelAll(): Promise<void> {
