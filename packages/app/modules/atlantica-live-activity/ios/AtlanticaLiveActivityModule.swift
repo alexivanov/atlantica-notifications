@@ -44,12 +44,32 @@ public class AtlanticaLiveActivityModule: Module {
             let state = AtlanticaActivityAttributes.ContentState(startsAt: start)
 
             do {
+                // staleDate is the event start: past it the widget switches to
+                // "Now" instead of counting upward forever.
                 let activity = try Activity.request(
                     attributes: attributes,
-                    content: .init(state: state, staleDate: start.addingTimeInterval(3600)),
+                    content: .init(state: state, staleDate: start),
                     pushType: nil
                 )
                 Self.activities[activity.id] = activity
+
+                // Auto-remove at event start. Only the system can dismiss a Live
+                // Activity while the app is not running, and `.after(date)` is
+                // the one mechanism for it -- otherwise a finished event's
+                // countdown sits on the Lock Screen until the app is next opened.
+                //
+                // ActivityKit caps this at 4 hours from the call, so for events
+                // further out we leave it alone and let the app clear it on next
+                // foreground; dismissing early would be worse than lingering.
+                let untilStart = start.timeIntervalSinceNow
+                if untilStart > 0, untilStart < 4 * 3600 {
+                    Task {
+                        await activity.end(
+                            .init(state: state, staleDate: start),
+                            dismissalPolicy: .after(start)
+                        )
+                    }
+                }
                 return activity.id
             } catch {
                 return nil

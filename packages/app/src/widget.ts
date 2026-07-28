@@ -113,6 +113,7 @@ export async function syncWidgetData(occurrences?: Occurrence[]): Promise<void> 
  */
 let current: { id: string; occurrenceKey: string } | null = null;
 
+/** The occurrence key currently being tracked, if any. */
 export function currentLiveActivity(): string | null {
   return current?.occurrenceKey ?? null;
 }
@@ -171,32 +172,20 @@ export async function endLiveActivity(id?: string): Promise<void> {
 }
 
 /**
- * Start a Live Activity for the next event if it is close enough to be useful.
- * Two hours out is roughly "you should think about heading over".
+ * Clear a countdown whose event has already started.
  *
- * Called on every foreground and refresh; idempotent, and retires the countdown
- * once its event has started.
+ * The system dismisses it on its own for events that were within four hours
+ * when tracking began (see the native module), so this covers the rest: an
+ * event tracked further ahead than that, where only the app can tidy up.
  */
-export async function maybeStartLiveActivityForNext(
+export async function pruneStaleLiveActivity(
   occurrences: Occurrence[],
-  withinMinutes = 120,
-): Promise<string | null> {
-  if (Platform.OS !== 'ios') return null;
+): Promise<void> {
+  if (Platform.OS !== 'ios' || !current) return;
 
-  const preferences = await getLocalPreferences();
-  const [next] = selectUpcoming(occurrences, { enabled: preferences, limit: 1 });
-
-  if (!next) {
-    if (current) await endLiveActivity();
-    return null;
+  const tracked = occurrences.find((o) => o.key === current!.occurrenceKey);
+  // Either the event is gone from the schedule, or it has already begun.
+  if (!tracked || new Date(tracked.startsAt).getTime() <= Date.now()) {
+    await endLiveActivity();
   }
-
-  const minsAway = (new Date(next.startsAt).getTime() - Date.now()) / 60_000;
-  if (minsAway > withinMinutes) {
-    // The showing activity is for an event that has since passed.
-    if (current && current.occurrenceKey !== next.key) await endLiveActivity();
-    return null;
-  }
-
-  return startLiveActivity(next);
 }

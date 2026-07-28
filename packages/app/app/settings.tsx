@@ -25,9 +25,9 @@ import {
   requestPermission,
 } from '../src/notifications';
 import {
+  currentLiveActivity,
   endLiveActivity,
   liveActivitiesAvailable,
-  startLiveActivity,
   syncWidgetData,
 } from '../src/widget';
 import { formatClock, theme } from '../src/theme';
@@ -55,51 +55,10 @@ export default function SettingsScreen() {
     void (async () => {
       setPrefs(await getLocalPreferences());
       setLiveSupported(await liveActivitiesAvailable());
+      setLiveOn(currentLiveActivity() !== null);
       await refreshDiagnostics();
     })();
   }, [refreshDiagnostics]);
-
-  /**
-   * Starts a countdown for whatever is next, ignoring the two-hour window the
-   * app normally applies. Without this there is no way to see a Live Activity
-   * except by waiting for an event to come close on its own.
-   */
-  async function toggleLiveActivity() {
-    setBusy(true);
-    try {
-      if (liveOn) {
-        await endLiveActivity();
-        setLiveOn(false);
-        return;
-      }
-      const { payload } = await fetchSchedule();
-      const now = Date.now();
-      const next = payload.occurrences.find(
-        (o) => new Date(o.startsAt).getTime() > now,
-      );
-      if (!next) {
-        Alert.alert('Nothing upcoming', 'There is no future event to count down to.');
-        return;
-      }
-      const id = await startLiveActivity(next);
-      if (id) {
-        setLiveOn(true);
-        Alert.alert(
-          'Countdown started',
-          `${next.title} at ${next.startTime}. Check your Lock Screen and the Dynamic Island.`,
-        );
-      } else {
-        Alert.alert(
-          'Could not start',
-          'Live Activities may be disabled in Settings → Atlantica.',
-        );
-      }
-    } catch (err) {
-      Alert.alert('Could not start', (err as Error).message);
-    } finally {
-      setBusy(false);
-    }
-  }
 
   /** Re-arm from the current schedule and refresh what we show. */
   const rearm = useCallback(
@@ -122,6 +81,18 @@ export default function SettingsScreen() {
     },
     [refreshDiagnostics],
   );
+
+  /** Clears whichever countdown is showing. Starting one is done per-event
+   * from the schedule screen. */
+  async function stopCountdown() {
+    setBusy(true);
+    try {
+      await endLiveActivity();
+      setLiveOn(false);
+    } finally {
+      setBusy(false);
+    }
+  }
 
   async function toggle(key: keyof Preferences, value: boolean) {
     const next = { ...prefs, [key]: value };
@@ -246,18 +217,18 @@ export default function SettingsScreen() {
       <View style={styles.card}>
         <Text style={styles.cardBody}>
           {liveSupported
-            ? 'A countdown appears on the Lock Screen and in the Dynamic Island once an event is within two hours. Start one now to see it.'
-            : 'Live Activities are unavailable. Check Settings → Atlantica → Live Activities.'}
+            ? 'Tap the star next to any upcoming event to put a countdown on your Lock Screen and in the Dynamic Island. It clears itself when the event starts.'
+            : 'Live Activities are unavailable. Check Settings \u2192 Atlantica \u2192 Live Activities.'}
         </Text>
-        <Pressable
-          style={[styles.btnQuiet, (busy || !liveSupported) && styles.btnBusy]}
-          onPress={toggleLiveActivity}
-          disabled={busy || !liveSupported}
-        >
-          <Text style={styles.btnQuietText}>
-            {liveOn ? 'Stop countdown' : 'Start countdown for next event'}
-          </Text>
-        </Pressable>
+        {liveOn && (
+          <Pressable
+            style={[styles.btnQuiet, busy && styles.btnBusy]}
+            onPress={stopCountdown}
+            disabled={busy}
+          >
+            <Text style={styles.btnQuietText}>Stop the current countdown</Text>
+          </Pressable>
+        )}
       </View>
 
       <Pressable style={styles.signOut} onPress={signOut}>

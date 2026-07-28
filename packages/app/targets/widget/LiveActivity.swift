@@ -31,12 +31,21 @@ struct AtlanticaLiveActivity: Widget {
 
                 Spacer()
 
-                // `.timer` style lets the system tick the countdown without the
-                // app running, which is the entire point of a Live Activity.
-                Text(context.state.startsAt, style: .timer)
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
-                    .monospacedDigit()
-                    .frame(width: 78)
+                // Once staleDate passes (the event start) the system marks the
+                // activity stale, which is how we show "Now" without the app
+                // running. Plain `.timer` keeps counting *upward* past zero,
+                // which is why a finished event appeared to run for hours.
+                if context.isStale {
+                    Text("Now")
+                        .font(.system(size: 17, weight: .semibold, design: .rounded))
+                        .foregroundStyle(Color(hex: 0xF2B880))
+                        .frame(width: 78)
+                } else {
+                    Text(context.state.startsAt, style: .timer)
+                        .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        .monospacedDigit()
+                        .frame(width: 78)
+                }
             }
             .padding(14)
             .activityBackgroundTint(Color(hex: 0x12152E))
@@ -51,10 +60,16 @@ struct AtlanticaLiveActivity: Widget {
                         .padding(.leading, 4)
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text(context.state.startsAt, style: .timer)
-                        .font(.system(size: 15, weight: .semibold))
-                        .monospacedDigit()
-                        .frame(width: 62)
+                    if context.isStale {
+                        Text("Now")
+                            .font(.system(size: 14, weight: .semibold))
+                            .frame(width: 62)
+                    } else {
+                        Text(context.state.startsAt, style: .timer)
+                            .font(.system(size: 15, weight: .semibold))
+                            .monospacedDigit()
+                            .frame(width: 62)
+                    }
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     if !context.attributes.venue.isEmpty {
@@ -68,10 +83,14 @@ struct AtlanticaLiveActivity: Widget {
                     .fill(Color(hex: 0xF2B880))
                     .frame(width: 8, height: 8)
             } compactTrailing: {
-                Text(context.state.startsAt, style: .timer)
-                    .monospacedDigit()
-                    .font(.system(size: 13))
-                    .frame(width: 44)
+                if context.isStale {
+                    Text("Now").font(.system(size: 12, weight: .semibold)).frame(width: 44)
+                } else {
+                    Text(context.state.startsAt, style: .timer)
+                        .monospacedDigit()
+                        .font(.system(size: 13))
+                        .frame(width: 44)
+                }
             } minimal: {
                 Circle()
                     .fill(Color(hex: 0xF2B880))

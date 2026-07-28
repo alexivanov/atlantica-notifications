@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 import {
   ActivityIndicator,
+  Alert,
   AppState,
   Pressable,
   RefreshControl,
@@ -19,7 +20,14 @@ import {
   getLocalPreferences,
 } from '../src/api';
 import { armReminders } from '../src/notifications';
-import { maybeStartLiveActivityForNext, syncWidgetData } from '../src/widget';
+import {
+  currentLiveActivity,
+  endLiveActivity,
+  liveActivitiesAvailable,
+  pruneStaleLiveActivity,
+  startLiveActivity,
+  syncWidgetData,
+} from '../src/widget';
 import {
   formatDayHeading,
   formatRelative,
@@ -36,6 +44,37 @@ export default function ScheduleScreen() {
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  /** Occurrence key with a live countdown, or null. Only one at a time. */
+  const [tracked, setTracked] = useState<string | null>(null);
+  const [liveSupported, setLiveSupported] = useState(false);
+
+  useEffect(() => {
+    void liveActivitiesAvailable().then(setLiveSupported);
+  }, []);
+
+  /**
+   * Star an event to get a Lock Screen / Dynamic Island countdown for it.
+   * iOS only shows one usefully, so starring a second replaces the first.
+   */
+  const toggleInterest = useCallback(
+    async (occ: Occurrence) => {
+      if (tracked === occ.key) {
+        await endLiveActivity();
+        setTracked(null);
+        return;
+      }
+      const id = await startLiveActivity(occ);
+      if (id) {
+        setTracked(occ.key);
+      } else {
+        Alert.alert(
+          'Could not start countdown',
+          'Check Settings → Atlantica → Live Activities is on.',
+        );
+      }
+    },
+    [tracked],
+  );
 
   const load = useCallback(
     async (isRefresh = false) => {
@@ -61,9 +100,10 @@ export default function ScheduleScreen() {
           preferences: prefs,
         });
         await syncWidgetData(result.payload.occurrences);
-        // Shows a Lock Screen / Dynamic Island countdown once the next event is
-        // close. Idempotent, so running it on every foreground is fine.
-        await maybeStartLiveActivityForNext(result.payload.occurrences);
+        // Countdowns are opt-in per event, so nothing starts automatically --
+        // this only clears one whose event has already begun.
+        await pruneStaleLiveActivity(result.payload.occurrences);
+        setTracked(currentLiveActivity());
       } catch (err) {
         if (err instanceof AuthError) {
           router.replace('/signin');
@@ -191,6 +231,30 @@ export default function ScheduleScreen() {
                     <Text style={styles.desc}>{occ.description}</Text>
                   )}
                 </View>
+
+                {/* Interest star -- only meaningful for events still to come. */}
+                {!past && liveSupported && (
+                  <Pressable
+                    onPress={() => toggleInterest(occ)}
+                    hitSlop={10}
+                    style={styles.star}
+                    accessibilityRole="button"
+                    accessibilityLabel={
+                      tracked === occ.key
+                        ? `Stop countdown for ${occ.title}`
+                        : `Interested in ${occ.title}, show a countdown`
+                    }
+                  >
+                    <Text
+                      style={[
+                        styles.starGlyph,
+                        tracked === occ.key && styles.starOn,
+                      ]}
+                    >
+                      {tracked === occ.key ? '★' : '☆'}
+                    </Text>
+                  </Pressable>
+                )}
               </View>
             );
           })}
@@ -265,6 +329,9 @@ const styles = StyleSheet.create({
   title: { color: theme.ink, fontSize: 16, fontWeight: '600', lineHeight: 21 },
   venue: { color: theme.muted, fontSize: 13, marginTop: 2 },
   desc: { color: theme.muted, fontSize: 12, marginTop: 5, lineHeight: 17 },
+  star: { paddingLeft: 4, paddingTop: 2, alignSelf: 'flex-start' },
+  starGlyph: { fontSize: 22, color: theme.muted, lineHeight: 26 },
+  starOn: { color: theme.accent },
   footnote: {
     color: theme.muted,
     fontSize: 12,
