@@ -149,12 +149,22 @@ app.get('/api/schedule', authed, async (req, reply) => {
     })
     .sort((a, b) => a.startsAt.localeCompare(b.startsAt));
 
-  // ETag covers the schedule content only -- deliberately not `now`, which
-  // changes every request and would make every revalidation a full download.
-  // The app caches this payload for offline use, so a cheap 304 is the common
-  // case when it wakes up to re-arm reminders.
+  // The ETag must cover everything the client acts on, not just the event list.
+  //
+  // It deliberately excludes `now` (which changes every request and would make
+  // every revalidation a full download) but it MUST include leadMinutes: the
+  // app caches this payload and schedules reminders from the cached
+  // leadMinutes, so hashing only the occurrences meant a lead-time change
+  // produced an unchanged ETag, a 304, and an app that kept arming reminders
+  // at the old lead time indefinitely.
   const etag = `W/"${createHash('sha256')
-    .update(JSON.stringify(upcoming))
+    .update(
+      JSON.stringify({
+        occurrences: upcoming,
+        leadMinutes: LEAD_MINUTES,
+        timezone: RESORT_TZ,
+      }),
+    )
     .digest('base64url')
     .slice(0, 27)}"`;
 
