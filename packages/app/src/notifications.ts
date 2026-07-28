@@ -119,7 +119,15 @@ export async function armReminders(
           title,
           body,
           sound: true,
-          data: { key: entry.occurrence.key, category: entry.occurrence.category },
+          data: {
+            key: entry.occurrence.key,
+            category: entry.occurrence.category,
+            // Stored because reading the fire time back off the trigger is
+            // platform-specific and unreliable -- iOS turns a DATE trigger into
+            // calendar components or a time interval depending on version. We
+            // already know the exact instant here, so record it.
+            fireAt: entry.fireAt.toISOString(),
+          },
         },
         trigger: {
           type: Notifications.SchedulableTriggerInputTypes.DATE,
@@ -165,11 +173,20 @@ export async function listScheduled(): Promise<
   if (!NOTIFICATIONS_SUPPORTED) return [];
   try {
     const pending = await Notifications.getAllScheduledNotificationsAsync();
-    return pending.map((n) => ({
-      id: n.identifier,
-      title: n.content.title ?? '(no title)',
-      fireAt: triggerDate(n.trigger),
-    }));
+    return pending.map((n) => {
+      // Prefer what we recorded at schedule time; fall back to interrogating
+      // the trigger for anything scheduled by an older build.
+      const stored = (n.content.data as { fireAt?: string } | undefined)?.fireAt;
+      const fromData = stored ? new Date(stored) : null;
+      return {
+        id: n.identifier,
+        title: n.content.title ?? '(no title)',
+        fireAt:
+          fromData && !Number.isNaN(fromData.getTime())
+            ? fromData
+            : triggerDate(n.trigger),
+      };
+    });
   } catch (err) {
     console.warn('[notifications] could not list pending:', (err as Error).message);
     return [];
@@ -205,6 +222,14 @@ function triggerDate(trigger: unknown): Date | null {
       const d = new Date(raw);
       if (!Number.isNaN(d.getTime())) return d;
     }
+  }
+
+  // A time-interval trigger only knows "n seconds from when it was set", so the
+  // absolute time is unrecoverable after the fact -- another reason the fire
+  // time is now stored in the notification's data.
+  const ti = trigger as { seconds?: number; repeats?: boolean };
+  if (typeof ti.seconds === 'number' && !ti.repeats) {
+    return null;
   }
 
   const c = t.dateComponents;
