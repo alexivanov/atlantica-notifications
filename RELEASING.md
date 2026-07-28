@@ -46,21 +46,23 @@ nothing, which is miserable to debug.
 The build runs on EAS's machines (~15–25 min). It does not need your laptop
 awake once it has uploaded.
 
-## 4. Create the App Store Connect record
+## 4–5. Submit (creates the App Store Connect record)
 
-Before submitting, the app must exist at
-[appstoreconnect.apple.com](https://appstoreconnect.apple.com) → Apps → **+** →
-New App:
-
-- Platform: iOS
-- Bundle ID: `com.alexivanov.atlantica`
-- SKU: anything, e.g. `atlantica-notifications`
-
-## 5. Submit
+**Must be interactive.** Non-interactive fails with "Set ascAppId in the submit
+profile", because the App Store Connect app id does not exist until the record
+does.
 
 ```sh
 eas submit --platform ios --profile production --latest
 ```
+
+EAS offers to create the App Store Connect record itself — accept, and it
+supplies the app id. To create it by hand instead:
+[appstoreconnect.apple.com](https://appstoreconnect.apple.com) → Apps → **+** →
+New App, bundle ID `com.alexivanov.atlantica`, SKU anything.
+
+Once you know the numeric app id, adding it to `eas.json` under
+`submit.production.ios.ascAppId` makes future submissions non-interactive.
 
 Processing on Apple's side takes 5–15 minutes. TestFlight builds expire after
 **90 days**.
