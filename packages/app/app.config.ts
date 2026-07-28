@@ -41,6 +41,11 @@ const config: ExpoConfig = {
       // HTTPS/TLS to its own backend, which is exempt. Declaring it here means
       // App Store Connect stops asking on every single build.
       ITSAppUsesNonExemptEncryption: false,
+      // Required for ActivityKit. Without it iOS disables Live Activities
+      // outright -- ActivityAuthorizationInfo().areActivitiesEnabled returns
+      // false and no "Live Activities" toggle appears under Settings → Atlantica,
+      // with nothing in the build output to explain why.
+      NSSupportsLiveActivities: true,
     },
     entitlements: {
       // Shared container so the WidgetKit extension can read the schedule the
