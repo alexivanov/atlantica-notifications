@@ -76,14 +76,35 @@ public class AtlanticaLiveActivityModule: Module {
             }
         }
 
+        /// Ids of activities the system currently considers running.
+        ///
+        /// Read from ActivityKit rather than the in-process dictionary, which
+        /// does not survive an app restart. Without this, JS has no way to know
+        /// a countdown from a previous launch is still on screen.
+        AsyncFunction("activeActivityIds") { () -> [String] in
+            guard #available(iOS 16.2, *) else { return [] }
+            return Activity<AtlanticaActivityAttributes>.activities.map { $0.id }
+        }
+
         AsyncFunction("endLiveActivity") { (id: String) in
             guard #available(iOS 16.2, *) else { return }
-            guard let activity = Self.activities[id] as? Activity<AtlanticaActivityAttributes>
-            else { return }
-            Task {
+            // Look the activity up from ActivityKit, not the static dictionary:
+            // that dictionary is empty after a process restart, so ending a
+            // countdown started in a previous launch silently did nothing and
+            // left it stuck on the Lock Screen with no way to dismiss it.
+            let running = Activity<AtlanticaActivityAttributes>.activities
+            guard let activity = running.first(where: { $0.id == id }) else { return }
+            await activity.end(nil, dismissalPolicy: .immediate)
+            Self.activities.removeValue(forKey: id)
+        }
+
+        /// Escape hatch: clears every countdown regardless of who started it.
+        AsyncFunction("endAllLiveActivities") {
+            guard #available(iOS 16.2, *) else { return }
+            for activity in Activity<AtlanticaActivityAttributes>.activities {
                 await activity.end(nil, dismissalPolicy: .immediate)
-                Self.activities.removeValue(forKey: id)
             }
+            Self.activities.removeAll()
         }
     }
 

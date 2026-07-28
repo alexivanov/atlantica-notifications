@@ -12,6 +12,7 @@ export const APP_GROUP = extra.appGroup ?? '';
 export const STORAGE = {
   deviceToken: 'atlantica.deviceToken',
   preferences: 'atlantica.preferences',
+  liveActivity: 'atlantica.liveActivity',
 } as const;
 
 export const CACHE_FILE = 'schedule-cache.json';

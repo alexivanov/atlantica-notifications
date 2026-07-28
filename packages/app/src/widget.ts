@@ -2,8 +2,9 @@ import { Platform } from 'react-native';
 import { requireOptionalNativeModule } from 'expo-modules-core';
 import { ExtensionStorage } from '@bacons/apple-targets';
 import { selectUpcoming, type Occurrence } from '@atlantica/shared';
-import { APP_GROUP } from './config';
+import { APP_GROUP, STORAGE } from './config';
 import { getLocalPreferences, readCache } from './api';
+import { deleteSecure, getSecure, setSecure } from './storage';
 
 /**
  * Feeds the iOS home screen widget and Live Activity.
@@ -20,6 +21,8 @@ import { getLocalPreferences, readCache } from './api';
 interface LiveActivityBridge {
   startLiveActivity(payload: string): Promise<string | null>;
   endLiveActivity(id: string): Promise<void>;
+  endAllLiveActivities(): Promise<void>;
+  activeActivityIds(): Promise<string[]>;
   areLiveActivitiesEnabled(): Promise<boolean>;
 }
 
@@ -118,6 +121,48 @@ export function currentLiveActivity(): string | null {
   return current?.occurrenceKey ?? null;
 }
 
+/**
+ * Re-attach to a countdown started before the app was last killed.
+ *
+ * `current` is module state and dies with the process, but the Live Activity
+ * itself outlives it. Without this, a countdown from a previous launch shows on
+ * the Lock Screen while the app believes nothing is tracked -- the star reads
+ * empty and there is no way to stop it.
+ */
+export async function restoreLiveActivity(): Promise<string | null> {
+  const native = liveActivities();
+  if (!native) return null;
+
+  try {
+    const ids = await native.activeActivityIds();
+    if (ids.length === 0) {
+      current = null;
+      await deleteSecure(STORAGE.liveActivity);
+      return null;
+    }
+
+    const saved = await getSecure(STORAGE.liveActivity);
+    const parsed = saved
+      ? (JSON.parse(saved) as { id: string; occurrenceKey: string })
+      : null;
+
+    if (parsed && ids.includes(parsed.id)) {
+      current = parsed;
+      return parsed.occurrenceKey;
+    }
+
+    // Something is running that we cannot map back to an event -- most likely
+    // left over from an older build. Clear it rather than stranding it.
+    await native.endAllLiveActivities();
+    current = null;
+    await deleteSecure(STORAGE.liveActivity);
+    return null;
+  } catch (err) {
+    console.warn('[liveactivity] restore failed:', (err as Error).message);
+    return null;
+  }
+}
+
 export async function liveActivitiesAvailable(): Promise<boolean> {
   const native = liveActivities();
   if (!native) return false;
@@ -151,6 +196,9 @@ export async function startLiveActivity(occ: Occurrence): Promise<string | null>
       }),
     );
     current = id ? { id, occurrenceKey: occ.key } : null;
+    // Persisted so the star still reflects reality, and the countdown can
+    // still be stopped, after the app is killed and reopened.
+    if (current) await setSecure(STORAGE.liveActivity, JSON.stringify(current));
     return id;
   } catch (err) {
     console.warn('[liveactivity] start failed:', (err as Error).message);
@@ -167,7 +215,10 @@ export async function endLiveActivity(id?: string): Promise<void> {
   } catch {
     // Ending a stale activity is not worth surfacing.
   } finally {
-    if (!id || id === current?.id) current = null;
+    if (!id || id === current?.id) {
+      current = null;
+      await deleteSecure(STORAGE.liveActivity);
+    }
   }
 }
 

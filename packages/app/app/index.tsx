@@ -25,6 +25,7 @@ import {
   endLiveActivity,
   liveActivitiesAvailable,
   pruneStaleLiveActivity,
+  restoreLiveActivity,
   startLiveActivity,
   syncWidgetData,
 } from '../src/widget';
@@ -50,6 +51,9 @@ export default function ScheduleScreen() {
 
   useEffect(() => {
     void liveActivitiesAvailable().then(setLiveSupported);
+    // A countdown can outlive the app process; re-attach so the star is honest
+    // and the user can still stop it.
+    void restoreLiveActivity().then(setTracked);
   }, []);
 
   /**
