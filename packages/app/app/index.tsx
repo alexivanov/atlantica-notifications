@@ -39,13 +39,15 @@ export default function ScheduleScreen() {
 
   const load = useCallback(
     async (isRefresh = false) => {
-      if (!(await getDeviceToken())) {
-        router.replace('/signin');
-        return;
-      }
-
       isRefresh ? setRefreshing(true) : setLoading(true);
       try {
+        // Inside the try: a Keychain read can fail, and an unhandled rejection
+        // here would leave the spinner up permanently with no way forward.
+        if (!(await getDeviceToken())) {
+          router.replace('/signin');
+          return;
+        }
+
         const result = await fetchSchedule();
         setPayload(result.payload);
         setFromCache(result.fromCache);

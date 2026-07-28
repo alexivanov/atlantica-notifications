@@ -40,17 +40,45 @@ const webStore = {
 
 const isWeb = Platform.OS === 'web';
 
+/**
+ * Reads never throw.
+ *
+ * A Keychain read can genuinely fail -- before the device's first unlock, or
+ * when entitlements are not applied (as in an unsigned simulator build). An
+ * unhandled rejection here leaves the app stuck on its loading spinner with no
+ * way out. Treating a failed read as "no value" degrades to the sign-in screen,
+ * which the user can actually recover from.
+ */
 export async function getSecure(key: string): Promise<string | null> {
-  if (isWeb) return webStore.getItem(key);
-  return SecureStore.getItemAsync(key);
+  try {
+    if (isWeb) return webStore.getItem(key);
+    return await SecureStore.getItemAsync(key);
+  } catch (err) {
+    console.warn(`[storage] could not read "${key}":`, (err as Error).message);
+    return null;
+  }
 }
 
-export async function setSecure(key: string, value: string): Promise<void> {
-  if (isWeb) return webStore.setItem(key, value);
-  return SecureStore.setItemAsync(key, value);
+/** Returns false if the value could not be persisted, so callers can react. */
+export async function setSecure(key: string, value: string): Promise<boolean> {
+  try {
+    if (isWeb) {
+      webStore.setItem(key, value);
+      return true;
+    }
+    await SecureStore.setItemAsync(key, value);
+    return true;
+  } catch (err) {
+    console.warn(`[storage] could not write "${key}":`, (err as Error).message);
+    return false;
+  }
 }
 
 export async function deleteSecure(key: string): Promise<void> {
-  if (isWeb) return webStore.removeItem(key);
-  return SecureStore.deleteItemAsync(key);
+  try {
+    if (isWeb) return webStore.removeItem(key);
+    await SecureStore.deleteItemAsync(key);
+  } catch {
+    // Nothing useful to do; the caller is signing out either way.
+  }
 }

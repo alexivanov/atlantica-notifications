@@ -22,7 +22,15 @@ export async function getDeviceToken(): Promise<string | null> {
 
 export async function setDeviceToken(token: string): Promise<void> {
   // Keychain-backed. Survives app updates, wiped on uninstall.
-  await setSecure(STORAGE.deviceToken, token);
+  const ok = await setSecure(STORAGE.deviceToken, token);
+  if (!ok) {
+    // Failing silently here would sign the user in for one session and then
+    // mysteriously sign them out on next launch.
+    throw new Error(
+      'Signed in, but this device could not save the credential. Check that ' +
+        'the app has Keychain access and try again.',
+    );
+  }
 }
 
 export async function clearDeviceToken(): Promise<void> {

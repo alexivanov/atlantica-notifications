@@ -98,8 +98,21 @@ struct AtlanticaWidgetEntryView: View {
             Spacer(minLength: 0)
         }
         .padding(12)
-        .containerBackground(for: .widget) {
-            Color(hex: 0x12152E)
+        .widgetBackground(Color(hex: 0x12152E))
+    }
+}
+
+extension View {
+    /// Widget backgrounds changed in iOS 17: `containerBackground(for: .widget)`
+    /// is required there (without it the widget renders incorrectly in StandBy
+    /// and on the Lock Screen), but it does not exist on iOS 16 -- and this
+    /// target deploys to 16.2 because that is what ActivityKit needs.
+    @ViewBuilder
+    func widgetBackground(_ background: some View) -> some View {
+        if #available(iOS 17.0, *) {
+            containerBackground(for: .widget) { background }
+        } else {
+            self.background(background)
         }
     }
 }

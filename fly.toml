@@ -1,42 +1,44 @@
-# Rename `app` to something globally unique before the first deploy.
-app = "atlantica-notifications"
-primary_region = "ams"
+# fly.toml app configuration file generated for atlantica-notifications on 2026-07-28T12:47:34+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'atlantica-notifications'
+primary_region = 'ams'
 
 [build]
-  dockerfile = "Dockerfile"
+  dockerfile = 'Dockerfile'
 
 [env]
-  PORT = "8080"
-  DATA_DIR = "/data"
-  RESORT_TZ = "Europe/Athens"
-  LEAD_MINUTES = "30"
+  DATA_DIR = '/data'
+  LEAD_MINUTES = '30'
+  PORT = '8080'
+  RESORT_TZ = 'Europe/Athens'
 
-# The JSON state file lives here. Without a volume, every deploy would forget
-# which reminders had already been sent and re-fire them.
 [[mounts]]
-  source = "atlantica_data"
-  destination = "/data"
+  source = 'atlantica_data'
+  destination = '/data'
 
 [http_service]
   internal_port = 8080
   force_https = true
-  # Must stay running: the reminder dispatcher is an in-process cron tick, so a
-  # machine that suspends between requests would simply never fire it.
-  auto_stop_machines = false
+  auto_stop_machines = 'off'
   auto_start_machines = true
   min_machines_running = 1
 
-  [http_service.http_options.response.headers]
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "no-referrer"
+  [http_service.http_options]
+    [http_service.http_options.response]
+      [http_service.http_options.response.headers]
+        Referrer-Policy = 'no-referrer'
+        X-Content-Type-Options = 'nosniff'
 
-[[http_service.checks]]
-  interval = "60s"
-  timeout = "5s"
-  grace_period = "20s"
-  method = "GET"
-  path = "/healthz"
+  [[http_service.checks]]
+    interval = '1m0s'
+    timeout = '5s'
+    grace_period = '20s'
+    method = 'GET'
+    path = '/healthz'
 
 [[vm]]
-  size = "shared-cpu-1x"
-  memory = "256mb"
+  size = 'shared-cpu-1x'
+  memory = '256mb'
