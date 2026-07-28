@@ -37,6 +37,10 @@ const config: ExpoConfig = {
       BGTaskSchedulerPermittedIdentifiers: [
         'com.expo.modules.backgroundtask.processing',
       ],
+      // Export-compliance declaration. The app's only cryptography is standard
+      // HTTPS/TLS to its own backend, which is exempt. Declaring it here means
+      // App Store Connect stops asking on every single build.
+      ITSAppUsesNonExemptEncryption: false,
     },
     entitlements: {
       // Shared container so the WidgetKit extension can read the schedule the
