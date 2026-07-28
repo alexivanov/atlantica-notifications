@@ -85,50 +85,99 @@ export async function syncWidgetData(occurrences?: Occurrence[]): Promise<void> 
  * Live Activity
  * ------------------------------------------------------------------ */
 
+/**
+ * The activity currently on screen, so repeated calls do not stack duplicates.
+ *
+ * Module-level rather than React state because this is called from the
+ * schedule screen on every foreground, and from settings -- both must see the
+ * same activity.
+ */
+let current: { id: string; occurrenceKey: string } | null = null;
+
+export function currentLiveActivity(): string | null {
+  return current?.occurrenceKey ?? null;
+}
+
+export async function liveActivitiesAvailable(): Promise<boolean> {
+  const native = liveActivities();
+  if (!native) return false;
+  try {
+    return await native.areLiveActivitiesEnabled();
+  } catch {
+    return false;
+  }
+}
+
 /** Start a countdown for an event, if Live Activities are available. */
 export async function startLiveActivity(occ: Occurrence): Promise<string | null> {
   const native = liveActivities();
   if (!native) return null;
 
+  // Already showing this exact event -- starting again would stack a duplicate
+  // on the Lock Screen.
+  if (current?.occurrenceKey === occ.key) return current.id;
+
   try {
     if (!(await native.areLiveActivitiesEnabled())) return null;
-    return await native.startLiveActivity(
+
+    // Only one countdown makes sense at a time; retire the previous event's.
+    if (current) await endLiveActivity(current.id);
+
+    const id = await native.startLiveActivity(
       JSON.stringify({
         title: occ.title,
         venue: occ.venue ?? '',
         startsAt: occ.startsAt,
       }),
     );
+    current = id ? { id, occurrenceKey: occ.key } : null;
+    return id;
   } catch (err) {
     console.warn('[liveactivity] start failed:', (err as Error).message);
     return null;
   }
 }
 
-export async function endLiveActivity(id: string): Promise<void> {
+export async function endLiveActivity(id?: string): Promise<void> {
   const native = liveActivities();
-  if (!native) return;
+  const target = id ?? current?.id;
+  if (!native || !target) return;
   try {
-    await native.endLiveActivity(id);
+    await native.endLiveActivity(target);
   } catch {
     // Ending a stale activity is not worth surfacing.
+  } finally {
+    if (!id || id === current?.id) current = null;
   }
 }
 
 /**
  * Start a Live Activity for the next event if it is close enough to be useful.
  * Two hours out is roughly "you should think about heading over".
+ *
+ * Called on every foreground and refresh; idempotent, and retires the countdown
+ * once its event has started.
  */
 export async function maybeStartLiveActivityForNext(
   occurrences: Occurrence[],
   withinMinutes = 120,
 ): Promise<string | null> {
+  if (Platform.OS !== 'ios') return null;
+
   const preferences = await getLocalPreferences();
   const [next] = selectUpcoming(occurrences, { enabled: preferences, limit: 1 });
-  if (!next) return null;
+
+  if (!next) {
+    if (current) await endLiveActivity();
+    return null;
+  }
 
   const minsAway = (new Date(next.startsAt).getTime() - Date.now()) / 60_000;
-  if (minsAway > withinMinutes) return null;
+  if (minsAway > withinMinutes) {
+    // The showing activity is for an event that has since passed.
+    if (current && current.occurrenceKey !== next.key) await endLiveActivity();
+    return null;
+  }
 
   return startLiveActivity(next);
 }

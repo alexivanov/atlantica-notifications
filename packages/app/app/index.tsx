@@ -19,7 +19,7 @@ import {
   getLocalPreferences,
 } from '../src/api';
 import { armReminders } from '../src/notifications';
-import { syncWidgetData } from '../src/widget';
+import { maybeStartLiveActivityForNext, syncWidgetData } from '../src/widget';
 import {
   formatDayHeading,
   formatRelative,
@@ -61,6 +61,9 @@ export default function ScheduleScreen() {
           preferences: prefs,
         });
         await syncWidgetData(result.payload.occurrences);
+        // Shows a Lock Screen / Dynamic Island countdown once the next event is
+        // close. Idempotent, so running it on every foreground is fine.
+        await maybeStartLiveActivityForNext(result.payload.occurrences);
       } catch (err) {
         if (err instanceof AuthError) {
           router.replace('/signin');
