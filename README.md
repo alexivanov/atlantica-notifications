@@ -24,9 +24,15 @@ they cost nothing and are the fallback if a build expires.
 
 ```sh
 npm install
+npm run build     # REQUIRED before running the app -- see below
 npm test          # 35 tests: 12 shared, 23 server
-npm run build
 ```
+
+**`npm run build` is not optional on a fresh clone.** The app imports
+`@atlantica/shared` through its compiled `dist/`, which is gitignored, so
+Metro cannot resolve the package until it has been built once. On EAS this is
+handled by the `eas-build-post-install` hook in `packages/app/package.json`;
+the server's Dockerfile builds it explicitly. Locally it is on you.
 
 Server secrets (`packages/server/.env`, see `.env.example`):
 
