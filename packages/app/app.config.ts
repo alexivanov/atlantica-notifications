@@ -8,11 +8,13 @@ const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'https://atlantica-notificati
 
 // Shared with the widget target's config -- see identifiers.js.
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID } = require('./identifiers.js') as {
-  BUNDLE_ID: string;
-  APP_GROUP: string;
-  APPLE_TEAM_ID: string;
-};
+const { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID, EAS_PROJECT_ID } =
+  require('./identifiers.js') as {
+    BUNDLE_ID: string;
+    APP_GROUP: string;
+    APPLE_TEAM_ID: string;
+    EAS_PROJECT_ID: string;
+  };
 
 const config: ExpoConfig = {
   name: 'Atlantica',
@@ -72,9 +74,9 @@ const config: ExpoConfig = {
   extra: {
     apiUrl: API_URL,
     appGroup: APP_GROUP,
-    eas: {
-      projectId: process.env.EAS_PROJECT_ID ?? '00000000-0000-0000-0000-000000000000',
-    },
+    // Omitted entirely until set, so `eas init` reports a clear "not
+    // configured" rather than chasing a bogus placeholder UUID.
+    ...(EAS_PROJECT_ID ? { eas: { projectId: EAS_PROJECT_ID } } : {}),
   },
 
   experiments: {

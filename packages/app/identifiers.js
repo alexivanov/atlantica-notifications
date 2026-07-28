@@ -24,4 +24,13 @@ const APP_GROUP = `group.${BUNDLE_ID}`;
  */
 const APPLE_TEAM_ID = process.env.APPLE_TEAM_ID || '6924F43338';
 
-module.exports = { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID };
+/**
+ * EAS project id.
+ *
+ * `eas init` normally writes this into app.json, but it cannot edit a dynamic
+ * app.config.ts -- it prints the id and expects you to paste it in. Do that
+ * here once; builds fail with "project id not configured" until you do.
+ */
+const EAS_PROJECT_ID = process.env.EAS_PROJECT_ID || '';
+
+module.exports = { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID, EAS_PROJECT_ID };
