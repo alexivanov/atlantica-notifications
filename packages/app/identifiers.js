@@ -31,6 +31,7 @@ const APPLE_TEAM_ID = process.env.APPLE_TEAM_ID || '6924F43338';
  * app.config.ts -- it prints the id and expects you to paste it in. Do that
  * here once; builds fail with "project id not configured" until you do.
  */
-const EAS_PROJECT_ID = process.env.EAS_PROJECT_ID || '';
+const EAS_PROJECT_ID =
+  process.env.EAS_PROJECT_ID || 'cf03ff42-f62f-4b3e-b358-016fa67f255b';
 
 module.exports = { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID, EAS_PROJECT_ID };

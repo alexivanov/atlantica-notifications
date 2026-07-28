@@ -9,29 +9,22 @@ so these steps have to be run by you.
 
 Run everything from `packages/app`.
 
-## 1. Log in
+## 1–2. Log in and link the project — DONE
 
-```sh
-eas login          # Expo account (create one free at expo.dev if needed)
-eas whoami         # confirm
-```
-
-## 2. Link the EAS project
-
-```sh
-eas init
-```
-
-`eas init` cannot edit a dynamic `app.config.ts`, so it prints the project id
-and stops. Paste it into `identifiers.js`:
-
-```js
-const EAS_PROJECT_ID = process.env.EAS_PROJECT_ID || 'paste-the-uuid-here';
-```
-
-Builds fail with "project id not configured" until this is set.
+Logged in as `alexivanovv`, project linked as
+`@alexivanovv/atlantica-notifications`
+(`cf03ff42-f62f-4b3e-b358-016fa67f255b`, set in `identifiers.js`).
 
 ## 3. Build
+
+**This step must be interactive** — a non-interactive run stops at
+"Distribution Certificate is not validated for non-interactive builds". EAS has
+already confirmed it sees both targets and will provision each separately:
+
+```
+- Target: Atlantica         com.alexivanov.atlantica
+- Target: AtlanticaWidget   com.alexivanov.atlantica.widget
+```
 
 ```sh
 eas build --platform ios --profile production
