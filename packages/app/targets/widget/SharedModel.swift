@@ -37,6 +37,10 @@ struct SchedulePayload: Codable {
 }
 
 enum SharedStore {
+    /// Must match `APP_GROUP` in `packages/app/identifiers.js`. Swift cannot
+    /// read that file, so this is the one copy that has to be kept in step by
+    /// hand -- a mismatch does not fail the build, the widget just renders
+    /// nothing.
     static let appGroup = "group.com.alexivanov.atlantica"
     static let key = "upcoming"
 

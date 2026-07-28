@@ -6,7 +6,12 @@ import type { ExpoConfig } from 'expo/config';
  */
 const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'https://atlantica-notifications.fly.dev';
 
-const BUNDLE_ID = 'com.alexivanov.atlantica';
+// Shared with the widget target's config -- see identifiers.js.
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { BUNDLE_ID, APP_GROUP } = require('./identifiers.js') as {
+  BUNDLE_ID: string;
+  APP_GROUP: string;
+};
 
 const config: ExpoConfig = {
   name: 'Atlantica',
@@ -36,7 +41,7 @@ const config: ExpoConfig = {
       // Shared container so the WidgetKit extension can read the schedule the
       // app writes. Widget extensions run in a separate process and cannot
       // reach the app's own storage.
-      'com.apple.security.application-groups': [`group.${BUNDLE_ID}`],
+      'com.apple.security.application-groups': [APP_GROUP],
     },
   },
 
@@ -67,7 +72,7 @@ const config: ExpoConfig = {
 
   extra: {
     apiUrl: API_URL,
-    appGroup: `group.${BUNDLE_ID}`,
+    appGroup: APP_GROUP,
     eas: {
       projectId: process.env.EAS_PROJECT_ID ?? '00000000-0000-0000-0000-000000000000',
     },

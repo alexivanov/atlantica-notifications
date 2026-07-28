@@ -1,4 +1,5 @@
 import { NativeModules, Platform } from 'react-native';
+import { ExtensionStorage } from '@bacons/apple-targets';
 import { selectUpcoming, type Occurrence } from '@atlantica/shared';
 import { APP_GROUP } from './config';
 import { getLocalPreferences, readCache } from './api';
@@ -9,11 +10,13 @@ import { getLocalPreferences, readCache } from './api';
  * Widget extensions run in their own process and cannot read the app's storage,
  * so the shared App Group container is the only channel. The app writes a small
  * JSON blob of the next few events; the widget reads it on its own timeline.
+ *
+ * Storage and timeline reloads come from @bacons/apple-targets' ExtensionStorage
+ * (already linked by the config plugin). Only ActivityKit needs custom native
+ * code, which is why the local module is as small as it is.
  */
 
-interface WidgetBridge {
-  setItem(key: string, value: string, appGroup: string): Promise<void>;
-  reloadAllTimelines(): Promise<void>;
+interface LiveActivityBridge {
   startLiveActivity(payload: string): Promise<string | null>;
   endLiveActivity(id: string): Promise<void>;
   areLiveActivitiesEnabled(): Promise<boolean>;
@@ -23,9 +26,9 @@ interface WidgetBridge {
  * Resolved lazily and defensively: the native module only exists in a custom
  * dev client or a real build, never in Expo Go, and never on Android.
  */
-function bridge(): WidgetBridge | null {
+function liveActivities(): LiveActivityBridge | null {
   if (Platform.OS !== 'ios') return null;
-  return (NativeModules.AtlanticaWidget as WidgetBridge | undefined) ?? null;
+  return (NativeModules.AtlanticaWidget as LiveActivityBridge | undefined) ?? null;
 }
 
 export const WIDGET_KEY = 'upcoming';
@@ -43,11 +46,10 @@ export interface WidgetPayload {
 
 /**
  * Write the next few events into the shared container and nudge WidgetKit.
- * Safe to call anywhere -- it no-ops when the native module is absent.
+ * Safe to call anywhere -- it no-ops off iOS or when the group is unset.
  */
 export async function syncWidgetData(occurrences?: Occurrence[]): Promise<void> {
-  const native = bridge();
-  if (!native) return;
+  if (Platform.OS !== 'ios' || !APP_GROUP) return;
 
   let list = occurrences;
   if (!list) {
@@ -70,8 +72,10 @@ export async function syncWidgetData(occurrences?: Occurrence[]): Promise<void> 
   };
 
   try {
-    await native.setItem(WIDGET_KEY, JSON.stringify(payload), APP_GROUP);
-    await native.reloadAllTimelines();
+    const storage = new ExtensionStorage(APP_GROUP);
+    // Stored as a JSON string; SharedModel.swift decodes the same shape.
+    storage.set(WIDGET_KEY, JSON.stringify(payload));
+    ExtensionStorage.reloadWidget();
   } catch (err) {
     console.warn('[widget] sync failed:', (err as Error).message);
   }
@@ -83,7 +87,7 @@ export async function syncWidgetData(occurrences?: Occurrence[]): Promise<void> 
 
 /** Start a countdown for an event, if Live Activities are available. */
 export async function startLiveActivity(occ: Occurrence): Promise<string | null> {
-  const native = bridge();
+  const native = liveActivities();
   if (!native) return null;
 
   try {
@@ -102,7 +106,7 @@ export async function startLiveActivity(occ: Occurrence): Promise<string | null>
 }
 
 export async function endLiveActivity(id: string): Promise<void> {
-  const native = bridge();
+  const native = liveActivities();
   if (!native) return;
   try {
     await native.endLiveActivity(id);

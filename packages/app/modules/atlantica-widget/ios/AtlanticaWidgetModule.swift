@@ -1,39 +1,20 @@
 import ActivityKit
 import ExpoModulesCore
-import WidgetKit
 
-/// Bridges JS to the two things React Native cannot reach on its own: the
-/// shared App Group container that feeds the widget, and ActivityKit.
+/// Live Activity bridge.
 ///
-/// Mirrors the `WidgetBridge` interface in `src/widget.ts`.
+/// Deliberately narrow: writing to the shared App Group container and reloading
+/// widget timelines are already provided by @bacons/apple-targets'
+/// `ExtensionStorage`, so this module only covers what that does not --
+/// ActivityKit.
 public class AtlanticaWidgetModule: Module {
-    /// Live Activities are referenced by id from JS so they can be ended later.
+    /// Activities are referenced by id from JS so they can be ended later.
+    /// `Any` because `Activity<T>` is only available from iOS 16.2 and stored
+    /// properties cannot carry an availability annotation.
     private static var activities: [String: Any] = [:]
 
     public func definition() -> ModuleDefinition {
         Name("AtlanticaWidget")
-
-        /// Write a value into the shared container the widget reads from.
-        AsyncFunction("setItem") { (key: String, value: String, appGroup: String) in
-            guard let defaults = UserDefaults(suiteName: appGroup) else {
-                throw NSError(
-                    domain: "AtlanticaWidget",
-                    code: 1,
-                    userInfo: [
-                        NSLocalizedDescriptionKey:
-                            "App Group \(appGroup) is not available. Check the entitlement."
-                    ]
-                )
-            }
-            defaults.set(value, forKey: key)
-        }
-
-        /// Ask WidgetKit to rebuild timelines now rather than at its own pace.
-        AsyncFunction("reloadAllTimelines") {
-            if #available(iOS 14.0, *) {
-                WidgetCenter.shared.reloadAllTimelines()
-            }
-        }
 
         AsyncFunction("areLiveActivitiesEnabled") { () -> Bool in
             if #available(iOS 16.2, *) {
@@ -52,17 +33,9 @@ public class AtlanticaWidgetModule: Module {
                 let data = payload.data(using: .utf8),
                 let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
                 let title = json["title"] as? String,
-                let startsAtRaw = json["startsAt"] as? String
+                let startsAtRaw = json["startsAt"] as? String,
+                let start = Self.parseISO(startsAtRaw)
             else { return nil }
-
-            let formatter = ISO8601DateFormatter()
-            formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
-            var startsAt = formatter.date(from: startsAtRaw)
-            if startsAt == nil {
-                formatter.formatOptions = [.withInternetDateTime]
-                startsAt = formatter.date(from: startsAtRaw)
-            }
-            guard let start = startsAt else { return nil }
 
             let attributes = AtlanticaActivityAttributes(
                 title: title,
@@ -92,5 +65,15 @@ public class AtlanticaWidgetModule: Module {
                 Self.activities.removeValue(forKey: id)
             }
         }
+    }
+
+    /// The server emits fractional seconds, but stay forgiving in case that
+    /// changes -- a Live Activity that silently never starts is hard to debug.
+    private static func parseISO(_ raw: String) -> Date? {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        if let d = formatter.date(from: raw) { return d }
+        formatter.formatOptions = [.withInternetDateTime]
+        return formatter.date(from: raw)
     }
 }

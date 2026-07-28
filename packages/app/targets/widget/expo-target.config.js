@@ -7,6 +7,8 @@
  *
  * @type {import('@bacons/apple-targets/app.plugin').Config}
  */
+const { APP_GROUP } = require('../../identifiers.js');
+
 module.exports = {
   type: 'widget',
   name: 'AtlanticaWidget',
@@ -15,7 +17,7 @@ module.exports = {
   // is the only way the extension can see data the app writes -- widgets run
   // in a separate process with no access to the app sandbox.
   entitlements: {
-    'com.apple.security.application-groups': ['group.com.alexivanov.atlantica'],
+    'com.apple.security.application-groups': [APP_GROUP],
   },
   frameworks: [
     'SwiftUI',
