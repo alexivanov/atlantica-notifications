@@ -1,4 +1,4 @@
-import { randomUUID } from 'node:crypto';
+import { createHash, randomUUID } from 'node:crypto';
 import { resolve } from 'node:path';
 import cookie from '@fastify/cookie';
 import fstatic from '@fastify/static';
@@ -8,6 +8,7 @@ import cron from 'node-cron';
 import {
   CATEGORIES,
   CRON,
+  DEV_ALLOW_ORIGIN,
   HOST,
   ICS_TOKEN,
   LEAD_MINUTES,
@@ -18,11 +19,16 @@ import {
   type Category,
 } from './config.js';
 import {
+  currentIdentity,
+  hashToken,
   isConfigured,
   issueSession,
   matchInviteToken,
+  mintDeviceToken,
+  ownerId,
   readSession,
   requireSession,
+  setDeviceLookup,
 } from './auth.js';
 import { buildIcs } from './ics.js';
 import { dispatchDue, pruneOld, suppressBackfill } from './notify/dispatcher.js';
@@ -41,6 +47,26 @@ await app.register(fstatic, {
   index: false,
 });
 
+/**
+ * Development-only CORS.
+ *
+ * The native app uses platform fetch, which has no same-origin policy, so this
+ * is never needed in production and stays off unless DEV_ALLOW_ORIGIN is set.
+ * It exists so `expo start --web` (served from a different port) can talk to a
+ * local server while developing the app UI.
+ */
+if (DEV_ALLOW_ORIGIN) {
+  app.addHook('onRequest', async (req, reply) => {
+    reply.header('Access-Control-Allow-Origin', DEV_ALLOW_ORIGIN);
+    reply.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, If-None-Match');
+    reply.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    reply.header('Access-Control-Expose-Headers', 'ETag');
+    reply.header('Access-Control-Allow-Credentials', 'true');
+    if (req.method === 'OPTIONS') await reply.code(204).send();
+  });
+  app.log.warn(`CORS enabled for ${DEV_ALLOW_ORIGIN} -- development only.`);
+}
+
 /* ------------------------------------------------------------------ *
  * Auth
  * ------------------------------------------------------------------ */
@@ -52,6 +78,43 @@ app.get<{ Params: { token: string } }>('/s/:token', async (req, reply) => {
   issueSession(reply, owner);
   return reply.redirect('/');
 });
+
+/**
+ * Native clients redeem an invite token once for a long-lived bearer token,
+ * which they keep in the Keychain. The invite tokens themselves stay valid --
+ * they are the shared secret for both people, not single-use.
+ */
+app.post<{ Body: { token?: string; label?: string } }>(
+  '/api/auth/redeem',
+  async (req, reply) => {
+    const supplied = req.body?.token?.trim();
+    if (!supplied) return reply.code(400).send({ error: 'token required' });
+
+    const owner = matchInviteToken(supplied);
+    if (!owner) {
+      // Deliberately vague, and no timing signal -- matchInviteToken compares
+      // in constant time.
+      return reply.code(401).send({ error: 'invalid invite token' });
+    }
+
+    const { token, tokenHash } = mintDeviceToken();
+    const label = (req.body?.label ?? 'device').toString().slice(0, 60);
+
+    await store.update((s) => {
+      s.devices ??= [];
+      s.devices.push({
+        tokenHash,
+        owner: ownerId(owner),
+        label,
+        createdAt: new Date().toISOString(),
+        lastSeenAt: new Date().toISOString(),
+      });
+    });
+
+    // The only time the plaintext token is ever transmitted.
+    return { token, leadMinutes: LEAD_MINUTES, timezone: RESORT_TZ };
+  },
+);
 
 app.get('/', async (req, reply) => {
   if (!readSession(req)) {
@@ -74,7 +137,7 @@ app.get('/', async (req, reply) => {
 const authed = { preHandler: requireSession };
 
 /** Everything from now to the end of the horizon, grouped client-side. */
-app.get('/api/schedule', authed, async () => {
+app.get('/api/schedule', authed, async (req, reply) => {
   const state = await store.load();
   const now = DateTime.now().setZone(RESORT_TZ);
   const cutoff = now.startOf('day');
@@ -85,6 +148,22 @@ app.get('/api/schedule', authed, async () => {
       return start.isValid && start >= cutoff;
     })
     .sort((a, b) => a.startsAt.localeCompare(b.startsAt));
+
+  // ETag covers the schedule content only -- deliberately not `now`, which
+  // changes every request and would make every revalidation a full download.
+  // The app caches this payload for offline use, so a cheap 304 is the common
+  // case when it wakes up to re-arm reminders.
+  const etag = `W/"${createHash('sha256')
+    .update(JSON.stringify(upcoming))
+    .digest('base64url')
+    .slice(0, 27)}"`;
+
+  reply.header('ETag', etag);
+  reply.header('Cache-Control', 'private, max-age=0, must-revalidate');
+
+  if (req.headers['if-none-match'] === etag) {
+    return reply.code(304).send();
+  }
 
   return {
     now: now.toISO(),
@@ -97,14 +176,19 @@ app.get('/api/schedule', authed, async () => {
 });
 
 app.get('/api/config', authed, async (req) => {
-  const id = readSession(req)!;
+  const id = currentIdentity(req)!;
   const state = await store.load();
   const mine = state.subscriptions.filter((s) => s.owner === id);
   return {
     vapidPublicKey: VAPID.publicKey,
     leadMinutes: LEAD_MINUTES,
+    timezone: RESORT_TZ,
     subscribed: mine.length > 0,
-    enabled: mine[0]?.enabled ?? { entertainment: true, daytime: true },
+    // Prefer the standalone preference record; fall back to the subscription
+    // for PWA installs that predate it.
+    enabled:
+      state.preferences?.[id] ??
+      mine[0]?.enabled ?? { entertainment: true, daytime: true },
   };
 });
 
@@ -115,7 +199,7 @@ interface SubscribeBody {
 }
 
 app.post<{ Body: SubscribeBody }>('/api/subscribe', authed, async (req, reply) => {
-  const id = readSession(req)!;
+  const id = currentIdentity(req)!;
   const { endpoint, keys } = req.body ?? ({} as SubscribeBody);
 
   if (!endpoint || !keys?.p256dh || !keys?.auth) {
@@ -150,9 +234,13 @@ app.post<{ Body: { enabled: Record<string, boolean> } }>(
   '/api/preferences',
   authed,
   async (req) => {
-    const id = readSession(req)!;
+    const id = currentIdentity(req)!;
     const enabled = normaliseEnabled(req.body?.enabled);
     await store.update((s) => {
+      s.preferences ??= {};
+      s.preferences[id] = enabled;
+      // Keep any push subscriptions in step, so the server-side dispatcher
+      // (still used by the PWA) respects the same toggles.
       for (const sub of s.subscriptions) {
         if (sub.owner === id) sub.enabled = enabled;
       }
@@ -163,7 +251,7 @@ app.post<{ Body: { enabled: Record<string, boolean> } }>(
 
 /** Fires a notification immediately, to prove delivery end-to-end on a phone. */
 app.post('/api/test-notification', authed, async (req, reply) => {
-  const id = readSession(req)!;
+  const id = currentIdentity(req)!;
   const state = await store.load();
   const mine = state.subscriptions.filter((s) => s.owner === id);
   if (mine.length === 0) {
@@ -241,6 +329,16 @@ async function boot() {
     app.log.warn('ICS_TOKEN not set -- the calendar feed will return 404.');
   }
   configurePush();
+
+  // Bearer-token auth needs to resolve a token hash to an owner. Injected here
+  // rather than imported inside auth.ts, which would create a cycle with the
+  // store.
+  setDeviceLookup((tokenHash) => {
+    const s = store.peek();
+    if (!s) return null;
+    const device = s.devices?.find((d) => d.tokenHash === tokenHash);
+    return device ? device.owner : null;
+  });
 
   const state = await store.load();
   const firstRun = !state.initialised;

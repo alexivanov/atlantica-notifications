@@ -2,10 +2,16 @@ node_modules/
 dist/
 *.log
 
-# Runtime state: push subscriptions and sent-reminder bookkeeping.
-data/state.json
-data/state.json.*.tmp
+# Runtime state: push subscriptions, device tokens, sent-reminder bookkeeping.
+packages/server/data/state.json
+packages/server/data/state.json.*.tmp
 
 # Secrets -- VAPID keys and invite tokens.
 .env
 .env.local
+
+# Expo
+packages/app/.expo/
+packages/app/ios/
+packages/app/android/
+packages/app/dist/

@@ -1,0 +1,81 @@
+import type { ExpoConfig } from 'expo/config';
+
+/**
+ * The API host the app talks to. Override per-build with EXPO_PUBLIC_API_URL
+ * (e.g. in an EAS build profile) so a dev build can point at a laptop.
+ */
+const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'https://atlantica-notifications.fly.dev';
+
+const BUNDLE_ID = 'com.alexivanov.atlantica';
+
+const config: ExpoConfig = {
+  name: 'Atlantica',
+  slug: 'atlantica-notifications',
+  version: '1.0.0',
+  orientation: 'portrait',
+  scheme: 'atlantica',
+  // New Architecture is the default from SDK 57; no flag needed.
+  userInterfaceStyle: 'dark',
+
+  ios: {
+    bundleIdentifier: BUNDLE_ID,
+    // Required by @bacons/apple-targets to sign the widget extension. Find it
+    // at developer.apple.com → Membership, or in Xcode's signing tab, and set
+    // APPLE_TEAM_ID (locally in .env, or via `eas secret:create`).
+    appleTeamId: process.env.APPLE_TEAM_ID,
+    supportsTablet: false,
+    infoPlist: {
+      // Required for expo-background-task to re-arm reminders while the app is
+      // backgrounded.
+      UIBackgroundModes: ['processing'],
+      BGTaskSchedulerPermittedIdentifiers: [
+        'com.expo.modules.backgroundtask.processing',
+      ],
+    },
+    entitlements: {
+      // Shared container so the WidgetKit extension can read the schedule the
+      // app writes. Widget extensions run in a separate process and cannot
+      // reach the app's own storage.
+      'com.apple.security.application-groups': [`group.${BUNDLE_ID}`],
+    },
+  },
+
+  android: {
+    package: BUNDLE_ID,
+    permissions: [
+      // Android 12+ requires this for alarms to fire at an exact time rather
+      // than being batched into a maintenance window.
+      'android.permission.SCHEDULE_EXACT_ALARM',
+      'android.permission.POST_NOTIFICATIONS',
+      'android.permission.RECEIVE_BOOT_COMPLETED',
+    ],
+  },
+
+  plugins: [
+    'expo-router',
+    'expo-secure-store',
+    'expo-background-task',
+    [
+      'expo-notifications',
+      {
+        color: '#f2b880',
+      },
+    ],
+    // Builds the Swift widget + Live Activity targets under ./targets.
+    '@bacons/apple-targets',
+  ],
+
+  extra: {
+    apiUrl: API_URL,
+    appGroup: `group.${BUNDLE_ID}`,
+    eas: {
+      projectId: process.env.EAS_PROJECT_ID ?? '00000000-0000-0000-0000-000000000000',
+    },
+  },
+
+  experiments: {
+    typedRoutes: true,
+  },
+};
+
+export default config;

@@ -41,6 +41,13 @@ export const CRON = {
   dispatch: process.env.DISPATCH_CRON ?? '* * * * *',
 };
 
+/**
+ * Development-only CORS origin (e.g. "http://127.0.0.1:8100" for
+ * `expo start --web`). Unset in production -- the native app uses platform
+ * fetch, which has no same-origin policy, and the PWA is same-origin.
+ */
+export const DEV_ALLOW_ORIGIN = process.env.DEV_ALLOW_ORIGIN ?? '';
+
 export const PORT = Number(process.env.PORT ?? 8080);
 export const HOST = process.env.HOST ?? '0.0.0.0';
 
@@ -78,5 +85,6 @@ export const ICS_TOKEN = process.env.ICS_TOKEN ?? '';
 /** Secret used to sign the session cookie. */
 export const COOKIE_SECRET = process.env.COOKIE_SECRET ?? '';
 
-export const CATEGORIES = ['entertainment', 'daytime'] as const;
-export type Category = (typeof CATEGORIES)[number];
+// Defined in @atlantica/shared so the server and the native app cannot drift.
+export { CATEGORIES } from '@atlantica/shared';
+export type { Category } from '@atlantica/shared';

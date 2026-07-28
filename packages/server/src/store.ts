@@ -66,6 +66,17 @@ async function persist(store: StoreShape): Promise<void> {
   cache = store;
 }
 
+/**
+ * Synchronous read of the already-loaded state, or null before the first load.
+ *
+ * Used only by the bearer-token lookup, which sits in a Fastify preHandler and
+ * must be synchronous. Safe because the server loads the store during boot,
+ * long before it accepts a request.
+ */
+export function peek(): StoreShape | null {
+  return cache;
+}
+
 /** Test hook. */
 export function _reset(): void {
   cache = null;
