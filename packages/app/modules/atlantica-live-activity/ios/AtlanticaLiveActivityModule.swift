@@ -7,14 +7,14 @@ import ExpoModulesCore
 /// widget timelines are already provided by @bacons/apple-targets'
 /// `ExtensionStorage`, so this module only covers what that does not --
 /// ActivityKit.
-public class AtlanticaWidgetModule: Module {
+public class AtlanticaLiveActivityModule: Module {
     /// Activities are referenced by id from JS so they can be ended later.
     /// `Any` because `Activity<T>` is only available from iOS 16.2 and stored
     /// properties cannot carry an availability annotation.
     private static var activities: [String: Any] = [:]
 
     public func definition() -> ModuleDefinition {
-        Name("AtlanticaWidget")
+        Name("AtlanticaLiveActivity")
 
         AsyncFunction("areLiveActivitiesEnabled") { () -> Bool in
             if #available(iOS 16.2, *) {

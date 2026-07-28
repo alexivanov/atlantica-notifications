@@ -13,4 +13,15 @@
 const BUNDLE_ID = 'com.alexivanov.atlantica';
 const APP_GROUP = `group.${BUNDLE_ID}`;
 
-module.exports = { BUNDLE_ID, APP_GROUP };
+/**
+ * Apple Developer Team ID, needed to sign the app and the widget extension.
+ *
+ * Not a secret -- it is embedded in the provisioning profile of every shipped
+ * app and is trivially readable from any .ipa -- so it lives here rather than
+ * in an env var, which keeps `expo prebuild` and EAS builds working with no
+ * extra setup. Override with APPLE_TEAM_ID if you ever build under a different
+ * team.
+ */
+const APPLE_TEAM_ID = process.env.APPLE_TEAM_ID || '6924F43338';
+
+module.exports = { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID };

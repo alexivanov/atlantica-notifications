@@ -48,13 +48,20 @@ EXPO_PUBLIC_API_URL=http://<your-lan-ip>:8080 npx expo start
 ## Building the app
 
 Requires **Xcode** (not just Command Line Tools) and an Apple Developer account.
+The team ID is set in `identifiers.js`; override with `APPLE_TEAM_ID` if needed.
 
 ```sh
 cd packages/app
-export APPLE_TEAM_ID=XXXXXXXXXX      # developer.apple.com → Membership
-npx expo prebuild                     # generates ios/ incl. the widget target
+npx expo prebuild --platform ios      # generates ios/ incl. the widget target
 npx expo run:ios                      # or: eas build --profile development
 ```
+
+`ios/` is generated and gitignored — never edit it by hand, `--clean` wipes it.
+
+The **App Group** `group.com.alexivanov.atlantica` must exist on the Apple
+Developer portal and be enabled for both the app and the widget App IDs.
+`eas build` registers capabilities automatically; building locally for a device
+may require adding it by hand at developer.apple.com → Identifiers.
 
 The widget and Live Activity need a **custom dev client** — they do not exist in
 Expo Go. Use the `development` EAS profile, or `expo run:ios` locally.
@@ -126,10 +133,19 @@ raises rather than reporting "nothing on tonight".
   definition (WidgetKit/ActivityKit, Swift, under `packages/app/targets/`).
   Android has no Live Activity equivalent and uses Glance for widgets, so those
   are a separate later decision — they do not port.
-- `AtlanticaActivityAttributes` lives in `targets/_shared` because the app
-  target starts the activity and the extension renders it. Defining it twice
-  would compile but produce two distinct types, and `Activity.request` would
-  never match the widget's configuration.
+- `AtlanticaActivityAttributes` must be compiled into **both** the app target
+  and the widget extension — the app starts the activity, the extension renders
+  it. The canonical file lives in `modules/atlantica-live-activity/ios/`
+  (CocoaPods silently ignores sources outside a pod's root, so it has to be
+  there) and `targets/_shared/` symlinks to it. Two separate declarations would
+  compile and then silently never match.
+- The Live Activity pod is named `AtlanticaLiveActivity`, **not**
+  `AtlanticaWidget`. The widget extension target already produces a module by
+  that name, and the collision made `import AtlanticaWidget` in Expo's
+  generated provider resolve to the extension — so the module's class was
+  "not found" despite compiling fine.
+- A local Expo module's podspec needs `DEFINES_MODULE => YES`; without it the
+  pod compiles but exports no Swift module for the provider to import.
 - **Android**, when added, needs `SCHEDULE_EXACT_ALARM` (already declared) for
   alarms to fire at an exact time rather than being batched.
 - `DEV_ALLOW_ORIGIN` and the localStorage fallback in `src/storage.ts` exist

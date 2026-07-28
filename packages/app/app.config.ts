@@ -8,9 +8,10 @@ const API_URL = process.env.EXPO_PUBLIC_API_URL ?? 'https://atlantica-notificati
 
 // Shared with the widget target's config -- see identifiers.js.
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { BUNDLE_ID, APP_GROUP } = require('./identifiers.js') as {
+const { BUNDLE_ID, APP_GROUP, APPLE_TEAM_ID } = require('./identifiers.js') as {
   BUNDLE_ID: string;
   APP_GROUP: string;
+  APPLE_TEAM_ID: string;
 };
 
 const config: ExpoConfig = {
@@ -24,10 +25,8 @@ const config: ExpoConfig = {
 
   ios: {
     bundleIdentifier: BUNDLE_ID,
-    // Required by @bacons/apple-targets to sign the widget extension. Find it
-    // at developer.apple.com → Membership, or in Xcode's signing tab, and set
-    // APPLE_TEAM_ID (locally in .env, or via `eas secret:create`).
-    appleTeamId: process.env.APPLE_TEAM_ID,
+    // Required by @bacons/apple-targets to sign the widget extension.
+    appleTeamId: APPLE_TEAM_ID,
     supportsTablet: false,
     infoPlist: {
       // Required for expo-background-task to re-arm reminders while the app is

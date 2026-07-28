@@ -28,7 +28,7 @@ interface LiveActivityBridge {
  */
 function liveActivities(): LiveActivityBridge | null {
   if (Platform.OS !== 'ios') return null;
-  return (NativeModules.AtlanticaWidget as LiveActivityBridge | undefined) ?? null;
+  return (NativeModules.AtlanticaLiveActivity as LiveActivityBridge | undefined) ?? null;
 }
 
 export const WIDGET_KEY = 'upcoming';
