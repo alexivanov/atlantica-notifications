@@ -13,7 +13,8 @@
     "dev": "tsc && node dist/src/index.js",
     "test": "tsc && node --test dist/test/*.test.js",
     "scrape": "tsc && node dist/src/scripts/scrape-once.js",
-    "keys": "web-push generate-vapid-keys"
+    "keys": "web-push generate-vapid-keys",
+    "setup-clerk": "tsc && node dist/src/scripts/setup-clerk.js"
   },
   "dependencies": {
     "@atlantica/shared": "*",
