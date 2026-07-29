@@ -181,6 +181,7 @@ app.get('/api/schedule', authed, async (req, reply) => {
     leadMinutes: LEAD_MINUTES,
     lastScrapeAt: state.lastScrapeAt,
     lastScrapeError: state.lastScrapeError,
+    daytimeSourceChangedAt: state.daytimeSourceChangedAt ?? null,
     occurrences: upcoming,
   };
 });
@@ -314,6 +315,7 @@ app.get('/healthz', async () => {
     subscriptions: state.subscriptions.length,
     lastScrapeAt: state.lastScrapeAt,
     lastScrapeError: state.lastScrapeError,
+    daytimeSourceChangedAt: state.daytimeSourceChangedAt ?? null,
   };
 });
 

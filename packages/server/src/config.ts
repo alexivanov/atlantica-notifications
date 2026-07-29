@@ -85,6 +85,51 @@ export const ICS_TOKEN = process.env.ICS_TOKEN ?? '';
 /** Secret used to sign the session cookie. */
 export const COOKIE_SECRET = process.env.COOKIE_SECRET ?? '';
 
+/* ------------------------------------------------------------------ *
+ * Clerk
+ * ------------------------------------------------------------------ */
+
+export const CLERK = {
+  secretKey: process.env.CLERK_SECRET_KEY ?? '',
+  /**
+   * Clerk's JWKS public key (PEM). Supplying it lets tokens be verified
+   * locally, with no Clerk round-trip on every request -- which matters because
+   * this server is a single small machine and the app polls it on every
+   * foreground.
+   */
+  jwtKey: process.env.CLERK_JWT_KEY ?? '',
+  /** Optional; rejects tokens minted for a different frontend. */
+  authorizedParties: (process.env.CLERK_AUTHORIZED_PARTIES ?? '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean),
+};
+
+/**
+ * Authorization allowlists.
+ *
+ * Clerk answers "who is this?"; these answer "are they allowed?". Clerk's own
+ * Restricted sign-up mode is the primary gate, but a dashboard setting is easy
+ * to change by accident, so the server keeps its own list. Ids are preferred
+ * over emails: they are stable, and they keep personal data out of config.
+ */
+export const ALLOWED_USER_IDS = (process.env.ALLOWED_USER_IDS ?? '')
+  .split(',')
+  .map((s) => s.trim())
+  .filter(Boolean);
+
+export const ALLOWED_EMAILS = (process.env.ALLOWED_EMAILS ?? '')
+  .split(',')
+  .map((s) => s.trim().toLowerCase())
+  .filter(Boolean);
+
+/**
+ * The "open it up later" switch. When true, anyone who can sign in through
+ * Clerk is allowed. Off by default -- turning it on makes the schedule readable
+ * by anyone who registers.
+ */
+export const OPEN_SIGNUP = process.env.OPEN_SIGNUP === 'true';
+
 // Defined in @atlantica/shared so the server and the native app cannot drift.
 export { CATEGORIES } from '@atlantica/shared';
 export type { Category } from '@atlantica/shared';

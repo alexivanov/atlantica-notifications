@@ -52,6 +52,15 @@ export interface StoreShape {
   sent: Record<string, string>;
   /** Content hash of the daytime PDF, to notice the resort republishing it. */
   daytimeSource: { pdfUrl: string; sha256: string; checkedAt: string } | null;
+  /**
+   * When the resort last republished the daytime PDF.
+   *
+   * The prompt to re-transcribe data/daytime-schedule.json used to be a push
+   * notification. Push is going away with the PWA, so the signal is persisted
+   * and surfaced through the API instead -- losing it would let the daytime
+   * timetable drift silently out of date.
+   */
+  daytimeSourceChangedAt: string | null;
   /** Set once the first scrape completes, so we can suppress a backfill burst. */
   initialised: boolean;
   lastScrapeAt: string | null;
@@ -66,6 +75,7 @@ export function emptyStore(): StoreShape {
     preferences: {},
     sent: {},
     daytimeSource: null,
+    daytimeSourceChangedAt: null,
     initialised: false,
     lastScrapeAt: null,
     lastScrapeError: null,

@@ -29,6 +29,7 @@ const config: ExpoConfig = {
 
   ios: {
     bundleIdentifier: BUNDLE_ID,
+    usesAppleSignIn: true,
     // Required by @bacons/apple-targets to sign the widget extension.
     appleTeamId: APPLE_TEAM_ID,
     supportsTablet: false,
@@ -72,6 +73,11 @@ const config: ExpoConfig = {
     'expo-router',
     'expo-secure-store',
     'expo-background-task',
+    '@clerk/expo',
+    'expo-web-browser',
+    // Sign in with Apple. The capability must also be enabled on the App ID;
+    // EAS registers it during credential setup.
+    'expo-apple-authentication',
     [
       'expo-notifications',
       {
@@ -85,6 +91,10 @@ const config: ExpoConfig = {
   extra: {
     apiUrl: API_URL,
     appGroup: APP_GROUP,
+    // Core 3 requires publishableKey be passed to <ClerkProvider> explicitly:
+    // env vars inside node_modules are not inlined in production RN builds, so
+    // reading process.env from within Clerk would come back undefined.
+    clerkPublishableKey: process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY ?? '',
     // Omitted entirely until set, so `eas init` reports a clear "not
     // configured" rather than chasing a bogus placeholder UUID.
     ...(EAS_PROJECT_ID ? { eas: { projectId: EAS_PROJECT_ID } } : {}),

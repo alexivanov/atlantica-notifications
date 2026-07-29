@@ -13,10 +13,11 @@ import {
 import { Link, useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import type { Occurrence, SchedulePayload } from '@atlantica/shared';
+import { useAuth } from '@clerk/expo';
 import {
   AuthError,
+  ForbiddenError,
   fetchSchedule,
-  getDeviceToken,
   getLocalPreferences,
 } from '../src/api';
 import { armReminders } from '../src/notifications';
@@ -38,6 +39,7 @@ import {
 
 export default function ScheduleScreen() {
   const router = useRouter();
+  const { isLoaded, isSignedIn } = useAuth();
   const insets = useSafeAreaInsets();
 
   const [payload, setPayload] = useState<SchedulePayload | null>(null);
@@ -82,15 +84,18 @@ export default function ScheduleScreen() {
 
   const load = useCallback(
     async (isRefresh = false) => {
+      // Clerk restores its session asynchronously; acting before it has loaded
+      // would look like "signed out" and bounce to the sign-in screen on every
+      // cold start.
+      if (!isLoaded) return;
+
+      if (!isSignedIn) {
+        router.replace('/signin');
+        return;
+      }
+
       isRefresh ? setRefreshing(true) : setLoading(true);
       try {
-        // Inside the try: a Keychain read can fail, and an unhandled rejection
-        // here would leave the spinner up permanently with no way forward.
-        if (!(await getDeviceToken())) {
-          router.replace('/signin');
-          return;
-        }
-
         const result = await fetchSchedule();
         setPayload(result.payload);
         setFromCache(result.fromCache);
@@ -113,13 +118,22 @@ export default function ScheduleScreen() {
           router.replace('/signin');
           return;
         }
+        if (err instanceof ForbiddenError) {
+          // Signed in, but not on the allowlist. Bouncing to sign-in would
+          // just loop; say so instead.
+          setError(err.message);
+          return;
+        }
+        // Anything else (including OfflineError) leaves the user signed in.
+        // fetchSchedule already falls back to cache when it can; if there is no
+        // cache yet there is genuinely nothing to show, so say so quietly.
         setError((err as Error).message);
       } finally {
         setLoading(false);
         setRefreshing(false);
       }
     },
-    [router],
+    [router, isLoaded, isSignedIn],
   );
 
   useEffect(() => {
@@ -186,6 +200,15 @@ export default function ScheduleScreen() {
       {error && !fromCache && (
         <View style={[styles.banner, styles.bannerWarn]}>
           <Text style={styles.bannerText}>{error}</Text>
+        </View>
+      )}
+
+      {payload?.daytimeSourceChangedAt && (
+        <View style={[styles.banner, styles.bannerWarn]}>
+          <Text style={styles.bannerText}>
+            The resort published a new daytime activities sheet. Times below may
+            be out of date until it is re-checked.
+          </Text>
         </View>
       )}
 

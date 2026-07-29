@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { theme } from '../src/theme';
+import { AuthProvider } from '../src/clerk';
 import { registerBackgroundRearm } from '../src/backgroundTask';
 
 export default function RootLayout() {
@@ -13,6 +14,7 @@ export default function RootLayout() {
   }, []);
 
   return (
+    <AuthProvider>
     <SafeAreaProvider>
       <StatusBar style="light" />
       <Stack
@@ -28,5 +30,6 @@ export default function RootLayout() {
         <Stack.Screen name="signin" options={{ title: 'Sign in', headerShown: false }} />
       </Stack>
     </SafeAreaProvider>
+    </AuthProvider>
   );
 }

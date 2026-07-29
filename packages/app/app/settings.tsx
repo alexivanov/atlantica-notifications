@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { MAX_SCHEDULED } from '@atlantica/shared';
+import { useAuth } from '@clerk/expo';
 import {
   DEFAULT_PREFERENCES,
-  clearDeviceToken,
   fetchSchedule,
   getLocalPreferences,
   pushPreferences,
@@ -34,6 +34,7 @@ import { formatClock, theme } from '../src/theme';
 
 export default function SettingsScreen() {
   const router = useRouter();
+  const { signOut } = useAuth();
   const [prefs, setPrefs] = useState<Preferences>(DEFAULT_PREFERENCES);
   const [permission, setPermission] = useState<'granted' | 'denied' | 'undetermined'>(
     'undetermined',
@@ -107,8 +108,8 @@ export default function SettingsScreen() {
     if (granted) await rearm(prefs);
   }
 
-  async function signOut() {
-    await clearDeviceToken();
+  async function handleSignOut() {
+    await signOut();
     router.replace('/signin');
   }
 
@@ -231,7 +232,7 @@ export default function SettingsScreen() {
         )}
       </View>
 
-      <Pressable style={styles.signOut} onPress={signOut}>
+      <Pressable style={styles.signOut} onPress={handleSignOut}>
         <Text style={styles.signOutText}>Sign out</Text>
       </Pressable>
     </ScrollView>

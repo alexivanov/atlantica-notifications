@@ -1,5 +1,5 @@
 import { File, Paths } from 'expo-file-system';
-import { deleteSecure, getSecure, setSecure } from './storage';
+import { getSecure, setSecure } from './storage';
 import type { Category, SchedulePayload } from '@atlantica/shared';
 import { API_URL, CACHE_FILE, STORAGE } from './config';
 
@@ -16,55 +16,44 @@ import { API_URL, CACHE_FILE, STORAGE } from './config';
  * Credentials
  * ------------------------------------------------------------------ */
 
-export async function getDeviceToken(): Promise<string | null> {
-  return getSecure(STORAGE.deviceToken);
+/**
+ * Supplies a Clerk session token.
+ *
+ * Injected rather than imported because Clerk's `getToken` comes from a React
+ * hook, while this module is also used from a background task where no
+ * component tree exists.
+ */
+type TokenProvider = () => Promise<string | null>;
+
+let getAuthToken: TokenProvider = async () => null;
+
+export function setTokenProvider(fn: TokenProvider): void {
+  getAuthToken = fn;
 }
 
-export async function setDeviceToken(token: string): Promise<void> {
-  // Keychain-backed. Survives app updates, wiped on uninstall.
-  const ok = await setSecure(STORAGE.deviceToken, token);
-  if (!ok) {
-    // Failing silently here would sign the user in for one session and then
-    // mysteriously sign them out on next launch.
-    throw new Error(
-      'Signed in, but this device could not save the credential. Check that ' +
-        'the app has Keychain access and try again.',
-    );
-  }
-}
+/** Signed in, but the server says this account is not on the allowlist. */
+export class ForbiddenError extends Error {}
 
-export async function clearDeviceToken(): Promise<void> {
-  await deleteSecure(STORAGE.deviceToken);
-}
-
+/** Not signed in, or the session is genuinely invalid. */
 export class AuthError extends Error {}
 
 /**
- * Exchange an invite token for a long-lived device token.
- * The invite token itself is never stored -- only what the server issues back.
+ * Could not obtain a token -- almost always no network.
+ *
+ * Kept distinct from AuthError on purpose: treating a failed refresh as "signed
+ * out" would log someone out every time the resort wifi drops, which is exactly
+ * when they are using the app.
  */
-export async function redeemInvite(
-  inviteToken: string,
-  label: string,
-): Promise<void> {
-  const res = await fetch(`${API_URL}/api/auth/redeem`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ token: inviteToken.trim(), label }),
-  });
-
-  if (res.status === 401) throw new AuthError('That invite link is not valid.');
-  if (!res.ok) throw new Error(`Sign-in failed (HTTP ${res.status}).`);
-
-  const body = (await res.json()) as { token?: string };
-  if (!body.token) throw new Error('Server did not return a token.');
-
-  await setDeviceToken(body.token);
-}
+export class OfflineError extends Error {}
 
 async function authedFetch(path: string, init: RequestInit = {}): Promise<Response> {
-  const token = await getDeviceToken();
-  if (!token) throw new AuthError('Not signed in.');
+  let token: string | null = null;
+  try {
+    token = await getAuthToken();
+  } catch {
+    throw new OfflineError('could not refresh session');
+  }
+  if (!token) throw new OfflineError('no session token available');
 
   const res = await fetch(`${API_URL}${path}`, {
     ...init,
@@ -75,11 +64,13 @@ async function authedFetch(path: string, init: RequestInit = {}): Promise<Respon
     },
   });
 
+  // 403 means Clerk authenticated them and the server declined -- a different
+  // problem from being signed out, and signing them out would not fix it.
+  if (res.status === 403) {
+    throw new ForbiddenError('This account does not have access.');
+  }
   if (res.status === 401) {
-    // The token was revoked or the server lost its state file. Drop it so the
-    // UI falls back to the sign-in screen rather than looping on 401s.
-    await clearDeviceToken();
-    throw new AuthError('Session expired. Open your invite link again.');
+    throw new AuthError('Session expired. Please sign in again.');
   }
 
   return res;
@@ -166,7 +157,8 @@ export async function fetchSchedule(): Promise<FetchResult> {
 
     return { payload, fromCache: false, fetchedAt: entry.fetchedAt };
   } catch (err) {
-    if (err instanceof AuthError) throw err;
+    // Auth problems must surface; anything else falls back to cache.
+    if (err instanceof AuthError || err instanceof ForbiddenError) throw err;
     if (cached) {
       return {
         payload: cached.payload,

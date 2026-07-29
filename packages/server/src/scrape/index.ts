@@ -86,6 +86,12 @@ async function checkForNewDaytimePdf(): Promise<void> {
       `[daytime] PDF changed!\n  was: ${previous.pdfUrl}\n  now: ${current.pdfUrl}\n` +
         '  data/daytime-schedule.json needs re-transcribing.',
     );
+
+    // Recorded so the signal survives the removal of push: it surfaces on
+    // /healthz and in the app rather than depending on a notification.
+    await store.update((s) => {
+      s.daytimeSourceChangedAt = new Date().toISOString();
+    });
     const fresh = await store.load();
     for (const sub of fresh.subscriptions) {
       await sendTo(sub, {

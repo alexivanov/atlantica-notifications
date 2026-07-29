@@ -1,4 +1,9 @@
 import { createHmac, randomBytes, timingSafeEqual } from 'node:crypto';
+import {
+  AuthzError,
+  authenticate,
+  isConfigured as clerkConfigured,
+} from './clerkAuth.js';
 import type { FastifyReply, FastifyRequest } from 'fastify';
 import { COOKIE_SECRET, INVITE_TOKENS } from './config.js';
 
@@ -138,14 +143,50 @@ export function readIdentity(
   return readSession(req);
 }
 
-/** Fastify preHandler that rejects anything without a valid session. */
+/**
+ * Fastify preHandler. Resolves the caller through whichever scheme they used
+ * and stashes the owner id so handlers do not re-verify.
+ *
+ * Clerk is tried first and is the intended path. The legacy device-token and
+ * cookie schemes remain during the transition so existing app installs and the
+ * PWA keep working; both go when the PWA is retired.
+ */
 export async function requireSession(
   req: FastifyRequest,
   reply: FastifyReply,
 ): Promise<void> {
-  if (!currentIdentity(req)) {
-    await reply.code(401).send({ error: 'unauthorised' });
+  if (clerkConfigured()) {
+    try {
+      const claims = await authenticate(req);
+      if (claims) {
+        setResolved(req, claims.sub);
+        return;
+      }
+    } catch (err) {
+      if (err instanceof AuthzError) {
+        // Genuinely signed in, genuinely not allowed. 403 rather than 401 so
+        // the client shows "no access" instead of looping on sign-in.
+        await reply.code(403).send({ error: 'not permitted' });
+        return;
+      }
+    }
   }
+
+  const legacy = readIdentity(req, deviceLookup);
+  if (legacy) {
+    setResolved(req, legacy);
+    return;
+  }
+
+  await reply.code(401).send({ error: 'unauthorised' });
+}
+
+interface WithIdentity {
+  atlanticaOwnerId?: string;
+}
+
+function setResolved(req: FastifyRequest, ownerId: string): void {
+  (req as FastifyRequest & WithIdentity).atlanticaOwnerId = ownerId;
 }
 
 /**
@@ -158,6 +199,13 @@ export function setDeviceLookup(fn: (tokenHash: string) => string | null): void 
   deviceLookup = fn;
 }
 
+/**
+ * Owner id for the current request. Reads what requireSession resolved, so a
+ * Clerk token is not verified twice per request.
+ */
 export function currentIdentity(req: FastifyRequest): string | null {
+  const stashed = (req as FastifyRequest & WithIdentity).atlanticaOwnerId;
+  if (stashed) return stashed;
+  // Routes that read identity without going through requireSession.
   return readIdentity(req, deviceLookup);
 }

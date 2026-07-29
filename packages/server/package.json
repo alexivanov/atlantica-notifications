@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@atlantica/shared": "*",
+    "@clerk/backend": "^3.13.2",
     "@fastify/cookie": "^9.3.1",
     "@fastify/static": "^7.0.4",
     "cheerio": "^1.0.0",

@@ -61,5 +61,11 @@ export interface SchedulePayload {
   leadMinutes: number;
   lastScrapeAt: string | null;
   lastScrapeError: string | null;
+  /**
+   * Set when the resort republished the daytime activities PDF, meaning the
+   * hand-transcribed weekly grid may be out of date. Surfaced so the app can
+   * say so -- this used to be delivered as a push notification.
+   */
+  daytimeSourceChangedAt?: string | null;
   occurrences: Occurrence[];
 }
