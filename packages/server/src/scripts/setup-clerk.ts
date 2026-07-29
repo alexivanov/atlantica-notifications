@@ -35,15 +35,57 @@ if (secretKey.startsWith('sk_live_')) {
 const key: string = secretKey;
 const clerk = createClerkClient({ secretKey: key });
 
+/**
+ * Clerk API errors carry their detail in an `errors` array; the top-level
+ * `message` is often empty, which makes a bare `err.message` useless.
+ */
+function describe(err: unknown): string {
+  const e = err as {
+    status?: number;
+    message?: string;
+    errors?: { message?: string; longMessage?: string; code?: string }[];
+  };
+  const parts = (e.errors ?? [])
+    .map((x) => x.longMessage ?? x.message ?? x.code)
+    .filter(Boolean);
+  if (parts.length) return `${parts.join('; ')}${e.status ? ` (HTTP ${e.status})` : ''}`;
+  return e.message || `${JSON.stringify(err)}`.slice(0, 300);
+}
+
 async function main() {
+  // Fail early and clearly if the key is not usable at all, rather than
+  // surfacing it as a confusing failure on the first real call.
+  try {
+    const inst = await clerk.instance.get();
+    console.log(`Connected to Clerk instance ${inst.environmentType ?? ''}\n`);
+  } catch (err) {
+    console.error(`Could not reach Clerk with that secret key:\n  ${describe(err)}`);
+    process.exit(1);
+  }
+
   // 1. Close sign-up. Without this anyone who finds the app can register, and
   //    Clerk would happily authenticate them.
-  console.log('Restricting sign-up to the allowlist…');
-  await clerk.instance.updateRestrictions({
-    allowlist: true,
-    blocklist: false,
-  });
-  console.log('  done — sign-up now requires an allowlisted address.\n');
+  console.log('Checking sign-up restrictions…');
+  let restricted = false;
+  try {
+    await clerk.instance.updateRestrictions({ allowlist: true });
+    restricted = true;
+    console.log('  allowlist enabled — sign-up now requires an allowlisted address.\n');
+  } catch (err) {
+    const detail = describe(err);
+    // Clerk's newer `sign_up_mode` supersedes the legacy `allowlist` flag and
+    // the two are mutually exclusive. Being rejected for this reason means
+    // sign-up is ALREADY restricted, which is the state we wanted.
+    if (/sign-?up mode is set to restricted/i.test(detail)) {
+      restricted = true;
+      console.log('  already restricted — sign-up mode is "restricted". Nothing to do.\n');
+    } else {
+      // Keep going: the allowlist and invitations below are still worth setting
+      // up, and the server-side gate protects access regardless.
+      console.warn(`  could not set restrictions: ${detail}`);
+      console.warn('  set it by hand: Clerk dashboard → Configure → Restrictions\n');
+    }
+  }
 
   // 2. Allowlist + invite each address.
   const existing = await clerk.allowlistIdentifiers.getAllowlistIdentifierList();
@@ -60,11 +102,15 @@ async function main() {
     if (already.has(email)) {
       console.log(`allowlist: ${email} (already there)`);
     } else {
-      await clerk.allowlistIdentifiers.createAllowlistIdentifier({
-        identifier: email,
-        notify: false,
-      });
-      console.log(`allowlist: ${email} added`);
+      try {
+        await clerk.allowlistIdentifiers.createAllowlistIdentifier({
+          identifier: email,
+          notify: false,
+        });
+        console.log(`allowlist: ${email} added`);
+      } catch (err) {
+        console.log(`allowlist: ${email} failed (${describe(err)})`);
+      }
     }
 
     if (invited.has(email)) {
@@ -75,7 +121,7 @@ async function main() {
         console.log(`invite:    ${email} sent`);
       } catch (err) {
         // Most often "already has an account", which is fine.
-        console.log(`invite:    ${email} skipped (${(err as Error).message})`);
+        console.log(`invite:    ${email} skipped (${describe(err)})`);
       }
     }
   }
@@ -88,7 +134,7 @@ async function main() {
     const jwks = await clerk.jwks.getJwks();
     jwtKey = JSON.stringify(jwks);
   } catch (err) {
-    console.warn(`  could not fetch JWKS: ${(err as Error).message}`);
+    console.warn(`  could not fetch JWKS: ${describe(err)}`);
   }
 
   // 4. Any users who already exist become the id allowlist -- ids are stable
@@ -113,6 +159,14 @@ async function main() {
       '\nCLERK_JWT_KEY: copy the PEM from Clerk dashboard → API keys → "JWKS public key".',
     );
   }
+  if (!restricted) {
+    console.log(
+      '\n!! Sign-up restrictions were NOT applied. Until you enable the\n' +
+        '   Allowlist in the dashboard, anyone can register with Clerk --\n' +
+        '   only the server-side ALLOWED_* lists are stopping them.',
+    );
+  }
+
   console.log(
     '\nStill to do by hand in the dashboard (no API for these):\n' +
       '  - enable Email verification code as a sign-in method\n' +
@@ -122,6 +176,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error('\nFailed:', (err as Error).message);
+  console.error(`\nFailed: ${describe(err)}`);
   process.exit(1);
 });
