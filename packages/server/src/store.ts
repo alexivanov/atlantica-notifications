@@ -67,6 +67,25 @@ async function persist(store: StoreShape): Promise<void> {
 }
 
 /**
+ * Drop occurrences that finished more than a few days ago, so the state file
+ * does not grow without bound.
+ *
+ * Lived in the notification dispatcher until the PWA and its push stack were
+ * removed; it is store housekeeping, not a notification concern, so it moved
+ * here rather than being deleted with the rest.
+ */
+export async function pruneOld(before: Date): Promise<void> {
+  await update((s) => {
+    for (const [key, occ] of Object.entries(s.occurrences)) {
+      const start = new Date(occ.startsAt);
+      if (!Number.isNaN(start.getTime()) && start < before) {
+        delete s.occurrences[key];
+      }
+    }
+  });
+}
+
+/**
  * Synchronous read of the already-loaded state, or null before the first load.
  *
  * Used only by the bearer-token lookup, which sits in a Fastify preHandler and

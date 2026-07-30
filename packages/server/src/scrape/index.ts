@@ -2,7 +2,6 @@ import { DateTime } from 'luxon';
 import { RESORT_TZ } from '../config.js';
 import * as store from '../store.js';
 import type { Occurrence } from '../types.js';
-import { sendTo } from '../notify/push.js';
 import {
   checkDaytimeSource,
   expandWeeklySchedule,
@@ -92,14 +91,5 @@ async function checkForNewDaytimePdf(): Promise<void> {
     await store.update((s) => {
       s.daytimeSourceChangedAt = new Date().toISOString();
     });
-    const fresh = await store.load();
-    for (const sub of fresh.subscriptions) {
-      await sendTo(sub, {
-        title: 'Daytime programme updated',
-        body: 'The resort published a new weekly activity schedule. Times may have changed.',
-        tag: 'daytime-pdf-changed',
-        url: '/',
-      });
-    }
   }
 }

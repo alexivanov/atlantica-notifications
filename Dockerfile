@@ -26,13 +26,12 @@ RUN npm ci --omit=dev --workspace @atlantica/shared --workspace @atlantica/serve
 
 COPY --from=build /repo/packages/shared/dist ./packages/shared/dist
 COPY --from=build /repo/packages/server/dist ./packages/server/dist
-COPY packages/server/public ./packages/server/public
 # The transcribed weekly grid ships with the image; DATA_DIR (the mutable state
-# file) is mounted separately so a redeploy never wipes the `sent` bookkeeping.
+# file) is mounted separately so a redeploy never wipes stored preferences.
 COPY packages/server/data/daytime-schedule.json ./packages/server/data/daytime-schedule.json
 
-# The server resolves SCHEDULE_FILE / PUBLIC_DIR relative to the working
-# directory, so it must run from the server package, not the repo root.
+# The server resolves SCHEDULE_FILE relative to the working directory, so it
+# must run from the server package, not the repo root.
 WORKDIR /repo/packages/server
 
 ENV DATA_DIR=/data

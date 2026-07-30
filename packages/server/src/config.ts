@@ -36,15 +36,12 @@ export const CRON = {
   /** Re-scrape the kiosk site. The schedule barely changes; this is mostly to
    *  pick up same-day edits and to notice the site breaking. */
   scrape: process.env.SCRAPE_CRON ?? '*/30 * * * *',
-  /** Dispatch tick. MUST be finer-grained than LEAD_MINUTES, otherwise a
-   *  reminder can only ever land on a coarse boundary and will often be late. */
-  dispatch: process.env.DISPATCH_CRON ?? '* * * * *',
 };
 
 /**
  * Development-only CORS origin (e.g. "http://127.0.0.1:8100" for
  * `expo start --web`). Unset in production -- the native app uses platform
- * fetch, which has no same-origin policy, and the PWA is same-origin.
+ * fetch, which has no same-origin policy.
  */
 export const DEV_ALLOW_ORIGIN = process.env.DEV_ALLOW_ORIGIN ?? '';
 
@@ -61,29 +58,8 @@ export const DATA_DIR = process.env.DATA_DIR ?? './data';
 export const SCHEDULE_FILE =
   process.env.SCHEDULE_FILE ?? './data/daytime-schedule.json';
 
-/** Static assets for the PWA. Also working-directory relative. */
-export const PUBLIC_DIR = process.env.PUBLIC_DIR ?? './public';
-
-export const VAPID = {
-  publicKey: process.env.VAPID_PUBLIC_KEY ?? '',
-  privateKey: process.env.VAPID_PRIVATE_KEY ?? '',
-  subject: process.env.VAPID_SUBJECT ?? 'mailto:alexivanov97@gmail.com',
-};
-
-/**
- * Invite tokens -- one unguessable string per person, comma-separated.
- * Opening /s/<token> exchanges the token for a signed cookie.
- */
-export const INVITE_TOKENS = (process.env.INVITE_TOKENS ?? '')
-  .split(',')
-  .map((t) => t.trim())
-  .filter(Boolean);
-
-/** Separate token for the ICS feed, since calendar clients cannot hold cookies. */
+/** Token for the ICS feed, since calendar clients cannot do OAuth. */
 export const ICS_TOKEN = process.env.ICS_TOKEN ?? '';
-
-/** Secret used to sign the session cookie. */
-export const COOKIE_SECRET = process.env.COOKIE_SECRET ?? '';
 
 /* ------------------------------------------------------------------ *
  * Clerk

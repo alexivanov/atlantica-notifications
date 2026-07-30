@@ -4,7 +4,6 @@ import { test } from 'node:test';
 import { DateTime } from 'luxon';
 import { RESORT_TZ } from '../src/config.js';
 import { buildIcs } from '../src/ics.js';
-import { isDue } from '../src/notify/dispatcher.js';
 import {
   DateResolutionError,
   parseTimeRange,
@@ -165,26 +164,6 @@ test('expands the weekly grid into dated occurrences', async () => {
 test('daytime occurrence keys are unique across the horizon', async () => {
   const occ = expandWeeklySchedule(await loadWeeklySchedule(), CAPTURED);
   assert.equal(new Set(occ.map((o) => o.key)).size, occ.length);
-});
-
-/* -------------------------------------------------------------- *
- * Dispatch window
- * -------------------------------------------------------------- */
-
-test('fires only inside the lead-time window, and only once', () => {
-  const occ = parseEntertainment(FIXTURE, CAPTURED)[0];
-  const start = DateTime.fromISO(occ.startsAt).setZone(RESORT_TZ);
-
-  assert.equal(isDue(occ, start.minus({ minutes: 45 }), {}), false, 'too early');
-  assert.equal(isDue(occ, start.minus({ minutes: 30 }), {}), true, 'window opens');
-  assert.equal(isDue(occ, start.minus({ minutes: 5 }), {}), true, 'inside window');
-  assert.equal(isDue(occ, start.plus({ minutes: 1 }), {}), false, 'already started');
-
-  // Already sent -> never again.
-  assert.equal(
-    isDue(occ, start.minus({ minutes: 10 }), { [occ.key]: 'x' }),
-    false,
-  );
 });
 
 /* -------------------------------------------------------------- *
