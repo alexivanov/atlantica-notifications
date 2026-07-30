@@ -1,30 +1,27 @@
-import { useMemo, useState } from 'react';
 import {
   Linking,
   Pressable,
   ScrollView,
   StyleSheet,
-  Switch,
   Text,
   View,
 } from 'react-native';
-import { Stack, useLocalSearchParams } from 'expo-router';
+import { Link, Stack, useLocalSearchParams } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { isOpenAt, timeOf, weekdayOf } from '@atlantica/shared';
-import { VENUES, euro, formatPeriod, menuFor } from '../../src/dining';
-import { RESORT_TZ, theme } from '../../src/theme';
+import { VENUES, formatPeriod, menuFor } from '../../../src/dining';
+import { RESORT_TZ, theme } from '../../../src/theme';
 
 /**
- * A venue: whether it is open, what it costs you, and the full menu.
+ * A venue: whether it is open, what it costs, and its menu *sections*.
  *
- * Laid out as discrete cards rather than one long ruled list -- a 165-item bar
- * menu is unreadable as a flat run, and boxing each category gives the eye
- * somewhere to stop.
+ * Items live one level down. A bar menu runs to 165 items across 29 categories,
+ * which is an unreadable wall on one screen -- listing sections first makes it
+ * navigable.
  */
 export default function VenueScreen() {
   const { slug } = useLocalSearchParams<{ slug: string }>();
   const insets = useSafeAreaInsets();
-  const [aiOnly, setAiOnly] = useState(false);
 
   const venue = VENUES.find((v) => v.slug === slug);
   const menu = venue ? menuFor(venue) : null;
@@ -33,16 +30,6 @@ export default function VenueScreen() {
   const state = venue
     ? isOpenAt(venue, weekdayOf(now, RESORT_TZ), timeOf(now, RESORT_TZ))
     : null;
-
-  const categories = useMemo(() => {
-    if (!menu) return [];
-    if (!aiOnly) return menu.categories;
-    // "Included or discounted" -- filtering to only "included" would hide the
-    // half-price cocktails, which is most of what the filter is for.
-    return menu.categories
-      .map((c) => ({ ...c, items: c.items.filter((i) => i.allInclusive !== 'none') }))
-      .filter((c) => c.items.length > 0);
-  }, [menu, aiOnly]);
 
   if (!venue) {
     return (
@@ -59,19 +46,6 @@ export default function VenueScreen() {
     venue.restriction,
   ].filter(Boolean) as string[];
 
-  const totalItems = menu
-    ? menu.categories.reduce((n, c) => n + c.items.length, 0)
-    : 0;
-  const aiCount = menu
-    ? menu.categories.reduce(
-        (n, c) => n + c.items.filter((i) => i.allInclusive !== 'none').length,
-        0,
-      )
-    : 0;
-  // Pointless control if everything (or nothing) qualifies -- Ginger's whole
-  // menu is all-inclusive, so the toggle would just sit there doing nothing.
-  const showAiFilter = aiCount > 0 && aiCount < totalItems;
-
   return (
     <>
       <Stack.Screen options={{ title: venue.name }} />
@@ -79,9 +53,10 @@ export default function VenueScreen() {
         style={styles.root}
         contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}
       >
-        {/* Status — the first thing you want to know. */}
         {state && (
-          <View style={[styles.card, styles.statusCard, state.open && styles.statusOpen]}>
+          <View
+            style={[styles.card, styles.statusCard, state.open && styles.statusOpen]}
+          >
             <View style={[styles.dot, state.open ? styles.dotOpen : styles.dotShut]} />
             <View style={styles.flex}>
               <Text style={[styles.statusTitle, state.open && styles.statusTitleOpen]}>
@@ -144,34 +119,9 @@ export default function VenueScreen() {
           </Pressable>
         )}
 
-        {menu && (
+        {menu && menu.categories.length > 0 && (
           <>
             <Text style={styles.section}>Menu</Text>
-
-            {showAiFilter && (
-              <View style={[styles.card, styles.filterCard]}>
-                <View style={styles.flex}>
-                  <Text style={styles.filterTitle}>All-inclusive only</Text>
-                  <Text style={styles.filterSub}>
-                    {aiCount} of {totalItems} items
-                  </Text>
-                </View>
-                <Switch
-                  value={aiOnly}
-                  onValueChange={setAiOnly}
-                  trackColor={{ true: theme.accent, false: theme.card2 }}
-                  thumbColor={theme.ink}
-                />
-              </View>
-            )}
-
-            {!showAiFilter && aiCount === totalItems && totalItems > 0 && (
-              <View style={[styles.card, styles.noteCard]}>
-                <Text style={styles.noteText}>
-                  Everything on this menu is covered by all-inclusive.
-                </Text>
-              </View>
-            )}
 
             {menu.note && (
               <View style={[styles.card, styles.noteCard]}>
@@ -179,55 +129,37 @@ export default function VenueScreen() {
               </View>
             )}
 
-            {categories.map((cat) => (
-              <View key={cat.name} style={styles.menuCard}>
-                <View style={styles.catHeader}>
-                  <Text style={styles.catName}>{cat.name}</Text>
-                </View>
-
-                {cat.items.map((item, i) => (
-                  <View
-                    key={`${item.name}-${i}`}
-                    style={[styles.item, i === cat.items.length - 1 && styles.itemLast]}
-                  >
+            {menu.categories.map((cat, i) => {
+              const included = cat.items.filter(
+                (it) => it.allInclusive !== 'none',
+              ).length;
+              return (
+                <Link
+                  key={cat.name}
+                  // Indexed, not named: category names contain commas,
+                  // ampersands and slashes that do not belong in a URL segment.
+                  href={{
+                    pathname: '/venue/[slug]/[cat]',
+                    params: { slug: venue.slug, cat: String(i) },
+                  }}
+                  asChild
+                >
+                  <Pressable style={styles.catRow}>
                     <View style={styles.flex}>
-                      <Text style={styles.itemName}>{item.name}</Text>
-                      {item.description && (
-                        <Text style={styles.itemDesc}>{item.description}</Text>
-                      )}
+                      <Text style={styles.catName}>{cat.name}</Text>
+                      <Text style={styles.catMeta}>
+                        {cat.items.length} item{cat.items.length === 1 ? '' : 's'}
+                        {included > 0 &&
+                          ` · ${
+                            included === cat.items.length ? 'all' : included
+                          } all-inclusive`}
+                      </Text>
                     </View>
-
-                    <View style={styles.priceCol}>
-                      {item.allInclusive === 'included' ? (
-                        <Text style={styles.included}>Included</Text>
-                      ) : item.allInclusive === 'discounted' &&
-                        item.finalPrice !== undefined ? (
-                        <>
-                          <Text style={styles.wasPrice}>{euro(item.price!)}</Text>
-                          <Text style={styles.finalPrice}>{euro(item.finalPrice)}</Text>
-                        </>
-                      ) : item.price !== undefined ? (
-                        <Text style={styles.price}>{euro(item.price)}</Text>
-                      ) : null}
-                    </View>
-                  </View>
-                ))}
-              </View>
-            ))}
-
-            {categories.length === 0 && (
-              <View style={styles.card}>
-                <Text style={styles.muted}>
-                  Nothing on this menu is included in all-inclusive.
-                </Text>
-              </View>
-            )}
-
-            <Text style={styles.legend}>
-              Struck-through prices are the menu price; the figure beside it is
-              what an all-inclusive guest pays. Prices and availability are as
-              published by the resort.
-            </Text>
+                    <Text style={styles.chevron}>›</Text>
+                  </Pressable>
+                </Link>
+              );
+            })}
           </>
         )}
       </ScrollView>
@@ -316,56 +248,20 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     marginTop: 28,
   },
-  filterCard: { flexDirection: 'row', alignItems: 'center', gap: 12 },
-  filterTitle: { color: theme.ink, fontSize: 15, fontWeight: '600' },
-  filterSub: { color: theme.muted, fontSize: 12, marginTop: 2 },
   noteCard: { backgroundColor: 'rgba(242,184,128,0.12)' },
   noteText: { color: theme.accent, fontSize: 13, lineHeight: 19 },
 
-  menuCard: {
-    backgroundColor: theme.card,
-    borderRadius: 14,
-    marginTop: 12,
-    overflow: 'hidden',
-  },
-  catHeader: {
-    backgroundColor: theme.card2,
-    paddingHorizontal: 16,
-    paddingVertical: 11,
-  },
-  catName: {
-    color: theme.ink,
-    fontSize: 14,
-    fontWeight: '700',
-    letterSpacing: 0.3,
-  },
-  item: {
+  catRow: {
     flexDirection: 'row',
-    gap: 12,
+    alignItems: 'center',
+    backgroundColor: theme.card,
+    borderRadius: 12,
     paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: theme.card2,
+    paddingVertical: 14,
+    marginTop: 8,
+    gap: 12,
   },
-  itemLast: { borderBottomWidth: 0 },
-  itemName: { color: theme.ink, fontSize: 15, lineHeight: 20 },
-  itemDesc: { color: theme.muted, fontSize: 12, lineHeight: 17, marginTop: 4 },
-  priceCol: { alignItems: 'flex-end', minWidth: 72 },
-  price: { color: theme.ink, fontSize: 15, fontVariant: ['tabular-nums'] },
-  wasPrice: {
-    color: theme.muted,
-    fontSize: 12,
-    textDecorationLine: 'line-through',
-    fontVariant: ['tabular-nums'],
-  },
-  finalPrice: {
-    color: theme.ok,
-    fontSize: 15,
-    fontWeight: '700',
-    fontVariant: ['tabular-nums'],
-    marginTop: 1,
-  },
-  included: { color: theme.ok, fontSize: 12, fontWeight: '700' },
-
-  legend: { color: theme.muted, fontSize: 12, lineHeight: 18, marginTop: 22 },
+  catName: { color: theme.ink, fontSize: 15, fontWeight: '600' },
+  catMeta: { color: theme.muted, fontSize: 12, marginTop: 3 },
+  chevron: { color: theme.muted, fontSize: 20 },
 });

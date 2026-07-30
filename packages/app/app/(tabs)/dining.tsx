@@ -62,23 +62,6 @@ export default function DiningScreen() {
         </View>
       )}
 
-      {events.map((e) => (
-        <View key={e.name} style={styles.eventCard}>
-          <Text style={styles.eventLabel}>
-            {new Date(`${e.date}T12:00:00Z`).toLocaleDateString('en-GB', {
-              weekday: 'long',
-              day: 'numeric',
-              month: 'long',
-            })}
-          </Text>
-          <Text style={styles.eventName}>{e.chef ?? e.name}</Text>
-          <Text style={styles.eventMeta}>
-            {[e.accolade, e.venue, e.price].filter(Boolean).join(' · ')}
-          </Text>
-          {e.description && <Text style={styles.eventDesc}>{e.description}</Text>}
-          <Text style={styles.eventBook}>Book at the Reception Desk.</Text>
-        </View>
-      ))}
 
       {groups.map(({ key, title }) => {
         const items = statuses.filter((s) => s.group === key);
@@ -93,7 +76,13 @@ export default function DiningScreen() {
                 asChild
               >
                 <Pressable
-                  style={[styles.row, key !== 'open' && styles.rowDim]}
+                  // Flattened deliberately: expo-router's Link with asChild
+                  // rejects a style ARRAY on its child, so the conditional has
+                  // to be resolved here rather than left for RN to merge.
+                  style={StyleSheet.flatten([
+                    styles.row,
+                    key !== 'open' && styles.rowDim,
+                  ])}
                   accessibilityRole="button"
                   accessibilityLabel={`${venue.name}, ${
                     state.open ? 'open now' : 'closed'
@@ -106,7 +95,11 @@ export default function DiningScreen() {
                         ? formatPeriod(state.current)
                         : state.next
                           ? `Opens ${state.next.from}`
-                          : (venue.hoursNote ?? 'Hours not published')}
+                          : venue.periods.length > 0
+                            ? // It has hours, they have just finished for today.
+                              // Saying "not published" here was simply untrue.
+                              `${formatPeriod(venue.periods[0])} · done for today`
+                            : (venue.hoursNote ?? 'Hours not published')}
                     </Text>
                     {(venue.extraCharge || venue.restriction) && (
                       <Text style={styles.venueFlags}>
@@ -128,6 +121,28 @@ export default function DiningScreen() {
           </View>
         );
       })}
+
+      {events.length > 0 && (
+        <Text style={styles.section}>Special dinners</Text>
+      )}
+
+      {events.map((e) => (
+        <View key={e.name} style={styles.eventCard}>
+          <Text style={styles.eventLabel}>
+            {new Date(`${e.date}T12:00:00Z`).toLocaleDateString('en-GB', {
+              weekday: 'long',
+              day: 'numeric',
+              month: 'long',
+            })}
+          </Text>
+          <Text style={styles.eventName}>{e.chef ?? e.name}</Text>
+          <Text style={styles.eventMeta}>
+            {[e.accolade, e.venue, e.price].filter(Boolean).join(' · ')}
+          </Text>
+          {e.description && <Text style={styles.eventDesc}>{e.description}</Text>}
+          <Text style={styles.eventBook}>Book at the Reception Desk.</Text>
+        </View>
+      ))}
 
       <Text style={styles.section}>Good to know</Text>
       <Link href="/dining-info" asChild>

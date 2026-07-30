@@ -30,7 +30,8 @@ export default function RootLayout() {
         <Stack.Screen name="settings" options={{ title: 'Reminders' }} />
         <Stack.Screen name="signin" options={{ title: 'Sign in', headerShown: false }} />
         <Stack.Screen name="dining-info" options={{ title: 'Good to know' }} />
-        <Stack.Screen name="venue/[slug]" options={{ title: 'Venue' }} />
+        <Stack.Screen name="venue/[slug]/index" options={{ title: 'Venue' }} />
+        <Stack.Screen name="venue/[slug]/[cat]" options={{ title: 'Menu' }} />
       </Stack>
     </SafeAreaProvider>
     </AuthProvider>
