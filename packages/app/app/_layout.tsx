@@ -23,6 +23,10 @@ export default function RootLayout() {
           headerTintColor: theme.ink,
           headerShadowVisible: false,
           contentStyle: { backgroundColor: theme.bg },
+          // iOS takes the back label from the previous route's title, which for
+          // the tab group is the literal route name "(tabs)". Naming it here
+          // keeps that internal detail off screen.
+          headerBackTitle: 'Back',
         }}
       >
         {/* The tab bar owns its own headers. */}
@@ -30,6 +34,11 @@ export default function RootLayout() {
         <Stack.Screen name="settings" options={{ title: 'Reminders' }} />
         <Stack.Screen name="signin" options={{ title: 'Sign in', headerShown: false }} />
         <Stack.Screen name="dining-info" options={{ title: 'Good to know' }} />
+        <Stack.Screen name="search" options={{ title: 'Search' }} />
+        <Stack.Screen
+          name="lucky"
+          options={{ title: 'Feeling lucky', presentation: 'modal' }}
+        />
         <Stack.Screen name="venue/[slug]/index" options={{ title: 'Venue' }} />
         <Stack.Screen name="venue/[slug]/[cat]" options={{ title: 'Menu' }} />
       </Stack>

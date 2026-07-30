@@ -55,6 +55,21 @@ export default function DiningScreen() {
       style={styles.root}
       contentContainerStyle={{ paddingBottom: insets.bottom + 40 }}
     >
+      <View style={styles.actionRow}>
+        <Link href="/search" asChild>
+          <Pressable style={styles.actionBtn}>
+            <Text style={styles.actionIcon}>⌕</Text>
+            <Text style={styles.actionText}>Search menus</Text>
+          </Pressable>
+        </Link>
+        <Link href="/lucky" asChild>
+          <Pressable style={styles.actionBtnAccent}>
+            <Text style={styles.actionIconAccent}>◍</Text>
+            <Text style={styles.actionTextAccent}>Feeling lucky</Text>
+          </Pressable>
+        </Link>
+      </View>
+
       {theme_ && (
         <View style={styles.themeCard}>
           <Text style={styles.themeLabel}>TONIGHT AT AGORA</Text>
@@ -198,6 +213,31 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   chevron: { color: theme.muted, fontSize: 20 },
+  actionRow: { flexDirection: 'row', gap: 10, marginTop: 12 },
+  actionBtn: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    backgroundColor: theme.card,
+    borderRadius: 12,
+    paddingVertical: 13,
+  },
+  actionBtnAccent: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 8,
+    backgroundColor: theme.accent,
+    borderRadius: 12,
+    paddingVertical: 13,
+  },
+  actionIcon: { color: theme.muted, fontSize: 17 },
+  actionText: { color: theme.ink, fontSize: 14, fontWeight: '600' },
+  actionIconAccent: { color: '#24180b', fontSize: 15 },
+  actionTextAccent: { color: '#24180b', fontSize: 14, fontWeight: '700' },
   themeCard: {
     backgroundColor: theme.card2,
     borderRadius: 14,

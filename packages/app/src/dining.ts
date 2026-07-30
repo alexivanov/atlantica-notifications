@@ -2,6 +2,7 @@ import {
   isOpenAt,
   timeOf,
   weekdayOf,
+  type MenuItem,
   type OpenState,
   type Venue,
   type VenueMenu,
@@ -112,4 +113,124 @@ export function formatPeriod(p: { label?: string; from: string; to: string }): s
 /** "€9.50" / "€9.50 → €4.75" is built in the UI; this just formats one price. */
 export function euro(n: number): string {
   return `€${n.toFixed(2)}`;
+}
+
+/* ------------------------------------------------------------------ *
+ * Search
+ * ------------------------------------------------------------------ */
+
+export interface SearchHit {
+  venueSlug: string;
+  venueName: string;
+  categoryName: string;
+  /** Index of the category within the venue, for linking. */
+  categoryIndex: number;
+  item: MenuItem;
+  /** Lower is better. */
+  score: number;
+}
+
+/**
+ * Search every menu across every venue.
+ *
+ * 700 items over 10 venues is well past the point of browsing, so this is the
+ * fastest route to "where do I get a mojito". Matching is deliberately naive --
+ * substring, case-insensitive, name weighted above description -- because the
+ * corpus is small and predictable, and fuzzy matching on drink names produces
+ * more confusion than it solves.
+ */
+export function searchMenus(query: string, limit = 60): SearchHit[] {
+  const q = query.trim().toLowerCase();
+  if (q.length < 2) return [];
+
+  const hits: SearchHit[] = [];
+
+  for (const venue of VENUES) {
+    const menu = menuFor(venue);
+    if (!menu) continue;
+
+    menu.categories.forEach((cat, categoryIndex) => {
+      for (const item of cat.items) {
+        const name = item.name.toLowerCase();
+        const desc = item.description?.toLowerCase() ?? '';
+
+        let score: number | null = null;
+        if (name.startsWith(q)) score = 0;
+        else if (name.includes(q)) score = 1;
+        else if (cat.name.toLowerCase().includes(q)) score = 2;
+        else if (desc.includes(q)) score = 3;
+
+        if (score !== null) {
+          hits.push({
+            venueSlug: venue.slug,
+            venueName: venue.name,
+            categoryName: cat.name,
+            categoryIndex,
+            item,
+            score,
+          });
+        }
+      }
+    });
+  }
+
+  return hits
+    .sort((a, b) => a.score - b.score || a.item.name.localeCompare(b.item.name))
+    .slice(0, limit);
+}
+
+/* ------------------------------------------------------------------ *
+ * Feeling lucky
+ * ------------------------------------------------------------------ */
+
+export interface DrinkPick {
+  item: MenuItem;
+  venueName: string;
+  venueSlug: string;
+  categoryName: string;
+  categoryIndex: number;
+}
+
+/** Cove serves food from these; everything else on a bar menu is a drink. */
+const FOOD_CATEGORIES = new Set(['Snacks', 'Sushi']);
+
+/** Bars, in "open first" order — the selector on the lucky screen. */
+export function barVenues(now = new Date()): VenueStatus[] {
+  return venueStatuses(now).filter(({ venue }) => venue.kind === 'bar');
+}
+
+/**
+ * Drinks a given bar will pour at no extra cost.
+ *
+ * Restricted to `included` rather than "included or discounted": a discounted
+ * item still costs money, and the point of a lucky spin is something you can
+ * simply order. Food categories are excluded so The Cove does not offer sushi.
+ */
+export function drinkCandidates(venueSlug: string): DrinkPick[] {
+  const venue = VENUES.find((v) => v.slug === venueSlug && v.kind === 'bar');
+  if (!venue) return [];
+
+  const menu = menuFor(venue);
+  if (!menu) return [];
+
+  const out: DrinkPick[] = [];
+  menu.categories.forEach((cat, categoryIndex) => {
+    if (FOOD_CATEGORIES.has(cat.name)) return;
+    for (const item of cat.items) {
+      if (item.allInclusive !== 'included') continue;
+      out.push({
+        item,
+        venueName: venue.name,
+        venueSlug: venue.slug,
+        categoryName: cat.name,
+        categoryIndex,
+      });
+    }
+  });
+  return out;
+}
+
+export function pickDrink(candidates: DrinkPick[]): DrinkPick | null {
+  if (candidates.length === 0) return null;
+  return candidates[Math.floor(Math.random() * candidates.length)];
 }

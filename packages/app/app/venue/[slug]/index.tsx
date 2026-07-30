@@ -119,6 +119,18 @@ export default function VenueScreen() {
           </Pressable>
         )}
 
+        {venue.kind === 'bar' && (
+          <Link
+            href={{ pathname: '/lucky', params: { venue: venue.slug } }}
+            asChild
+          >
+            <Pressable style={styles.luckyBtn}>
+              <Text style={styles.luckyIcon}>◍</Text>
+              <Text style={styles.luckyText}>Feeling lucky — pick me a drink</Text>
+            </Pressable>
+          </Link>
+        )}
+
         {menu && menu.categories.length > 0 && (
           <>
             <Text style={styles.section}>Menu</Text>
@@ -251,6 +263,18 @@ const styles = StyleSheet.create({
   noteCard: { backgroundColor: 'rgba(242,184,128,0.12)' },
   noteText: { color: theme.accent, fontSize: 13, lineHeight: 19 },
 
+  luckyBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: 9,
+    backgroundColor: theme.card2,
+    borderRadius: 12,
+    paddingVertical: 13,
+    marginTop: 12,
+  },
+  luckyIcon: { color: theme.accent, fontSize: 16 },
+  luckyText: { color: theme.ink, fontSize: 14, fontWeight: '600' },
   catRow: {
     flexDirection: 'row',
     alignItems: 'center',
