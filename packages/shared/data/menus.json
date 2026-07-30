@@ -11,56 +11,54 @@
      {
       "name": "Sparkling Wine Brut or Demi Sec 150ml",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Sparkling Wine Brut or Demi Sec 750ml",
       "allInclusive": "included",
-      "price": 27,
-      "description": "€ 27.00"
+      "price": 27
      },
      {
       "name": "Cair Brut NV",
       "allInclusive": "none",
       "price": 60,
-      "description": "€ 60.00 Cair Winery, Rhodes Dodecanese Glowing yellow color. Aromas from peach, quince and fresh baked brioche. Rich in body with taste of fried bread, citrus and nuts. Medium to full acidity with long aftertaste. Dry Sparkling Wine , Athiri 100%"
+      "description": "Cair Winery, Rhodes Dodecanese Glowing yellow color. Aromas from peach, quince and fresh baked brioche. Rich in body with taste of fried bread, citrus and nuts. Medium to full acidity with long aftertaste. Dry Sparkling Wine , Athiri 100%"
      },
      {
       "name": "Cair Demi Sec",
       "allInclusive": "none",
       "price": 60,
-      "description": "€ 60.00 Cair Winery, Rhodes Dodecanese Aromas from mature apple, apricot, honey and fried bread. Full taste of apricot compote and baked quince. Rich thin bellows with aftertaste that lasts. Medium Dry Sparkling Wine, Athiri 100%"
+      "description": "Cair Winery, Rhodes Dodecanese Aromas from mature apple, apricot, honey and fried bread. Full taste of apricot compote and baked quince. Rich thin bellows with aftertaste that lasts. Medium Dry Sparkling Wine, Athiri 100%"
      },
      {
       "name": "Boheme Rose Demi Sec",
       "allInclusive": "none",
       "price": 60,
-      "description": "€ 60.00 Cair Winery, Rhodes Dodecanese Rose color with variety of fresh aromas like cherry, strawberry, forest fruits and roses. In taste is pleasant, intense sparkle which offers cool acidity. Excellent balance with district sweetness. Medium Dry Rose Sparkling Wine, Mandilari 80%, Muscat 20%"
+      "description": "Cair Winery, Rhodes Dodecanese Rose color with variety of fresh aromas like cherry, strawberry, forest fruits and roses. In taste is pleasant, intense sparkle which offers cool acidity. Excellent balance with district sweetness. Medium Dry Rose Sparkling Wine, Mandilari 80%, Muscat 20%"
      },
      {
       "name": "Möet Ice Imperial",
       "allInclusive": "none",
       "price": 160,
-      "description": "€ 160.00 Luis Roederer, Champagne France Deep gold lemon color, intense fruity taste from strawberries, tropical fruits, nuts and nectarines. Hints of caramel, quince marmalade and deep acidity from citrus and ginger. Champagne Demi Sec, Pinot Noir, Chardonnay, Meunier"
+      "description": "Luis Roederer, Champagne France Deep gold lemon color, intense fruity taste from strawberries, tropical fruits, nuts and nectarines. Hints of caramel, quince marmalade and deep acidity from citrus and ginger. Champagne Demi Sec, Pinot Noir, Chardonnay, Meunier"
      },
      {
       "name": "Veuve Clicquot Brut NV Yellow Label",
       "allInclusive": "none",
       "price": 165,
-      "description": "€ 165.00 Champagne France Manages to reconcile two opposing factors strength and silkiness and to hold them in perfect balance with aromatic intensity and a lot of freshness. This consistent power to please makes it ideal to enjoy with any meal. Champagne Brut, Pinot Noir, Chardonnay, Meunier"
+      "description": "Champagne France Manages to reconcile two opposing factors strength and silkiness and to hold them in perfect balance with aromatic intensity and a lot of freshness. This consistent power to please makes it ideal to enjoy with any meal. Champagne Brut, Pinot Noir, Chardonnay, Meunier"
      },
      {
       "name": "Veuve Clicquot Brut NV Rose",
       "allInclusive": "none",
       "price": 180,
-      "description": "€ 180.00 Champagne France Perfectly balanced, combining elegance and flair. Full bodied and deliciously fruity, with intense flavors of strawberries and cherries. Champagne Brut, Pinot Noir, Chardonnay, Meunier"
+      "description": "Champagne France Perfectly balanced, combining elegance and flair. Full bodied and deliciously fruity, with intense flavors of strawberries and cherries. Champagne Brut, Pinot Noir, Chardonnay, Meunier"
      },
      {
       "name": "Cristal Brut",
       "allInclusive": "none",
       "price": 510,
-      "description": "€ 510.00 Luis Roederer, Champagne France A symphony of purity and elegance. Remarkable balanced and refined with inimitable length. Silky texture and fruity aromas, complemented by a powerful mineral quality with white fruit and citrus notes. Champagne Prestigee Cuvee Brut, Pinot Noir 60%, Chardonnay 40%"
+      "description": "Luis Roederer, Champagne France A symphony of purity and elegance. Remarkable balanced and refined with inimitable length. Silky texture and fruity aromas, complemented by a powerful mineral quality with white fruit and citrus notes. Champagne Prestigee Cuvee Brut, Pinot Noir 60%, Chardonnay 40%"
      }
     ]
    },
@@ -71,91 +69,91 @@
       "name": "Merastri 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Michalakis Estate, Crete Medium to Full-bodied wine, with acidity that is remarkably fresh and relatively broad spectrum of fruit flavors. Dry white wine, Vidiano 100%"
+      "description": "Michalakis Estate, Crete Medium to Full-bodied wine, with acidity that is remarkably fresh and relatively broad spectrum of fruit flavors. Dry white wine, Vidiano 100%"
      },
      {
       "name": "Vin De Crete 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Pneumatikakis Estate, Crete Complex character with muscat aromas and citrus fruits. Lemony with flavors of white fruits, crisp acidity and a satisfying aftertaste. Dry white wine, Moschato, Romeiko"
+      "description": "Pneumatikakis Estate, Crete Complex character with muscat aromas and citrus fruits. Lemony with flavors of white fruits, crisp acidity and a satisfying aftertaste. Dry white wine, Moschato, Romeiko"
      },
      {
       "name": "Pandora 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Cavino Winery, Peloponnese Pale yellow limpid color with fine citrus aromas and crispy fruity taste. Dry white wine, Sauvignon Blanc, Roditis"
+      "description": "Cavino Winery, Peloponnese Pale yellow limpid color with fine citrus aromas and crispy fruity taste. Dry white wine, Sauvignon Blanc, Roditis"
      },
      {
       "name": "Lato 750ml",
       "allInclusive": "included",
       "price": 20,
-      "description": "€ 20.00 Michalakis Estate, Crete Medium Dry white wine, Vidiano 100%"
+      "description": "Michalakis Estate, Crete Medium Dry white wine, Vidiano 100%"
      },
      {
       "name": "Retsina Dry 750ml",
       "allInclusive": "included",
       "price": 20,
-      "description": "€ 20.00 Michalakis Estate, Crete"
+      "description": "Michalakis Estate, Crete"
      },
      {
       "name": "Ktima Michalakis Vidiano 750ml",
       "allInclusive": "none",
       "price": 31,
-      "description": "€ 31.00 Michalakis Estate, Crete Dry white wine with stone fruit aromas with pleasant minerality and freshness. Lavish in mouth with fresh fruits and lemon in aftertaste. Dry white wine, Vidiano 100%"
+      "description": "Michalakis Estate, Crete Dry white wine with stone fruit aromas with pleasant minerality and freshness. Lavish in mouth with fresh fruits and lemon in aftertaste. Dry white wine, Vidiano 100%"
      },
      {
       "name": "Moschofilero Boutari 750 ml",
       "allInclusive": "none",
       "price": 33,
-      "description": "€ 33.00 Mantinia Winery, Peloponnese Soft, aromatic with white rose and orange blossom prevailing. A fresh wine full and balanced, with a long citrus aftertaste. Dry white wine, Moschofilero 100%"
+      "description": "Mantinia Winery, Peloponnese Soft, aromatic with white rose and orange blossom prevailing. A fresh wine full and balanced, with a long citrus aftertaste. Dry white wine, Moschofilero 100%"
      },
      {
       "name": "Lefko Gramma 750ml",
       "allInclusive": "none",
       "price": 35,
-      "description": "€ 35.00 Mantinia Winery, Peloponnese Bright citrus and stone-fruit aromas and a lively minerality that evokes lemon, grapefruit and peach. Balanced and refreshing. Dry white wine, Assyrtiko 60%, Sauvignon Blanc 20%, Malagouzia 20%"
+      "description": "Mantinia Winery, Peloponnese Bright citrus and stone-fruit aromas and a lively minerality that evokes lemon, grapefruit and peach. Balanced and refreshing. Dry white wine, Assyrtiko 60%, Sauvignon Blanc 20%, Malagouzia 20%"
      },
      {
       "name": "Emery Villare 750ml",
       "allInclusive": "none",
       "price": 35,
-      "description": "€ 35.00 Emery Winery, Rhodes Dodecanese A wine with wonderful balance, intense and purely fruity. In mouth is cool, fresh and velvety. Soft with golden reflections attractive and completely harmonic. Dry white wine, Athiri 70%, Sauvignon Blanc 30%"
+      "description": "Emery Winery, Rhodes Dodecanese A wine with wonderful balance, intense and purely fruity. In mouth is cool, fresh and velvety. Soft with golden reflections attractive and completely harmonic. Dry white wine, Athiri 70%, Sauvignon Blanc 30%"
      },
      {
       "name": "Malagouzia Akrani 750ml",
       "allInclusive": "none",
       "price": 36,
-      "description": "€ 36.00 Triantafyllopoulos Estate, Kos Floral aromas with citrus and botanical character. In mouth, has brilliant body, cool acidity and soft aftertaste. Dry white wine, Malagouzia 100%"
+      "description": "Triantafyllopoulos Estate, Kos Floral aromas with citrus and botanical character. In mouth, has brilliant body, cool acidity and soft aftertaste. Dry white wine, Malagouzia 100%"
      },
      {
       "name": "Techni Alipias 750ml",
       "allInclusive": "none",
       "price": 39,
-      "description": "€ 39.00 Wine Art Estate, Drama Vibrant aromas of citrus, stone fruit, and delicate floral notes. Crisp and refreshing with balanced acidity and a refined minerality. Dry white wine, Sauvignon Blanc 50%, Assyrtiko 50%"
+      "description": "Wine Art Estate, Drama Vibrant aromas of citrus, stone fruit, and delicate floral notes. Crisp and refreshing with balanced acidity and a refined minerality. Dry white wine, Sauvignon Blanc 50%, Assyrtiko 50%"
      },
      {
       "name": "Dexameni 750ml",
       "allInclusive": "none",
       "price": 39,
-      "description": "€ 39.00 Emery Winery, Rhodes Dodecanese Aromas from apricot, figs and grilled almonds. Fruity with pleasant minerality and mediterranean herbs. Long aftertaste with vanilla hints. Dry white wine, Chardonnay, Malagouzia"
+      "description": "Emery Winery, Rhodes Dodecanese Aromas from apricot, figs and grilled almonds. Fruity with pleasant minerality and mediterranean herbs. Long aftertaste with vanilla hints. Dry white wine, Chardonnay, Malagouzia"
      },
      {
       "name": "Chardonnay Κtima Akrani 750ml",
       "allInclusive": "none",
       "price": 40,
-      "description": "€ 40.00 Triantafyllopoulos Estate, Kos Fruity and fresh with hints of pineapple, citrus, peach and white flowers with fresh spices. Excellent acidity balance and long spicy aftertaste. Dry white wine, Chardonnay 100%"
+      "description": "Triantafyllopoulos Estate, Kos Fruity and fresh with hints of pineapple, citrus, peach and white flowers with fresh spices. Excellent acidity balance and long spicy aftertaste. Dry white wine, Chardonnay 100%"
      },
      {
       "name": "Idisma Drios 750ml",
       "allInclusive": "none",
       "price": 51,
-      "description": "€ 51.00 Chardonnay Wine Art Estate, Drama Barrel aged with a golden hue and fragrant notes of tropical fruit, vanilla and honey balanced by crisp acidity and a smooth, full body. Dry white wine, Chardonnay 100%"
+      "description": "Chardonnay Wine Art Estate, Drama Barrel aged with a golden hue and fragrant notes of tropical fruit, vanilla and honey balanced by crisp acidity and a smooth, full body. Dry white wine, Chardonnay 100%"
      },
      {
       "name": "Ktima Sigala 750ml",
       "allInclusive": "none",
       "price": 71,
-      "description": "€ 71.00 Sigalas Estate, Santorini Explosive acidity which make the wine cool, thirsty and completely enjoyable. Delicate citrus flavour with mineral hints and a long aftertaste. Dry white wine, Assyrtiko 100%"
+      "description": "Sigalas Estate, Santorini Explosive acidity which make the wine cool, thirsty and completely enjoyable. Delicate citrus flavour with mineral hints and a long aftertaste. Dry white wine, Assyrtiko 100%"
      }
     ]
    },
@@ -166,55 +164,55 @@
       "name": "Merastri 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Michalakis Estate, Crete Cool and fresh, very intense and enjoyable. Hints of pomegranate and strawberry with full taste of acidity that comes in aftertaste. Dry rose wine, Mandilari 50%, Kotsifali 50%"
+      "description": "Michalakis Estate, Crete Cool and fresh, very intense and enjoyable. Hints of pomegranate and strawberry with full taste of acidity that comes in aftertaste. Dry rose wine, Mandilari 50%, Kotsifali 50%"
      },
      {
       "name": "Vin De Crete 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Pneumatikakis Estate, Crete Complex aromas of red fruits, with flavors of unripe strawberry, sour cherry and cherry. A refreshing wine with a pleasant aftertaste. Dry rose wine, Syrah 100%"
+      "description": "Pneumatikakis Estate, Crete Complex aromas of red fruits, with flavors of unripe strawberry, sour cherry and cherry. A refreshing wine with a pleasant aftertaste. Dry rose wine, Syrah 100%"
      },
      {
       "name": "Pandora 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Cavino Winery, Peloponnese Pale rose color with purple hues. Red fruits in the nose and soft and fresh in mouth. Dry rose wine, Agiorgitiko"
+      "description": "Cavino Winery, Peloponnese Pale rose color with purple hues. Red fruits in the nose and soft and fresh in mouth. Dry rose wine, Agiorgitiko"
      },
      {
       "name": "Emery Granrose 750ml",
       "allInclusive": "none",
       "price": 34,
-      "description": "€ 34.00 Emery Winery, Rhodes Dodecanese Deep rose colour. Aromas from cherry, strawberry and blueberry n the nose. Unique taste, fruity and enjoyable. Dry rose wine, Mandilaria 100%"
+      "description": "Emery Winery, Rhodes Dodecanese Deep rose colour. Aromas from cherry, strawberry and blueberry n the nose. Unique taste, fruity and enjoyable. Dry rose wine, Mandilaria 100%"
      },
      {
       "name": "Ktima Akrani 750ml",
       "allInclusive": "none",
       "price": 35,
-      "description": "€ 35.00 Akrani Estate & Triantafyllopoulos winery, Kos Shiny and normal tension rose colour. Fresh distinctive fruity and floral aromas. Cool, soft, fresh and peppery in mouth. Dry rose wine, Cabernet Sauvignon 60%, Sauvignon Blanc 40%"
+      "description": "Akrani Estate & Triantafyllopoulos winery, Kos Shiny and normal tension rose colour. Fresh distinctive fruity and floral aromas. Cool, soft, fresh and peppery in mouth. Dry rose wine, Cabernet Sauvignon 60%, Sauvignon Blanc 40%"
      },
      {
       "name": "Variete Rose 750ml",
       "allInclusive": "none",
       "price": 36,
-      "description": "€ 36.00 Lalikos winery, Kavala, Eastern Macedonia Aromas of strawberry, cherry and flowers in Variete, while the mouth follows in the same light pattern, with a nice balance of freshness-sweetness and a fruity aftertaste. Medium Dry rose wine, Grenache Rouge 100%"
+      "description": "Lalikos winery, Kavala, Eastern Macedonia Aromas of strawberry, cherry and flowers in Variete, while the mouth follows in the same light pattern, with a nice balance of freshness-sweetness and a fruity aftertaste. Medium Dry rose wine, Grenache Rouge 100%"
      },
      {
       "name": "Mega Spileo 750ml",
       "allInclusive": "none",
       "price": 38,
-      "description": "€ 38.00 Mega Spileo Estate, Achaia, Peloponnese Faint ros color with \"saumon\" shades. Aromas of citrus fruits, unripe fruits of the forest against a background of mild botany. In the mouth leaves an exuberant and cool feeling with a fruity aftertaste. Dry rose wine, Malagouzia 70%, Cabernet Franc 30%"
+      "description": "Mega Spileo Estate, Achaia, Peloponnese Faint ros color with \"saumon\" shades. Aromas of citrus fruits, unripe fruits of the forest against a background of mild botany. In the mouth leaves an exuberant and cool feeling with a fruity aftertaste. Dry rose wine, Malagouzia 70%, Cabernet Franc 30%"
      },
      {
       "name": "Techni Alipias 750ml",
       "allInclusive": "none",
       "price": 41,
-      "description": "€ 41.00 Wine Art Estate, Drama Aromas of fresh strawberries, rose petals and a hint of citrus zest. Crisp and refreshing with balanced acidity and a delicate minerality. Dry rose wine, Syrah 100%"
+      "description": "Wine Art Estate, Drama Aromas of fresh strawberries, rose petals and a hint of citrus zest. Crisp and refreshing with balanced acidity and a delicate minerality. Dry rose wine, Syrah 100%"
      },
      {
       "name": "Xinomavro 750ml",
       "allInclusive": "none",
       "price": 47,
-      "description": "€ 47.00 Gerovassiliou Winery, Epanomi A lively nose that refers mainly to red fruits such as strawberry and cherry, while not missing a hint of lemon verbena and an almost imperceptible passage of spices. It is aristocratic and elegant, with a refreshing acidity that balances the alcohol, creating a sense of harmony and has a pleasant fruity finish. Dry rose wine, Xinomavro 100%"
+      "description": "Gerovassiliou Winery, Epanomi A lively nose that refers mainly to red fruits such as strawberry and cherry, while not missing a hint of lemon verbena and an almost imperceptible passage of spices. It is aristocratic and elegant, with a refreshing acidity that balances the alcohol, creating a sense of harmony and has a pleasant fruity finish. Dry rose wine, Xinomavro 100%"
      }
     ]
    },
@@ -225,73 +223,73 @@
       "name": "Merastri 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Michalakis Estate, Crete Sweet spices and red fruits are combined in a rich complex in total. Soft tannins and acidity that makes it cool in taste. Dry red wine, Mandilari 50%, Kotsifali 50%"
+      "description": "Michalakis Estate, Crete Sweet spices and red fruits are combined in a rich complex in total. Soft tannins and acidity that makes it cool in taste. Dry red wine, Mandilari 50%, Kotsifali 50%"
      },
      {
       "name": "Vin De Crete 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Pneumatikakis Estate, Crete Unique aromas of blueberry, clove, bitter chocolate and nutmeg. Rich fatty flavor with a long aftertaste. Dry red wine, Cabernet - Syrah"
+      "description": "Pneumatikakis Estate, Crete Unique aromas of blueberry, clove, bitter chocolate and nutmeg. Rich fatty flavor with a long aftertaste. Dry red wine, Cabernet - Syrah"
      },
      {
       "name": "Pandora 750ml",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Cavino Winery, Peloponnese Deep red with violet hues. Aromatic character of red fruits and sweet spices with mild herbal notes. Soft tannins and good volume in the mouth. Dry red wine, Agiorgitiko, Cabernet Sauvignon"
+      "description": "Cavino Winery, Peloponnese Deep red with violet hues. Aromatic character of red fruits and sweet spices with mild herbal notes. Soft tannins and good volume in the mouth. Dry red wine, Agiorgitiko, Cabernet Sauvignon"
      },
      {
       "name": "Lato 750ml",
       "allInclusive": "included",
       "price": 20,
-      "description": "€ 20.00 Michalakis Estate, Crete Medium Dry red wine, Mandilari 50%, Kotsifali 50%"
+      "description": "Michalakis Estate, Crete Medium Dry red wine, Mandilari 50%, Kotsifali 50%"
      },
      {
       "name": "Dikaios Oinos 750ml",
       "allInclusive": "none",
       "price": 31,
-      "description": "€ 31.00 Akrani Estate & Triantafyllopoulos winery, Kos Deep red color with ruby reflection. Intense aromas like cherry and cassis with hints of olive and pepper. Well-balanced acidity with result a fruity long aftertaste. Dry red wine, Merlot, Syrah"
+      "description": "Akrani Estate & Triantafyllopoulos winery, Kos Deep red color with ruby reflection. Intense aromas like cherry and cassis with hints of olive and pepper. Well-balanced acidity with result a fruity long aftertaste. Dry red wine, Merlot, Syrah"
      },
      {
       "name": "Chrisolithos 750ml",
       "allInclusive": "none",
       "price": 36,
-      "description": "€ 36.00 Muses Estate, Thebes Central Greece Deep purple red color with aromas of fresh red fruits. Intense taste from black fruits, spices and soft tannins. A well-made, pleasant and serious wine. Dry red wine, Merlot 100%"
+      "description": "Muses Estate, Thebes Central Greece Deep purple red color with aromas of fresh red fruits. Intense taste from black fruits, spices and soft tannins. A well-made, pleasant and serious wine. Dry red wine, Merlot 100%"
      },
      {
       "name": "Emery Villare 750ml",
       "allInclusive": "none",
       "price": 36,
-      "description": "€ 36.00 Emery Winery, Rhodes Dodecanese Complex nose of great intensity and hints of barrel. Beautiful balance of flavours, strong structure, rich body and long aftertaste. Dry red wine, Mandilaria, Syrah"
+      "description": "Emery Winery, Rhodes Dodecanese Complex nose of great intensity and hints of barrel. Beautiful balance of flavours, strong structure, rich body and long aftertaste. Dry red wine, Mandilaria, Syrah"
      },
      {
       "name": "Limnio 750ml",
       "allInclusive": "none",
       "price": 38,
-      "description": "€ 38.00 Domain Porto Carras, Chalkidiki Expressive with aromas of ripe red berries, dried herbs and subtle hints of spice. Medium-bodied and well structured with soft tannins and balanced acidity. Dry red wine, Limnio 100%"
+      "description": "Domain Porto Carras, Chalkidiki Expressive with aromas of ripe red berries, dried herbs and subtle hints of spice. Medium-bodied and well structured with soft tannins and balanced acidity. Dry red wine, Limnio 100%"
      },
      {
       "name": "Syrah 750ml",
       "allInclusive": "none",
       "price": 41,
-      "description": "€ 41.00 Akrani Estate & Triantafyllopoulos winery, Kos Ruby red color with tile shade. Aromas from matured black fruits with hints of chocolate and caramel. Velvety in the mouth, warm and rich with the elements of ageing. Dry red wine, Syrah 100%"
+      "description": "Akrani Estate & Triantafyllopoulos winery, Kos Ruby red color with tile shade. Aromas from matured black fruits with hints of chocolate and caramel. Velvety in the mouth, warm and rich with the elements of ageing. Dry red wine, Syrah 100%"
      },
      {
       "name": "Xinomavro 750ml",
       "allInclusive": "none",
       "price": 46,
-      "description": "€ 46.00 Alpha Estate, Vineyard Hedgehog, Amyndeon Florina A complex bucket of aromas and spices. Full bodied wine with hints of mature blackberry, vanilla and sundried tomato. Long barrel aftertaste with intense flavor of quince. Dry red wine, Xinomavro 100%"
+      "description": "Alpha Estate, Vineyard Hedgehog, Amyndeon Florina A complex bucket of aromas and spices. Full bodied wine with hints of mature blackberry, vanilla and sundried tomato. Long barrel aftertaste with intense flavor of quince. Dry red wine, Xinomavro 100%"
      },
      {
       "name": "Limniona 750ml",
       "allInclusive": "none",
       "price": 48,
-      "description": "€ 48.00 Zafeirakis Estate, Thessaly Intense and impressive nose with juicy strawberries, cherries and framboise. Notes of black tea, mushrooms and herbs complement the special aromatic bouquet. On the palate it has medium body, refreshing acidity and silky tannins. Dry red wine, Limniona 100%"
+      "description": "Zafeirakis Estate, Thessaly Intense and impressive nose with juicy strawberries, cherries and framboise. Notes of black tea, mushrooms and herbs complement the special aromatic bouquet. On the palate it has medium body, refreshing acidity and silky tannins. Dry red wine, Limniona 100%"
      },
      {
       "name": "Nemea 750ml",
       "allInclusive": "none",
       "price": 61,
-      "description": "€ 61.00 Gaia Estate, Nemea Deep erythroviotic color, with aromas of great intensity, purity and complexity with components of fruit, wood, vanilla and cloves. The oiliness, the volume, the body, the structure and the taste duration complete the delicious canvas of this unusual Nemea. Dry red wine, Agiorgitiko 100%"
+      "description": "Gaia Estate, Nemea Deep erythroviotic color, with aromas of great intensity, purity and complexity with components of fruit, wood, vanilla and cloves. The oiliness, the volume, the body, the structure and the taste duration complete the delicious canvas of this unusual Nemea. Dry red wine, Agiorgitiko 100%"
      }
     ]
    },
@@ -302,19 +300,19 @@
       "name": "Dolcetto, White 750ml",
       "allInclusive": "none",
       "price": 32,
-      "description": "€ 32.00 Emery Winery, Rhodes Dodecanese Light yellow colour and well-balanced. Intense aromas, like peach, apricot and flowers. Semi sweet white wine, Muscat 70%, Athiri 30%"
+      "description": "Emery Winery, Rhodes Dodecanese Light yellow colour and well-balanced. Intense aromas, like peach, apricot and flowers. Semi sweet white wine, Muscat 70%, Athiri 30%"
      },
      {
       "name": "Dolcetto, Rose 750ml",
       "allInclusive": "none",
       "price": 32,
-      "description": "€ 32.00 Emery Winery, Rhodes Dodecanese Pink color with strong aromas of peach, raisins, pear and nuts. Rich in mouth with sweet long aftertaste. Semi sweet rose wine, Mandilaria, Muscat"
+      "description": "Emery Winery, Rhodes Dodecanese Pink color with strong aromas of peach, raisins, pear and nuts. Rich in mouth with sweet long aftertaste. Semi sweet rose wine, Mandilaria, Muscat"
      },
      {
       "name": "Dolcetto, Red 750ml",
       "allInclusive": "none",
       "price": 32,
-      "description": "€ 32.00 Emery Winery, Rhodes Dodecanese Purple color with strong aromas of dark chocolate, raisins, plum and nuts. Rich in mouth with sweet long aftertaste. Semi sweet red wine, Mandilaria, Muscat, Merlot"
+      "description": "Emery Winery, Rhodes Dodecanese Purple color with strong aromas of dark chocolate, raisins, plum and nuts. Rich in mouth with sweet long aftertaste. Semi sweet red wine, Mandilaria, Muscat, Merlot"
      }
     ]
    },
@@ -324,68 +322,57 @@
      {
       "name": "Draught Lager 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Mythos Lager 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Strongbow Apple Cider 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Non Alcohol Beer 330ml",
       "allInclusive": "included",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Gluten Free Beer 330ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Stella Artois 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amstel Radler 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Warsteiner Pilsner 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sol Light Lager 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Weissbier 500ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Guinness Irish Stout 500ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      }
     ]
    },
@@ -395,26 +382,23 @@
      {
       "name": "Ice Tea 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Sparkling Water 250ml",
       "allInclusive": "none",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Soft Drinks 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Fruit Juices 250ml",
       "allInclusive": "included",
       "price": 4.5,
-      "description": "€ 4.50 Orange, Apple, Pineapple"
+      "description": "Orange, Apple, Pineapple"
      }
     ]
    }
@@ -434,65 +418,65 @@
       "name": "Yasai Ura Maki 4pcs",
       "allInclusive": "included",
       "price": 6.5,
-      "description": "€ 6.50 Avocado, cucumber, mango, cream cheese"
+      "description": "Avocado, cucumber, mango, cream cheese"
      },
      {
       "name": "Yasai Ura Maki 8pcs",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Avocado, cucumber, mango, cream cheese"
+      "description": "Avocado, cucumber, mango, cream cheese"
      },
      {
       "name": "Shake Salmon Ura Maki 4pcs",
       "allInclusive": "included",
       "price": 7,
-      "description": "€ 7.00 Salmon, avocado, roasted sesame seeds"
+      "description": "Salmon, avocado, roasted sesame seeds"
      },
      {
       "name": "Shake Salmon Ura Maki 8pcs",
       "allInclusive": "included",
       "price": 14,
-      "description": "€ 14.00 Salmon, avocado, roasted sesame seeds"
+      "description": "Salmon, avocado, roasted sesame seeds"
      },
      {
       "name": "Spicy Salmon Ura Maki 4pcs",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Salmon, crispy onion, spicy sauce"
+      "description": "Salmon, crispy onion, spicy sauce"
      },
      {
       "name": "Spicy Salmon Ura Maki 8pcs",
       "allInclusive": "included",
       "price": 17,
-      "description": "€ 17.00 Salmon, crispy onion, spicy sauce"
+      "description": "Salmon, crispy onion, spicy sauce"
      },
      {
       "name": "Boston Ura Maki 4pcs",
       "allInclusive": "discounted",
       "price": 9,
       "finalPrice": 6.3,
-      "description": "€ 9.00 Prawn, cucumber, avocado, lettuce, mayonnaise, roasted sesame seeds"
+      "description": "Prawn, cucumber, avocado, lettuce, mayonnaise, roasted sesame seeds"
      },
      {
       "name": "Boston Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 18,
       "finalPrice": 12.6,
-      "description": "€ 18.00 Prawn, cucumber, avocado, lettuce, mayonnaise, roasted sesame seeds"
+      "description": "Prawn, cucumber, avocado, lettuce, mayonnaise, roasted sesame seeds"
      },
      {
       "name": "Ebi Tempura Ura Maki 4pcs",
       "allInclusive": "discounted",
       "price": 9.5,
       "finalPrice": 6.65,
-      "description": "€ 9.50 Deep-fried prawn, avocado, mayonnaise, tempura flakes"
+      "description": "Deep-fried prawn, avocado, mayonnaise, tempura flakes"
      },
      {
       "name": "Ebi Tempura Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 19,
       "finalPrice": 13.3,
-      "description": "€ 19.00 Deep-fried prawn, avocado, mayonnaise, tempura flakes"
+      "description": "Deep-fried prawn, avocado, mayonnaise, tempura flakes"
      }
     ]
    },
@@ -504,35 +488,35 @@
       "allInclusive": "discounted",
       "price": 30,
       "finalPrice": 21,
-      "description": "€ 30.00 Deep fried prawn, avocado, passion mayo, wrapped in cucumber slices toped with tobiko & unagi sauce"
+      "description": "Deep fried prawn, avocado, passion mayo, wrapped in cucumber slices toped with tobiko & unagi sauce"
      },
      {
       "name": "Omg Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 31,
       "finalPrice": 21.7,
-      "description": "€ 31.00 Shrimp tempura, spicy mayo, green onion, toped with spicy tuna tartar and mango"
+      "description": "Shrimp tempura, spicy mayo, green onion, toped with spicy tuna tartar and mango"
      },
      {
       "name": "Tiger Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 32,
       "finalPrice": 22.4,
-      "description": "€ 32.00 Boiled prawn, avocado, cucumber, mayonaise, wrapped in seabass slices topped with jalapeno pepper, kizam, wasabi and ponzu sauce"
+      "description": "Boiled prawn, avocado, cucumber, mayonaise, wrapped in seabass slices topped with jalapeno pepper, kizam, wasabi and ponzu sauce"
      },
      {
       "name": "Crispy Crab Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 32,
       "finalPrice": 22.4,
-      "description": "€ 32.00 Soft shell crab tempura, spicy mayo, avocado, cucumber, wrapped in tuna slices and topped with yuzu-kosho unagi sauce"
+      "description": "Soft shell crab tempura, spicy mayo, avocado, cucumber, wrapped in tuna slices and topped with yuzu-kosho unagi sauce"
      },
      {
       "name": "Toro Ura Maki Roll 8pcs",
       "allInclusive": "discounted",
       "price": 34,
       "finalPrice": 23.8,
-      "description": "€ 34.00 Bluefin tuna belly tartar, spicy creamy gochujang, spring onions, black truffle, caviar, chives"
+      "description": "Bluefin tuna belly tartar, spicy creamy gochujang, spring onions, black truffle, caviar, chives"
      }
     ]
    },
@@ -544,7 +528,7 @@
       "allInclusive": "discounted",
       "price": 30,
       "finalPrice": 21,
-      "description": "€ 30.00 An artful selection of premium, thinly sliced raw fish"
+      "description": "An artful selection of premium, thinly sliced raw fish"
      }
     ]
    },
@@ -555,13 +539,13 @@
       "name": "Miso Soup",
       "allInclusive": "included",
       "price": 17,
-      "description": "€ 17.00 Tofu, seaweed, spring onions"
+      "description": "Tofu, seaweed, spring onions"
      },
      {
       "name": "Sakana Soup",
       "allInclusive": "included",
       "price": 17,
-      "description": "€ 17.00 Salmon fillet, seabass, seaweed, spring onions"
+      "description": "Salmon fillet, seabass, seaweed, spring onions"
      }
     ]
    },
@@ -573,45 +557,45 @@
       "allInclusive": "discounted",
       "price": 17,
       "finalPrice": 11.9,
-      "description": "€ 17.00 Black Truffle and Parmesan cheese"
+      "description": "Black Truffle and Parmesan cheese"
      },
      {
       "name": "Pan Fried Gyoza \"Pastitsio\"",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Minced meat, b chamel and black Truffle"
+      "description": "Minced meat, b chamel and black Truffle"
      },
      {
       "name": "Charcoaled Roasted Broccolini",
       "allInclusive": "included",
       "price": 22,
-      "description": "€ 22.00 Beetroot hummus, chilly garlic vinegrate, sunflower seeds dukkah, manouri cream"
+      "description": "Beetroot hummus, chilly garlic vinegrate, sunflower seeds dukkah, manouri cream"
      },
      {
       "name": "Bao Buns ''Stifado''",
       "allInclusive": "included",
       "price": 23,
-      "description": "€ 23.00 Pulled beef stifado, pickled onion, confit tomato, chives mayo"
+      "description": "Pulled beef stifado, pickled onion, confit tomato, chives mayo"
      },
      {
       "name": "Tuna Tataki",
       "allInclusive": "included",
       "price": 26,
-      "description": "€ 26.00 Soy molasses, spicy mayonnaise, nori powder, orange"
+      "description": "Soy molasses, spicy mayonnaise, nori powder, orange"
      },
      {
       "name": "Sea Bass Ceviche",
       "allInclusive": "discounted",
       "price": 28,
       "finalPrice": 19.6,
-      "description": "€ 28.00 Avocado, sweet potatoes and squid ink-puffed rice, mango sorbet"
+      "description": "Avocado, sweet potatoes and squid ink-puffed rice, mango sorbet"
      },
      {
       "name": "Beef Tartare",
       "allInclusive": "discounted",
       "price": 28,
       "finalPrice": 19.6,
-      "description": "€ 28.00 Dijon vinaigrette, egg yolk confit, bread cracker and condiments"
+      "description": "Dijon vinaigrette, egg yolk confit, bread cracker and condiments"
      }
     ]
    },
@@ -622,66 +606,66 @@
       "name": "Marinated Eggplant",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Miso, feta cheese with harissa, parsley pesto, hazelnuts"
+      "description": "Miso, feta cheese with harissa, parsley pesto, hazelnuts"
      },
      {
       "name": "Cacio E Pepe Pasta",
       "allInclusive": "discounted",
       "price": 29,
       "finalPrice": 20.3,
-      "description": "€ 29.00 Black truffle"
+      "description": "Black truffle"
      },
      {
       "name": "Grilled Chicken Breast",
       "allInclusive": "included",
       "price": 29,
-      "description": "€ 29.00 Mushroom duxelles, eggplant with miso, pickled eggplant and thyme jus"
+      "description": "Mushroom duxelles, eggplant with miso, pickled eggplant and thyme jus"
      },
      {
       "name": "Pluma Pork Iberico",
       "allInclusive": "included",
       "price": 31,
-      "description": "€ 31.00 Grilled cabbage with parmesan truffle, almonds, apple pear and mustard puree"
+      "description": "Grilled cabbage with parmesan truffle, almonds, apple pear and mustard puree"
      },
      {
       "name": "Duck Leg Confit",
       "allInclusive": "included",
       "price": 33,
-      "description": "€ 33.00 Beetroot textures, baby gem, orange gravy"
+      "description": "Beetroot textures, baby gem, orange gravy"
      },
      {
       "name": "Sea Bass Fillet",
       "allInclusive": "included",
       "price": 34,
-      "description": "€ 34.00 Charcoal grilled broccoli, shallot puree, beurre blanc sauce"
+      "description": "Charcoal grilled broccoli, shallot puree, beurre blanc sauce"
      },
      {
       "name": "Grilled Salmon",
       "allInclusive": "discounted",
       "price": 36,
       "finalPrice": 25.2,
-      "description": "€ 36.00 Pumpkin puree, pumpkin lime chutney, salicornia"
+      "description": "Pumpkin puree, pumpkin lime chutney, salicornia"
      },
      {
       "name": "Beef Fillet and King Prawn",
       "allInclusive": "discounted",
       "price": 55,
       "finalPrice": 38.5,
-      "description": "€ 55.00 Ginger-carrot puree, king oyster and Sichuan gravy sauce"
+      "description": "Ginger-carrot puree, king oyster and Sichuan gravy sauce"
      },
      {
       "name": "Ribeye Tagliata",
       "allInclusive": "discounted",
       "price": 59,
       "finalPrice": 41.3,
-      "description": "€ 59.00 French fries, black truffle, Parmesan and jus"
+      "description": "French fries, black truffle, Parmesan and jus"
      },
      {
       "name": "Tomahawk Steak",
       "allInclusive": "discounted",
       "price": 180,
       "finalPrice": 126,
-      "description": "€ 180.00 French fries and grilled vegetables (For 2 Persons)"
+      "description": "French fries and grilled vegetables (For 2 Persons)"
      }
     ]
    },
@@ -692,19 +676,19 @@
       "name": "Crème Brûlée",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Cardamom and mango ice cream"
+      "description": "Cardamom and mango ice cream"
      },
      {
       "name": "Pavlova",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 White chocolate cream, strawberries, basil"
+      "description": "White chocolate cream, strawberries, basil"
      },
      {
       "name": "Yuzu Lemon Tart",
       "allInclusive": "included",
       "price": 14,
-      "description": "€ 14.00 Chocolate crumble"
+      "description": "Chocolate crumble"
      }
     ]
    }
@@ -724,7 +708,7 @@
       "name": "Fish Soup \"Kakavia\"",
       "allInclusive": "included",
       "price": 18,
-      "description": "€ 18.00 Onion puree, tomato, potato confit"
+      "description": "Onion puree, tomato, potato confit"
      }
     ]
    },
@@ -735,20 +719,20 @@
       "name": "Greek Salad",
       "allInclusive": "included",
       "price": 14,
-      "description": "€ 14.00 With feta mousse"
+      "description": "With feta mousse"
      },
      {
       "name": "Greek Greens Salad",
       "allInclusive": "included",
       "price": 16,
-      "description": "€ 16.00 ''Nouboulo beef salami from Corfu, pickled pear, katiki cheese and walnuts"
+      "description": "''Nouboulo beef salami from Corfu, pickled pear, katiki cheese and walnuts"
      },
      {
       "name": "Sea Bream Tartar \"Athinaiki Salad\"",
       "allInclusive": "discounted",
       "price": 25,
       "finalPrice": 17.5,
-      "description": "€ 25.00 Dill mayonnaise, vegetables and bottarga"
+      "description": "Dill mayonnaise, vegetables and bottarga"
      }
     ]
    },
@@ -759,26 +743,26 @@
       "name": "Spinach Dumblings",
       "allInclusive": "included",
       "price": 17,
-      "description": "€ 17.00 Herbs cream, dill oil and aromatic yogurt"
+      "description": "Herbs cream, dill oil and aromatic yogurt"
      },
      {
       "name": "Traditional Greek Chicken \"Pastitsada\"",
       "allInclusive": "included",
       "price": 19,
-      "description": "€ 19.00 Truffle oil and graviera cream"
+      "description": "Truffle oil and graviera cream"
      },
      {
       "name": "Grilled Octopus",
       "allInclusive": "included",
       "price": 22,
-      "description": "€ 22.00 Sweet potato purre, grilled greek greens, vinegar marmelade, octopus jus"
+      "description": "Sweet potato purre, grilled greek greens, vinegar marmelade, octopus jus"
      },
      {
       "name": "Seafood \"Meze\"",
       "allInclusive": "discounted",
       "price": 27,
       "finalPrice": 18.9,
-      "description": "€ 27.00 Fried shrimp in fylo pastry and white fish roe cream ''Tarama'', shrimp bisque"
+      "description": "Fried shrimp in fylo pastry and white fish roe cream ''Tarama'', shrimp bisque"
      }
     ]
    },
@@ -789,59 +773,59 @@
       "name": "Celeriac ''Saganaki''",
       "allInclusive": "included",
       "price": 21,
-      "description": "€ 21.00 Wild mushroom, hazelnut, raisin-caper chutney, graviere cream, celeriac jus"
+      "description": "Wild mushroom, hazelnut, raisin-caper chutney, graviere cream, celeriac jus"
      },
      {
       "name": "Sautéed Pork",
       "allInclusive": "included",
       "price": 22,
-      "description": "€ 22.00 Celery root cream , celeriac souvlaki , green apple sauce, celeriac jus"
+      "description": "Celery root cream , celeriac souvlaki , green apple sauce, celeriac jus"
      },
      {
       "name": "Chicken ''Prasoryzo''",
       "allInclusive": "included",
       "price": 26,
-      "description": "€ 26.00 Leek and mushroom risotto, feta cheese, thyme jus"
+      "description": "Leek and mushroom risotto, feta cheese, thyme jus"
      },
      {
       "name": "Sea Bass Fillet",
       "allInclusive": "included",
       "price": 30,
-      "description": "€ 30.00 Eggplant Imam , yoghurt with herbs, chives mayonnaise"
+      "description": "Eggplant Imam , yoghurt with herbs, chives mayonnaise"
      },
      {
       "name": "Amberjack ''Frikase''",
       "allInclusive": "discounted",
       "price": 34,
       "finalPrice": 23.8,
-      "description": "€ 34.00 Asparagus, baby gem, hollandaise sauce, dill oil"
+      "description": "Asparagus, baby gem, hollandaise sauce, dill oil"
      },
      {
       "name": "Lamb",
       "allInclusive": "discounted",
       "price": 43,
       "finalPrice": 30.1,
-      "description": "€ 43.00 Orzo pasta ''Giouvetsi''"
+      "description": "Orzo pasta ''Giouvetsi''"
      },
      {
       "name": "Beef Fillet",
       "allInclusive": "discounted",
       "price": 50,
       "finalPrice": 35,
-      "description": "€ 50.00 Mushrooms, potato pave & onion Stifado sauce"
+      "description": "Mushrooms, potato pave & onion Stifado sauce"
      },
      {
       "name": "Lobster Pasta",
       "allInclusive": "discounted",
       "price": 58,
       "finalPrice": 40.6,
-      "description": "€ 58.00 Ouzo and Bottarga"
+      "description": "Ouzo and Bottarga"
      },
      {
       "name": "Catch of the day",
       "allInclusive": "none",
       "price": 80,
-      "description": "€ 80.00 Seasonal vegetables"
+      "description": "Seasonal vegetables"
      }
     ]
    },
@@ -852,19 +836,19 @@
       "name": "Armenonville Ice cream",
       "allInclusive": "included",
       "price": 14,
-      "description": "€ 14.00 Caramelized hazelnut, almond, meringue, chocolate sauce"
+      "description": "Caramelized hazelnut, almond, meringue, chocolate sauce"
      },
      {
       "name": "SERANO CAKE",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Homemade vanilla ice cream"
+      "description": "Homemade vanilla ice cream"
      },
      {
       "name": "Pistachio Baklava",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Kaimaki ice cream and raspberry sauce"
+      "description": "Kaimaki ice cream and raspberry sauce"
      }
     ]
    }
@@ -884,33 +868,33 @@
       "name": "Memory",
       "allInclusive": "included",
       "price": 22,
-      "description": "€ 22.00 Beef | Consomme | Root Vegetables"
+      "description": "Beef | Consomme | Root Vegetables"
      },
      {
       "name": "At the edge of orchard & root",
       "allInclusive": "included",
       "price": 24,
-      "description": "€ 24.00 Nut pate | Beetroot | Pear"
+      "description": "Nut pate | Beetroot | Pear"
      },
      {
       "name": "Umami custard",
       "allInclusive": "included",
       "price": 25,
-      "description": "€ 25.00 Chawanmushi | Mushroom | Mussels"
+      "description": "Chawanmushi | Mushroom | Mussels"
      },
      {
       "name": "Golden nets of the Aegean",
       "allInclusive": "discounted",
       "price": 34,
       "finalPrice": 23.8,
-      "description": "€ 34.00 Prawn kataifi | Sea buckthorn | Pumpkin"
+      "description": "Prawn kataifi | Sea buckthorn | Pumpkin"
      },
      {
       "name": "Olive & grape",
       "allInclusive": "discounted",
       "price": 35,
       "finalPrice": 24.5,
-      "description": "€ 35.00 Langoustine ravioli | green olive dulce | verjus"
+      "description": "Langoustine ravioli | green olive dulce | verjus"
      }
     ]
    },
@@ -921,40 +905,40 @@
       "name": "Northern char",
       "allInclusive": "included",
       "price": 26,
-      "description": "€ 26.00 Courgette | Yeast | Pine nuts"
+      "description": "Courgette | Yeast | Pine nuts"
      },
      {
       "name": "The golden bird",
       "allInclusive": "included",
       "price": 33,
-      "description": "€ 33.00 Chicken breast | Morels | Cabbage"
+      "description": "Chicken breast | Morels | Cabbage"
      },
      {
       "name": "Sweet – bitter complexity",
       "allInclusive": "included",
       "price": 34,
-      "description": "€ 34.00 Catch of the day | Plum ketchup | Beer"
+      "description": "Catch of the day | Plum ketchup | Beer"
      },
      {
       "name": "After the flame",
       "allInclusive": "discounted",
       "price": 39,
       "finalPrice": 27.3,
-      "description": "€ 39.00 Saddle of lamb | Artichoke | Almond | Tomato tahini"
+      "description": "Saddle of lamb | Artichoke | Almond | Tomato tahini"
      },
      {
       "name": "A Sunday memory",
       "allInclusive": "discounted",
       "price": 52,
       "finalPrice": 36.4,
-      "description": "€ 52.00 Beef ribs | Mpriam textures | Jus"
+      "description": "Beef ribs | Mpriam textures | Jus"
      },
      {
       "name": "Sweet, salt, illusion",
       "allInclusive": "discounted",
       "price": 55,
       "finalPrice": 38.5,
-      "description": "€ 55.00 Lobster | White chocolate | Cucumber | Melon"
+      "description": "Lobster | White chocolate | Cucumber | Melon"
      }
     ]
    },
@@ -965,13 +949,13 @@
       "name": "Guess",
       "allInclusive": "included",
       "price": 14,
-      "description": "€ 14.00 Chocolate | Red currant | Kalamata olives"
+      "description": "Chocolate | Red currant | Kalamata olives"
      },
      {
       "name": "Bee among chamomile",
       "allInclusive": "included",
       "price": 16,
-      "description": "€ 16.00 Lemon | Macadamia | Bee pollen"
+      "description": "Lemon | Macadamia | Bee pollen"
      }
     ]
    }
@@ -989,21 +973,18 @@
      {
       "name": "Panini with ham, cheese, green salad, tomato, mayonnaise",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Tuna salad sandwich, spring onions, sliced cucumber, lettuce, mayonnaise",
       "allInclusive": "included",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Bagel with smoked salmon, cream cheese, capers, cucumber, iceberg salad",
       "allInclusive": "discounted",
       "price": 12,
-      "finalPrice": 8.4,
-      "description": "€ 12.00"
+      "finalPrice": 8.4
      }
     ]
    },
@@ -1013,15 +994,13 @@
      {
       "name": "Traditional Greek Salad",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Green salad with prawns, tomato, cucumber, avocado, cocktail sauce",
       "allInclusive": "discounted",
       "price": 13,
-      "finalPrice": 9.1,
-      "description": "€ 13.00"
+      "finalPrice": 9.1
      }
     ]
    },
@@ -1032,29 +1011,28 @@
       "name": "Marinated Salmon Poke Bowl",
       "allInclusive": "discounted",
       "price": 12,
-      "finalPrice": 8.4,
-      "description": "€ 12.00"
+      "finalPrice": 8.4
      },
      {
       "name": "Nigiri Combo 6pcs",
       "allInclusive": "discounted",
       "price": 12,
       "finalPrice": 8.4,
-      "description": "€ 12.00 3pcs Salmon | 3 pcs Prawn"
+      "description": "3pcs Salmon | 3 pcs Prawn"
      },
      {
       "name": "Shake Avocado Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 13,
       "finalPrice": 9.1,
-      "description": "€ 13.00 Salmon | Avocado | Roasted sesame seeds"
+      "description": "Salmon | Avocado | Roasted sesame seeds"
      },
      {
       "name": "Combo Ura Maki & Nigiri 10pcs",
       "allInclusive": "discounted",
       "price": 15,
       "finalPrice": 10.5,
-      "description": "€ 15.00 Salmon | Prawn | Tuna | Vegetables | Avocado | Roasted sesame seeds"
+      "description": "Salmon | Prawn | Tuna | Vegetables | Avocado | Roasted sesame seeds"
      }
     ]
    },
@@ -1064,59 +1042,50 @@
      {
       "name": "French fries with Βrasil sauce and grated cheese",
       "allInclusive": "included",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Pizza Margherita (mozzarella, fresh tomato, basil)",
       "allInclusive": "included",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Pizza Special (mozzarella, mushrooms, pepper, bacon, salami)",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Pita with Haloumi cheese, tomato, onion, lettuce, yoghurt sauce and fries",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Greek pita gyros, with pork, tomato, onion, tzatziki and fries",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Cheeseburger with tomato, lettuce, onions, bacon and fries",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Bao Bun burger with crispy chicken, coleslaw salad, tonkatsu sauce, green salad",
       "allInclusive": "discounted",
       "price": 13,
-      "finalPrice": 9.1,
-      "description": "€ 13.00"
+      "finalPrice": 9.1
      },
      {
       "name": "Bao Bun burger with crispy chicken, coleslaw salad, tonkatsu sauce, green salad",
       "allInclusive": "discounted",
       "price": 14,
-      "finalPrice": 9.8,
-      "description": "€ 14.00"
+      "finalPrice": 9.8
      },
      {
       "name": "Bao Bun with black angus burger, fried egg, bacon and truffle mayo",
       "allInclusive": "discounted",
       "price": 16,
-      "finalPrice": 11.2,
-      "description": "€ 16.00"
+      "finalPrice": 11.2
      }
     ]
    },
@@ -1126,8 +1095,7 @@
      {
       "name": "Fresh seasonal fruits",
       "allInclusive": "included",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      }
     ]
    }
@@ -1145,19 +1113,19 @@
       "name": "Atlantica Breakfast",
       "allInclusive": "included",
       "price": 40,
-      "description": "€ 40.00 Bakery and Pastry Basket, Cold Cuts, Marmalade, Honey, Butter, Cereals of your choice, Fresh Orange Juice and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance. Atlantica Breakfast is free of charge for guests booked with all-inclusive terms."
+      "description": "Bakery and Pastry Basket, Cold Cuts, Marmalade, Honey, Butter, Cereals of your choice, Fresh Orange Juice and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance. Atlantica Breakfast is free of charge for guests booked with all-inclusive terms."
      },
      {
       "name": "Healthy Breakfast",
       "allInclusive": "none",
       "price": 45,
-      "description": "€ 45.00 Three White Eggs any style with Fresh Mixed Salad, Brown Toast, Mixed Fruit Platter, Energy Yoghurt with fruits and oats, Fresh juice of the day and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance."
+      "description": "Three White Eggs any style with Fresh Mixed Salad, Brown Toast, Mixed Fruit Platter, Energy Yoghurt with fruits and oats, Fresh juice of the day and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance."
      },
      {
       "name": "American Breakfast",
       "allInclusive": "none",
       "price": 55,
-      "description": "€ 55.00 Eggs your way, Bacon, Sausage, Beans, Roastie Potatoes, Bakery and Pastry Basket, Pancakes or Waffle, Bloody Mary and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance"
+      "description": "Eggs your way, Bacon, Sausage, Beans, Roastie Potatoes, Bakery and Pastry Basket, Pancakes or Waffle, Bloody Mary and Hot Beverage of your choice (coffee, tea, milk). *Please give your breakfast room service order one day in advance"
      }
     ]
    },
@@ -1168,19 +1136,19 @@
       "name": "Floating Breakfast",
       "allInclusive": "none",
       "price": 100,
-      "description": "€ 100.00 per Couple Croissant mix with marmelade variety Scrambled eggs on brioche bread with avocado Cheese Omelette Fluffy Ham and cheese toast Fresh seasonal cut fruits Energy yoghurt Pancakes or waffles with honey, nuts and Nutella Fresh Orange Juice Coffee or Tea of your choice Glass of Sparkling Wine Available only for rooms with swimming pool"
+      "description": "per Couple Croissant mix with marmelade variety Scrambled eggs on brioche bread with avocado Cheese Omelette Fluffy Ham and cheese toast Fresh seasonal cut fruits Energy yoghurt Pancakes or waffles with honey, nuts and Nutella Fresh Orange Juice Coffee or Tea of your choice Glass of Sparkling Wine Available only for rooms with swimming pool"
      },
      {
       "name": "Floating Light Lunch",
       "allInclusive": "none",
       "price": 100,
-      "description": "€ 100.00 per Couple Mini Greek salad or Mini Rocket salad with parmesan, pine nuts & balsamic-honey vinaigrette Spring rolls with sweet chilli sauce Mini brioche BBQ burgers or Club sandwich served with fries Fresh seasonal cutted fruits Traditional Greek dessert variety Glass of Sparkling Wine Available only for rooms with swimming pool"
+      "description": "per Couple Mini Greek salad or Mini Rocket salad with parmesan, pine nuts & balsamic-honey vinaigrette Spring rolls with sweet chilli sauce Mini brioche BBQ burgers or Club sandwich served with fries Fresh seasonal cutted fruits Traditional Greek dessert variety Glass of Sparkling Wine Available only for rooms with swimming pool"
      },
      {
       "name": "Floating Champagne Menu",
       "allInclusive": "none",
       "price": 240,
-      "description": "€ 240.00 per Couple Canapes with smoked salmon Rice paper rolls with prawns Fried potatoes Pave Cheese variety Fresh seasonal cutted fruits Dessert selection French Champagne M et Ice Imperial Available only for rooms with swimming pool"
+      "description": "per Couple Canapes with smoked salmon Rice paper rolls with prawns Fried potatoes Pave Cheese variety Fresh seasonal cutted fruits Dessert selection French Champagne M et Ice Imperial Available only for rooms with swimming pool"
      }
     ]
    }
@@ -1198,20 +1166,17 @@
      {
       "name": "Ice Tea 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Sparkling Water 250ml",
       "allInclusive": "none",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Soft Drinks 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -1221,38 +1186,32 @@
      {
       "name": "Orange Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Apple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Pineapple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "CranberryJuice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tomato Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Lemon Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -1262,68 +1221,57 @@
      {
       "name": "Greek Coffee",
       "allInclusive": "included",
-      "price": 3.5,
-      "description": "€ 3.50"
+      "price": 3.5
      },
      {
       "name": "Espresso",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Decaffeinated Coffee",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Hot Chocolate",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Filtered Coffee",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tea",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Frappe",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Double Espresso",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Freddo Espresso",
       "allInclusive": "included",
-      "price": 5,
-      "description": "€ 5.00"
+      "price": 5
      },
      {
       "name": "Cappuccino",
       "allInclusive": "included",
-      "price": 5.2,
-      "description": "€ 5.20"
+      "price": 5.2
      },
      {
       "name": "Freddo Cappuccino",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      }
     ]
    },
@@ -1334,31 +1282,31 @@
       "name": "Irish Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Whisky, Filter Coffee, Cream"
+      "description": "Whisky, Filter Coffee, Cream"
      },
      {
       "name": "Baileys Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Irish Cream, Filter Coffee, Cream"
+      "description": "Irish Cream, Filter Coffee, Cream"
      },
      {
       "name": "Royal Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Brandy, Filter Coffee, Cream"
+      "description": "Brandy, Filter Coffee, Cream"
      },
      {
       "name": "Calypso Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Coffee Liqueur, Filter Coffee, Cream"
+      "description": "Coffee Liqueur, Filter Coffee, Cream"
      },
      {
       "name": "Amaretto Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Amaretto, Filter Coffee, Cream"
+      "description": "Amaretto, Filter Coffee, Cream"
      }
     ]
    },
@@ -1368,92 +1316,77 @@
      {
       "name": "Draught Lager 330ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Mythos Lager 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Mamos Pils 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Strongbow Apple Cider 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Non Alcohol Beer 330ml",
       "allInclusive": "included",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Stella Artois 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Gluten Free Beer 330ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Peroni Lager 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amstel Radler 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Warsteiner 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sol Light Lager 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "NHSOS Artisanal Pils 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Weissbier 500ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Guinness Irish Stout 500ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      },
      {
       "name": "Pikri Forbidden I.P.A 330ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      }
     ]
    },
@@ -1463,39 +1396,33 @@
      {
       "name": "Smirnoff Red 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Absolut 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Stolichnaya 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tito’s 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Belvedere 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Grey Goose 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -1505,44 +1432,37 @@
      {
       "name": "Martini Rosso 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Dry 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Bianco 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Ouzo 40ml",
       "allInclusive": "included",
-      "price": 6.6,
-      "description": "€ 6.60"
+      "price": 6.6
      },
      {
       "name": "Aperol 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Campari 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Pernod 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      }
     ]
    },
@@ -1552,69 +1472,59 @@
      {
       "name": "Old House Irish Cream 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amaretto Antico 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Malibu 40ml",
       "allInclusive": "included",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Baileys Irish Cream 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Grand Marnier 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Cointreau 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Tia Maria 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Southern Comfort 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Amaretto Disaronno 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Drambuie 40ml",
       "allInclusive": "discounted",
       "price": 9,
-      "finalPrice": 4.5,
-      "description": "€ 9.00"
+      "finalPrice": 4.5
      }
     ]
    },
@@ -1624,88 +1534,74 @@
      {
       "name": "Gordon's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Beefeater 40ml",
       "allInclusive": "included",
-      "price": 9.5,
-      "description": "€ 9.50"
+      "price": 9.5
      },
      {
       "name": "Beefeater 24 40ml",
       "allInclusive": "none",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 0% 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Bombay Saphire 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Votanikon 40ml",
       "allInclusive": "included",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Citadelle 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Mataroa Pink 40ml",
       "allInclusive": "none",
-      "price": 14,
-      "description": "€ 14.00"
+      "price": 14
      },
      {
       "name": "Mataroa Mediterannean 40ml",
       "allInclusive": "none",
-      "price": 14,
-      "description": "€ 14.00"
+      "price": 14
      },
      {
       "name": "Hendrick's 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Roku 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "G' Vine Floraison 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Monkey 47 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      }
     ]
    },
@@ -1715,50 +1611,42 @@
      {
       "name": "Bacardi 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Havana Club 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura Reserva 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Captain Morgan 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura 5yrs 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Angostura 7yrs 40ml",
       "allInclusive": "none",
-      "price": 10.5,
-      "description": "€ 10.50"
+      "price": 10.5
      },
      {
       "name": "Don Papa 7yrs 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Diplomatico Reserva 12yrs 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      }
     ]
    },
@@ -1768,38 +1656,32 @@
      {
       "name": "Jose Cuervo Silver 40ml",
       "allInclusive": "included",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      },
      {
       "name": "Jose Cuervo Reposado 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Casadores Blanco 40ml",
       "allInclusive": "included",
-      "price": 10.5,
-      "description": "€ 10.50"
+      "price": 10.5
      },
      {
       "name": "Casadores Reposado 40ml",
       "allInclusive": "included",
-      "price": 11,
-      "description": "€ 11.00"
+      "price": 11
      },
      {
       "name": "Don Julio Reposado 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Corralejo Triple Destilado 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -1809,32 +1691,27 @@
      {
       "name": "Courvoisier VS 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Martell VS 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Hennessy VS 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Rémy Martin VSOP 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      },
      {
       "name": "Rémy Martin XO 40ml",
       "allInclusive": "none",
-      "price": 45,
-      "description": "€ 45.00"
+      "price": 45
      }
     ]
    },
@@ -1844,29 +1721,25 @@
      {
       "name": "Metaxa 3 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Metaxa 5 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Metaxa 7 40ml",
       "allInclusive": "discounted",
       "price": 11,
-      "finalPrice": 5.5,
-      "description": "€ 11.00"
+      "finalPrice": 5.5
      },
      {
       "name": "Metaxa 12 40ml",
       "allInclusive": "discounted",
       "price": 16,
-      "finalPrice": 8,
-      "description": "€ 16.00"
+      "finalPrice": 8
      }
     ]
    },
@@ -1876,38 +1749,32 @@
      {
       "name": "Masticha 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sambuca 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Fernet Branca 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Ramazzotti 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Averna 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Jägermeister 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      }
     ]
    },
@@ -1917,26 +1784,22 @@
      {
       "name": "Moët Ice Imperial 750ml",
       "allInclusive": "none",
-      "price": 160,
-      "description": "€ 160.00"
+      "price": 160
      },
      {
       "name": "Veuve Clicquot Brut NV 750ml",
       "allInclusive": "none",
-      "price": 165,
-      "description": "€ 165.00"
+      "price": 165
      },
      {
       "name": "Veuve Clicquot Brut Rose NV 750ml",
       "allInclusive": "none",
-      "price": 180,
-      "description": "€ 180.00"
+      "price": 180
      },
      {
       "name": "Louis Roederer Cristal Brut 750ml",
       "allInclusive": "none",
-      "price": 510,
-      "description": "€ 510.00"
+      "price": 510
      }
     ]
    },
@@ -1946,26 +1809,22 @@
      {
       "name": "Sparkling Wine by Glass 150ml",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Sparkling Wine 750ml",
       "allInclusive": "included",
-      "price": 27,
-      "description": "€ 27.00"
+      "price": 27
      },
      {
       "name": "Rodos Sparkling Wine Brut or Demi Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      },
      {
       "name": "Rodos Sparkling Wine Rose Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      }
     ]
    },
@@ -1976,19 +1835,19 @@
       "name": "House Wine 187ml",
       "allInclusive": "included",
       "price": 6,
-      "description": "€ 6.00 White, Rose, Red"
+      "description": "White, Rose, Red"
      },
      {
       "name": "Emery Villare 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 Red"
+      "description": "Red"
      },
      {
       "name": "Techni Alipias 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 White, Rose"
+      "description": "White, Rose"
      }
     ]
    },
@@ -1999,31 +1858,31 @@
       "name": "Kir Royal",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Cr me De Cassis, Spumante"
+      "description": "Cr me De Cassis, Spumante"
      },
      {
       "name": "Bellini",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Peach Pur e, Spumante"
+      "description": "Peach Pur e, Spumante"
      },
      {
       "name": "Hugo Spritz",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Spumante, Elderflower, Soda"
+      "description": "Spumante, Elderflower, Soda"
      },
      {
       "name": "Aperol Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Aperol, Spumante, Soda"
+      "description": "Aperol, Spumante, Soda"
      },
      {
       "name": "Greek Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Otto's vermouth, Spumante, Tonic"
+      "description": "Otto's vermouth, Spumante, Tonic"
      }
     ]
    },
@@ -2034,25 +1893,25 @@
       "name": "Daiquiri",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Rum, Lime Juice, Sugar Syrup"
+      "description": "Rum, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Berry Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Raspberry, Lime Juice, Sugar Syrup"
+      "description": "Rum, Raspberry, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Passion Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Rum, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Mango Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Mango, Lime Juice, Sugar Syrup"
+      "description": "Rum, Mango, Lime Juice, Sugar Syrup"
      }
     ]
    },
@@ -2063,31 +1922,31 @@
       "name": "Whisky Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Whisky, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Gin Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Gin, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Vodka Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Vodka, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Amaretto Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Amaretto, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Amaretto, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Brandy Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Brandy, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Brandy, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      }
     ]
    },
@@ -2098,31 +1957,31 @@
       "name": "Dry Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Vermouth Dry, Orange Bitter, Olive"
+      "description": "Gin, Vermouth Dry, Orange Bitter, Olive"
      },
      {
       "name": "French Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Raspberry Liqueur, Pineapple Juice"
+      "description": "Vodka, Raspberry Liqueur, Pineapple Juice"
      },
      {
       "name": "Passion Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Espresso Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
+      "description": "Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
      },
      {
       "name": "Chocolate Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Chocolate Cream Liqueur, Chocolate Bitters"
+      "description": "Vodka, Chocolate Cream Liqueur, Chocolate Bitters"
      }
     ]
    },
@@ -2133,55 +1992,55 @@
       "name": "Mojito",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Sugar, Lime, Soda, Fresh Mint"
+      "description": "Rum, Sugar, Lime, Soda, Fresh Mint"
      },
      {
       "name": "Margarita",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Tequila, Triple Sec, Lime Juice"
+      "description": "Tequila, Triple Sec, Lime Juice"
      },
      {
       "name": "Cosmopolitan",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Triple Sec, Cranberry Juice, Lime Juice"
+      "description": "Vodka, Triple Sec, Cranberry Juice, Lime Juice"
      },
      {
       "name": "Caipirinha",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Cacha a Rum, Brown Sugar, Lime,"
+      "description": "Cacha a Rum, Brown Sugar, Lime,"
      },
      {
       "name": "Pina Colada",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Coconut Cream, Pineapple Juice"
+      "description": "Rum, Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Passion Fruit Caipiroska",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Lime Juice, Passion Fruit, Brown Sugar"
+      "description": "Vodka, Lime Juice, Passion Fruit, Brown Sugar"
      },
      {
       "name": "Paloma",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Tequila, Lime Juice, Pink Grapefruit"
+      "description": "Tequila, Lime Juice, Pink Grapefruit"
      },
      {
       "name": "Old Fashioned",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Angostura Bitter, Sugar Syrup"
+      "description": "Whisky, Angostura Bitter, Sugar Syrup"
      },
      {
       "name": "Manhattan",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Vermouth Rosso, Angostura Bitter"
+      "description": "Whisky, Vermouth Rosso, Angostura Bitter"
      }
     ]
    },
@@ -2192,37 +2051,37 @@
       "name": "Imperial Potion",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
+      "description": "Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
      },
      {
       "name": "Monkey Funky",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
+      "description": "Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
      },
      {
       "name": "Musa Ceae",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Banana, Soy, Carpano Bitter, Carpano Classico, Soda"
+      "description": "Banana, Soy, Carpano Bitter, Carpano Classico, Soda"
      },
      {
       "name": "Guilty Pleasure",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Strawberry & Chocolate Foam, Sweet & Sour Mix, Angostura Rum, Bitters"
+      "description": "Strawberry & Chocolate Foam, Sweet & Sour Mix, Angostura Rum, Bitters"
      },
      {
       "name": "Sexy Sips",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Red Fruit Shrub, Aperitivo, Prosecco, Vodka"
+      "description": "Red Fruit Shrub, Aperitivo, Prosecco, Vodka"
      },
      {
       "name": "Ficus Carica",
       "allInclusive": "included",
       "price": 16,
-      "description": "€ 16.00 Quince Cordial, Fig Leaf Soda, Cazadores Tequila"
+      "description": "Quince Cordial, Fig Leaf Soda, Cazadores Tequila"
      }
     ]
    },
@@ -2233,25 +2092,25 @@
       "name": "Spicy Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Pepper, Spiced Cranberry Bitters, Tonic"
+      "description": "Gin, Pepper, Spiced Cranberry Bitters, Tonic"
      },
      {
       "name": "C G&T",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Cucumber, Fresh Bitters, Tonic"
+      "description": "Gin, Cucumber, Fresh Bitters, Tonic"
      },
      {
       "name": "Rhubarb & Ginger Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Rhubarb, Ginger, Tonic"
+      "description": "Gin, Rhubarb, Ginger, Tonic"
      },
      {
       "name": "Pink Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
+      "description": "Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
      }
     ]
    },
@@ -2262,31 +2121,31 @@
       "name": "Virgin Mojito",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
+      "description": "Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
      },
      {
       "name": "Virgin Colada",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Coconut Cream, Pineapple Juice"
+      "description": "Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Wake Me Up",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Cherry Soda, Espresso"
+      "description": "Cherry Soda, Espresso"
      },
      {
       "name": "Sober Sips",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Red Fruit Shrub, Aperitiv0%, Soda"
+      "description": "Red Fruit Shrub, Aperitiv0%, Soda"
      },
      {
       "name": "America N0%",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Melon cordial, Bitter 0%, Aperitiv0%, Bubbles"
+      "description": "Melon cordial, Bitter 0%, Aperitiv0%, Bubbles"
      }
     ]
    }
@@ -2304,20 +2163,17 @@
      {
       "name": "Ice Tea 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Sparkling Water 250ml",
       "allInclusive": "none",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Soft Drinks 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -2327,38 +2183,32 @@
      {
       "name": "Orange Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Apple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Pineapple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "CranberryJuice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tomato Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Lemon Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -2368,68 +2218,57 @@
      {
       "name": "Greek Coffee",
       "allInclusive": "included",
-      "price": 3.5,
-      "description": "€ 3.50"
+      "price": 3.5
      },
      {
       "name": "Hot Chocolate",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Espresso",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Decaffeinated Coffee",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Filtered Coffee",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tea",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Frappe",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Double Espresso",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Freddo Espresso",
       "allInclusive": "included",
-      "price": 5,
-      "description": "€ 5.00"
+      "price": 5
      },
      {
       "name": "Cappuccino",
       "allInclusive": "included",
-      "price": 5.2,
-      "description": "€ 5.20"
+      "price": 5.2
      },
      {
       "name": "Freddo Cappuccino",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      }
     ]
    },
@@ -2440,31 +2279,31 @@
       "name": "Irish Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Whisky, Filter Coffee, Cream"
+      "description": "Whisky, Filter Coffee, Cream"
      },
      {
       "name": "Baileys Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Irish Cream, Filter Coffee, Cream"
+      "description": "Irish Cream, Filter Coffee, Cream"
      },
      {
       "name": "Royal Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Brandy, Filter Coffee, Cream"
+      "description": "Brandy, Filter Coffee, Cream"
      },
      {
       "name": "Calypso Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Coffee Liqueur, Filter Coffee, Cream"
+      "description": "Coffee Liqueur, Filter Coffee, Cream"
      },
      {
       "name": "Amaretto Coffee",
       "allInclusive": "included",
       "price": 8.5,
-      "description": "€ 8.50 Amaretto, Filter Coffee, Cream"
+      "description": "Amaretto, Filter Coffee, Cream"
      }
     ]
    },
@@ -2474,92 +2313,77 @@
      {
       "name": "Mamos Draught 330ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Mythos Lager 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Mamos Pils 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Strongbow Apple Cider 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Non Alcohol Beer 330ml",
       "allInclusive": "included",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Stella Artois 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Gluten Free Beer 330ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Peroni Lager 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amstel Radler 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Warsteiner 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sol Light Lager 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "NHSOS Artisanal Pils 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Weissbier 500ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Guinness Irish Stout 500ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      },
      {
       "name": "Pikri Forbidden I.P.A 330ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      }
     ]
    },
@@ -2569,44 +2393,37 @@
      {
       "name": "Martini Rosso 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Dry 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Bianco 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Ouzo 40ml",
       "allInclusive": "included",
-      "price": 6.6,
-      "description": "€ 6.60"
+      "price": 6.6
      },
      {
       "name": "Aperol 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Campari 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Pernod 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      }
     ]
    },
@@ -2616,69 +2433,59 @@
      {
       "name": "Old House Irish Cream 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amaretto Antico 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Malibu 40ml",
       "allInclusive": "included",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Baileys Irish Cream 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Grand Marnier 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Cointreau 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Tia Maria 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Southern Comfort 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Amaretto Disaronno 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Drambuie 40ml",
       "allInclusive": "discounted",
       "price": 9,
-      "finalPrice": 4.5,
-      "description": "€ 9.00"
+      "finalPrice": 4.5
      }
     ]
    },
@@ -2688,39 +2495,33 @@
      {
       "name": "Smirnoff Red 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Absolut 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Stolichnaya 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tito’s 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Belvedere 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Grey Goose 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -2730,101 +2531,85 @@
      {
       "name": "Gordon's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Beefeater 40ml",
       "allInclusive": "included",
-      "price": 9.5,
-      "description": "€ 9.50"
+      "price": 9.5
      },
      {
       "name": "Beefeater 24 40ml",
       "allInclusive": "none",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 0% 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Bombay Saphire 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Tanqueray 10 40ml",
       "allInclusive": "discounted",
       "price": 12,
-      "finalPrice": 6,
-      "description": "€ 12.00"
+      "finalPrice": 6
      },
      {
       "name": "Votanikon 40ml",
       "allInclusive": "included",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Citadelle 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Mataroa Pink 40ml",
       "allInclusive": "none",
-      "price": 14,
-      "description": "€ 14.00"
+      "price": 14
      },
      {
       "name": "Mataroa Mediterannean 40ml",
       "allInclusive": "none",
-      "price": 14,
-      "description": "€ 14.00"
+      "price": 14
      },
      {
       "name": "Hendrick's 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Roku 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "G' Vine Floraison 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Monkey 47 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Portofino 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      }
     ]
    },
@@ -2834,70 +2619,59 @@
      {
       "name": "Bacardi 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Havana Club 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura Reserva 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Captain Morgan 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura 5yrs 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Angostura 7yrs 40ml",
       "allInclusive": "none",
-      "price": 10.5,
-      "description": "€ 10.50"
+      "price": 10.5
      },
      {
       "name": "Botran Reserva 8yrs 40ml",
       "allInclusive": "discounted",
       "price": 12,
-      "finalPrice": 6,
-      "description": "€ 12.00"
+      "finalPrice": 6
      },
      {
       "name": "Plantation Original Dark OFTD 40ml",
       "allInclusive": "discounted",
       "price": 15,
-      "finalPrice": 7.5,
-      "description": "€ 15.00"
+      "finalPrice": 7.5
      },
      {
       "name": "Don Papa 7yrs 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Diplomatico Reserva 12yrs 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Angostura 1824 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -2907,32 +2681,27 @@
      {
       "name": "Courvoisier VS 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Martell VS 40ml",
       "allInclusive": "none",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Hennessy VS 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Rémy Martin VSOP 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      },
      {
       "name": "Rémy Martin XO 40ml",
       "allInclusive": "none",
-      "price": 45,
-      "description": "€ 45.00"
+      "price": 45
      }
     ]
    },
@@ -2942,29 +2711,25 @@
      {
       "name": "Metaxa 3 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Metaxa 5 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Metaxa 7 40ml",
       "allInclusive": "discounted",
       "price": 11,
-      "finalPrice": 5.5,
-      "description": "€ 11.00"
+      "finalPrice": 5.5
      },
      {
       "name": "Metaxa 12 40ml",
       "allInclusive": "discounted",
       "price": 16,
-      "finalPrice": 8,
-      "description": "€ 16.00"
+      "finalPrice": 8
      }
     ]
    },
@@ -2974,38 +2739,32 @@
      {
       "name": "Masticha 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sambuca 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Fernet Branca 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Ramazzotti 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Averna 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Jägermeister 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      }
     ]
    },
@@ -3015,38 +2774,32 @@
      {
       "name": "Jose Cuervo Silver 40ml",
       "allInclusive": "included",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      },
      {
       "name": "Jose Cuervo Reposado 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Casadores Blanco 40ml",
       "allInclusive": "included",
-      "price": 10.5,
-      "description": "€ 10.50"
+      "price": 10.5
      },
      {
       "name": "Casadores Reposado 40ml",
       "allInclusive": "included",
-      "price": 11,
-      "description": "€ 11.00"
+      "price": 11
      },
      {
       "name": "Don Julio Reposado 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Corralejo Triple Destilado 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -3056,26 +2809,22 @@
      {
       "name": "Moët Ice Imperial 750ml",
       "allInclusive": "none",
-      "price": 160,
-      "description": "€ 160.00"
+      "price": 160
      },
      {
       "name": "Veuve Clicquot Brut NV 750ml",
       "allInclusive": "none",
-      "price": 165,
-      "description": "€ 165.00"
+      "price": 165
      },
      {
       "name": "Veuve Clicquot Brut Rose NV 750ml",
       "allInclusive": "none",
-      "price": 180,
-      "description": "€ 180.00"
+      "price": 180
      },
      {
       "name": "Louis Roederer Cristal Brut 750ml",
       "allInclusive": "none",
-      "price": 510,
-      "description": "€ 510.00"
+      "price": 510
      }
     ]
    },
@@ -3085,26 +2834,22 @@
      {
       "name": "Sparkling Wine by Glass 150ml",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Sparkling Wine 750ml",
       "allInclusive": "included",
-      "price": 27,
-      "description": "€ 27.00"
+      "price": 27
      },
      {
       "name": "Rodos Sparkling Wine Brut or Demi Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      },
      {
       "name": "Rodos Sparkling Wine Rose Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      }
     ]
    },
@@ -3115,19 +2860,19 @@
       "name": "House Wine 187ml",
       "allInclusive": "included",
       "price": 6,
-      "description": "€ 6.00 White, Rose, Red"
+      "description": "White, Rose, Red"
      },
      {
       "name": "Emery Villare 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 Red"
+      "description": "Red"
      },
      {
       "name": "Techni Alipias 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 White, Ros"
+      "description": "White, Ros"
      }
     ]
    },
@@ -3138,31 +2883,31 @@
       "name": "Kir Royal",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Spumante, Cr me De Cassis"
+      "description": "Spumante, Cr me De Cassis"
      },
      {
       "name": "Bellini",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Peach Pur e, Spumante"
+      "description": "Peach Pur e, Spumante"
      },
      {
       "name": "Hugo Spritz",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Spumante, Elderflower, Soda"
+      "description": "Spumante, Elderflower, Soda"
      },
      {
       "name": "Aperol Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Aperol, Spumante, Soda"
+      "description": "Aperol, Spumante, Soda"
      },
      {
       "name": "Greek Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Otto's vermouth, Spumante, Tonic"
+      "description": "Otto's vermouth, Spumante, Tonic"
      }
     ]
    },
@@ -3173,25 +2918,25 @@
       "name": "Daiquiri",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Rum, Lime Juice, Sugar Syrup"
+      "description": "Rum, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Berry Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Raspberry, Lime Juice, Sugar Syrup"
+      "description": "Rum, Raspberry, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Passion Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Rum, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Mango Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Mango, Lime Juice, Sugar Syrup"
+      "description": "Rum, Mango, Lime Juice, Sugar Syrup"
      }
     ]
    },
@@ -3202,31 +2947,31 @@
       "name": "Whiskey Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whiskey, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
+      "description": "Whiskey, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
      },
      {
       "name": "Gin Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
+      "description": "Gin, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
      },
      {
       "name": "Vodka Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
+      "description": "Vodka, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
      },
      {
       "name": "Brandy Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Brandy, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
+      "description": "Brandy, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
      },
      {
       "name": "Amaretto Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Amaretto, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
+      "description": "Amaretto, Egg White Syrup, Sugar, Lemon Juice, Aromatic Bitter"
      }
     ]
    },
@@ -3237,31 +2982,31 @@
       "name": "Dry Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Vermouth Dry, Orange Bitter, Olive"
+      "description": "Gin, Vermouth Dry, Orange Bitter, Olive"
      },
      {
       "name": "French Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Raspberry Liquer, Pineapple Juice"
+      "description": "Vodka, Raspberry Liquer, Pineapple Juice"
      },
      {
       "name": "Passion Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Espresso Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
+      "description": "Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
      },
      {
       "name": "Chocolate Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Chocolate Cream Liqueur, Chocolate Bitters"
+      "description": "Vodka, Chocolate Cream Liqueur, Chocolate Bitters"
      }
     ]
    },
@@ -3272,55 +3017,55 @@
       "name": "Mojito",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Sugar, Lime, Soda, Fresh Mint"
+      "description": "Rum, Sugar, Lime, Soda, Fresh Mint"
      },
      {
       "name": "Margarita",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Tequila, Triple Sec, Lime Juice"
+      "description": "Tequila, Triple Sec, Lime Juice"
      },
      {
       "name": "Cosmopolitan",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Triple Sec, Cranberry Juice, Lime Juice"
+      "description": "Vodka, Triple Sec, Cranberry Juice, Lime Juice"
      },
      {
       "name": "Caipirinha",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Cacha a Rum, Brown Sugar, Lime,"
+      "description": "Cacha a Rum, Brown Sugar, Lime,"
      },
      {
       "name": "Pina Colada",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Coconut Cream, Pineapple Juice"
+      "description": "Rum, Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Passion Fruit Caipiroska",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Lime Juice, Passion Fruit, Brown Sugar"
+      "description": "Vodka, Lime Juice, Passion Fruit, Brown Sugar"
      },
      {
       "name": "Paloma",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Tequila, Lime Juice, Pink Grapefruit"
+      "description": "Tequila, Lime Juice, Pink Grapefruit"
      },
      {
       "name": "Old Fashioned",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Angostura Bitter, Sugar Syrup"
+      "description": "Whisky, Angostura Bitter, Sugar Syrup"
      },
      {
       "name": "Manhattan",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Vermouth Rosso, Angostura Bitter"
+      "description": "Whisky, Vermouth Rosso, Angostura Bitter"
      }
     ]
    },
@@ -3331,38 +3076,38 @@
       "name": "Imperial Potion",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
+      "description": "Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
      },
      {
       "name": "Monkey Funky",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
+      "description": "Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
      },
      {
       "name": "May Crest",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Otto s Vermouth, Votanikon Gin, Peach Shrub, Thyme Tincture"
+      "description": "Otto s Vermouth, Votanikon Gin, Peach Shrub, Thyme Tincture"
      },
      {
       "name": "Cardinal",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Tsipouro, Ottos vermouth, Strawberry & Olive oleo, Prosecco"
+      "description": "Tsipouro, Ottos vermouth, Strawberry & Olive oleo, Prosecco"
      },
      {
       "name": "Bitter Love",
       "allInclusive": "included",
       "price": 16,
-      "description": "€ 16.00 Angostura Rum, Carpano Bitter, Carpano Classico, Salted Coconut"
+      "description": "Angostura Rum, Carpano Bitter, Carpano Classico, Salted Coconut"
      },
      {
       "name": "Childhood Memories",
       "allInclusive": "discounted",
       "price": 16,
       "finalPrice": 8,
-      "description": "€ 16.00 Angostura Rum, Pedro Ximenez, Banana Yogurt Liqueur, Bitters"
+      "description": "Angostura Rum, Pedro Ximenez, Banana Yogurt Liqueur, Bitters"
      }
     ]
    },
@@ -3373,25 +3118,25 @@
       "name": "Spicy Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Pepper, Spiced Cranberry Bitters, Tonic"
+      "description": "Gin, Pepper, Spiced Cranberry Bitters, Tonic"
      },
      {
       "name": "C G&T",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Cucumber, Fresh Bitters, Tonic"
+      "description": "Gin, Cucumber, Fresh Bitters, Tonic"
      },
      {
       "name": "Rhubarb & Ginger Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Rhubarb, Ginger, Tonic"
+      "description": "Gin, Rhubarb, Ginger, Tonic"
      },
      {
       "name": "Pink Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
+      "description": "Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
      }
     ]
    },
@@ -3402,31 +3147,31 @@
       "name": "Virgin Mojito",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
+      "description": "Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
      },
      {
       "name": "Virgin Colada",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Coconut Cream, Pineapple Juice"
+      "description": "Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Wake Me Up",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Cherry Soda, Espresso"
+      "description": "Cherry Soda, Espresso"
      },
      {
       "name": "Sober Sips",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Red Fruit Shrub, Aperitiv0%, Soda"
+      "description": "Red Fruit Shrub, Aperitiv0%, Soda"
      },
      {
       "name": "America N0%",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Melon cordial, Bitter 0%, Aperitiv0%, Bubbles"
+      "description": "Melon cordial, Bitter 0%, Aperitiv0%, Bubbles"
      }
     ]
    }
@@ -3444,38 +3189,32 @@
      {
       "name": "Ice Cream (scoop)",
       "allInclusive": "included",
-      "price": 2,
-      "description": "€ 2.00"
+      "price": 2
      },
      {
       "name": "Milkshake 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Slash 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Ice Tea 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Sparkling Water 250ml",
       "allInclusive": "none",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Soft Drinks 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -3485,38 +3224,32 @@
      {
       "name": "Orange Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Apple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Pineapple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "CranberryJuice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tomato Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Lemon Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -3526,62 +3259,52 @@
      {
       "name": "Espresso",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Decaffeinated Coffee",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Filtered Coffee",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tea",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Frappe",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Double Espresso",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Freddo Espresso",
       "allInclusive": "included",
-      "price": 5,
-      "description": "€ 5.00"
+      "price": 5
      },
      {
       "name": "Cappuccino",
       "allInclusive": "included",
-      "price": 5.2,
-      "description": "€ 5.20"
+      "price": 5.2
      },
      {
       "name": "Freddo Cappuccino",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Affogato Cafe",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      }
     ]
    },
@@ -3591,26 +3314,22 @@
      {
       "name": "Draught Lager 330ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Mythos Draught 330ml",
       "allInclusive": "none",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Kaiser Draught 330ml",
       "allInclusive": "none",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Carlsberg Draught 330ml",
       "allInclusive": "none",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      }
     ]
    },
@@ -3620,62 +3339,52 @@
      {
       "name": "Mamos Pils 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Strongbow Apple Cider 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Non Alcohol Beer 330ml",
       "allInclusive": "included",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Stella Artois 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Gluten Free Beer 330ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Peroni Lager 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amstel Radler 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sol Light Lager 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Weissbier 500ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Guinness Irish Stout 500ml",
       "allInclusive": "none",
-      "price": 8.5,
-      "description": "€ 8.50"
+      "price": 8.5
      }
     ]
    },
@@ -3685,38 +3394,32 @@
      {
       "name": "Martini Rosso 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Bianco 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Martini Dry 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Ouzo 40ml",
       "allInclusive": "included",
-      "price": 6.6,
-      "description": "€ 6.60"
+      "price": 6.6
      },
      {
       "name": "Aperol 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Campari 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      }
     ]
    },
@@ -3726,62 +3429,53 @@
      {
       "name": "Old House Irish Cream 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amaretto Antico 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Malibu 40ml",
       "allInclusive": "included",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      },
      {
       "name": "Baileys Irish Cream 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Cointreau 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Tia Maria 40ml",
       "allInclusive": "discounted",
       "price": 8,
-      "finalPrice": 4,
-      "description": "€ 8.00"
+      "finalPrice": 4
      },
      {
       "name": "Southern Comfort 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Amaretto Disaronno 40ml",
       "allInclusive": "discounted",
       "price": 8.5,
-      "finalPrice": 4.25,
-      "description": "€ 8.50"
+      "finalPrice": 4.25
      },
      {
       "name": "Drambuie 40ml",
       "allInclusive": "discounted",
       "price": 9,
-      "finalPrice": 4.5,
-      "description": "€ 9.00"
+      "finalPrice": 4.5
      }
     ]
    },
@@ -3791,52 +3485,44 @@
      {
       "name": "Gordon's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Beefeater 40ml",
       "allInclusive": "included",
-      "price": 9.5,
-      "description": "€ 9.50"
+      "price": 9.5
      },
      {
       "name": "Beefeater 24 40ml",
       "allInclusive": "none",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 0% 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Bombay Saphire 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      },
      {
       "name": "Votanikon 40ml",
       "allInclusive": "included",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      },
      {
       "name": "Hendrick's 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      }
     ]
    },
@@ -3846,27 +3532,23 @@
      {
       "name": "Smirnoff Red 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Absolut 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Stolichnaya 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tito's 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      }
     ]
    },
@@ -3876,32 +3558,27 @@
      {
       "name": "Bacardi 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Havana Club 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura Reserva 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Captain Morgan 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Angostura 5yrs 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      }
     ]
    },
@@ -3911,14 +3588,12 @@
      {
       "name": "Hennessy VS 40ml",
       "allInclusive": "none",
-      "price": 15,
-      "description": "€ 15.00"
+      "price": 15
      },
      {
       "name": "Rémy Martin VSOP 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -3928,33 +3603,28 @@
      {
       "name": "Grant's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Ballantine's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "J&B 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Johnnie Walker Red Label 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Johnnie Walker Black Label 40ml",
       "allInclusive": "discounted",
       "price": 15,
-      "finalPrice": 7.5,
-      "description": "€ 15.00"
+      "finalPrice": 7.5
      }
     ]
    },
@@ -3964,22 +3634,19 @@
      {
       "name": "Metaxa 3 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Metaxa 5 40ml",
       "allInclusive": "discounted",
       "price": 9.5,
-      "finalPrice": 4.75,
-      "description": "€ 9.50"
+      "finalPrice": 4.75
      },
      {
       "name": "Metaxa 7 40ml",
       "allInclusive": "discounted",
       "price": 11,
-      "finalPrice": 5.5,
-      "description": "€ 11.00"
+      "finalPrice": 5.5
      }
     ]
    },
@@ -3990,8 +3657,7 @@
       "name": "Jameson 40ml",
       "allInclusive": "discounted",
       "price": 11,
-      "finalPrice": 5.5,
-      "description": "€ 11.00"
+      "finalPrice": 5.5
      }
     ]
    },
@@ -4002,14 +3668,12 @@
       "name": "Jim Beam 40ml",
       "allInclusive": "discounted",
       "price": 10,
-      "finalPrice": 5,
-      "description": "€ 10.00"
+      "finalPrice": 5
      },
      {
       "name": "Bulleit 40ml",
       "allInclusive": "none",
-      "price": 12,
-      "description": "€ 12.00"
+      "price": 12
      }
     ]
    },
@@ -4020,8 +3684,7 @@
       "name": "Jack Daniel’s 40ml",
       "allInclusive": "discounted",
       "price": 13,
-      "finalPrice": 6.5,
-      "description": "€ 13.00"
+      "finalPrice": 6.5
      }
     ]
    },
@@ -4031,20 +3694,17 @@
      {
       "name": "Masticha 40ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sambuca 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      },
      {
       "name": "Jägermeister 40ml",
       "allInclusive": "none",
-      "price": 8,
-      "description": "€ 8.00"
+      "price": 8
      }
     ]
    },
@@ -4054,26 +3714,22 @@
      {
       "name": "Moët Ice Imperial 750ml",
       "allInclusive": "none",
-      "price": 160,
-      "description": "€ 160.00"
+      "price": 160
      },
      {
       "name": "Veuve Clicquot Brut NV 750ml",
       "allInclusive": "none",
-      "price": 165,
-      "description": "€ 165.00"
+      "price": 165
      },
      {
       "name": "Veuve Clicquot Brut Rose NV 750ml",
       "allInclusive": "none",
-      "price": 180,
-      "description": "€ 180.00"
+      "price": 180
      },
      {
       "name": "Louis Roederer Cristal Brut 750ml",
       "allInclusive": "none",
-      "price": 510,
-      "description": "€ 510.00"
+      "price": 510
      }
     ]
    },
@@ -4083,26 +3739,22 @@
      {
       "name": "Sparkling Wine by Glass 150ml",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Sparkling Wine 750ml",
       "allInclusive": "included",
-      "price": 27,
-      "description": "€ 27.00"
+      "price": 27
      },
      {
       "name": "Rodos Sparkling Wine Brut or Demi Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      },
      {
       "name": "Rodos Sparkling Wine Rose Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      }
     ]
    },
@@ -4113,19 +3765,19 @@
       "name": "House Wine 187ml",
       "allInclusive": "included",
       "price": 6,
-      "description": "€ 6.00 White, Rose, Red"
+      "description": "White, Rose, Red"
      },
      {
       "name": "Emery Villare 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 Red"
+      "description": "Red"
      },
      {
       "name": "Techni Alipias 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 White, Rose"
+      "description": "White, Rose"
      }
     ]
    },
@@ -4136,31 +3788,31 @@
       "name": "Kir Royal",
       "allInclusive": "none",
       "price": 10,
-      "description": "€ 10.00 Cr me De Cassis, Spumante"
+      "description": "Cr me De Cassis, Spumante"
      },
      {
       "name": "Bellini",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Peach Pur e, Spumante"
+      "description": "Peach Pur e, Spumante"
      },
      {
       "name": "Hugo Spritz",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Spumante, Elderflower, Soda"
+      "description": "Spumante, Elderflower, Soda"
      },
      {
       "name": "Aperol Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Aperol, Spumante, Soda"
+      "description": "Aperol, Spumante, Soda"
      },
      {
       "name": "Greek Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Otto's vermouth , Spumante, Tonic"
+      "description": "Otto's vermouth , Spumante, Tonic"
      }
     ]
    },
@@ -4171,25 +3823,25 @@
       "name": "Daiquiri",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Rum, Lime Juice, Sugar Syrup"
+      "description": "Rum, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Berry Daquiry",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Raspberry, Lime Juice, Sugar Syrup"
+      "description": "Rum, Raspberry, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Passion Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Rum, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Mango Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Mango, Lime Juice, Sugar Syrup"
+      "description": "Rum, Mango, Lime Juice, Sugar Syrup"
      }
     ]
    },
@@ -4200,31 +3852,31 @@
       "name": "Whisky Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Whisky, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Whisky, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Gin Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Gin, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Vodka Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Vodka, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Amaretto Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Amaretto, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Amaretto, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      },
      {
       "name": "Brandy Sour",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Brandy, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
+      "description": "Brandy, Egg White Syrup, Lemon Juice, Sugar, Aromatic Bitter"
      }
     ]
    },
@@ -4235,25 +3887,25 @@
       "name": "Dry Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Gin, Vermouth Dry, Orange Bitter, Olive"
+      "description": "Gin, Vermouth Dry, Orange Bitter, Olive"
      },
      {
       "name": "French Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Raspberry Liqueur, Pineapple Juice"
+      "description": "Vodka, Raspberry Liqueur, Pineapple Juice"
      },
      {
       "name": "Passion Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Vodka, Vanilla, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Espresso Martini",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
+      "description": "Vodka, Espresso, Coffee Liqueur, Sugar Syrup"
      }
     ]
    },
@@ -4264,49 +3916,49 @@
       "name": "Mojito",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Sugar, Lime, Soda, Fresh Mint"
+      "description": "Rum, Sugar, Lime, Soda, Fresh Mint"
      },
      {
       "name": "Margarita",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Tequila, Triple Sec, Lime Juice"
+      "description": "Tequila, Triple Sec, Lime Juice"
      },
      {
       "name": "Cosmopolitan",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Triple Sec, Cranberry Juice, Lime Juice"
+      "description": "Vodka, Triple Sec, Cranberry Juice, Lime Juice"
      },
      {
       "name": "Caipirinha",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Cacha a Rum, Brown Sugar, Lime"
+      "description": "Cacha a Rum, Brown Sugar, Lime"
      },
      {
       "name": "Pina Colada",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Coconut Cream, Pineapple Juice"
+      "description": "Rum, Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Passion Fruit Caipiroska",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Lime Juice, Passion Fruit, Brown Sugar"
+      "description": "Vodka, Lime Juice, Passion Fruit, Brown Sugar"
      },
      {
       "name": "Paloma",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Tequila, Pink Grapefruit, Lime Juice"
+      "description": "Tequila, Pink Grapefruit, Lime Juice"
      },
      {
       "name": "Sex on the Beach",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Vodka, Peach Liqueur, Orange Juice, Cranberry Juice"
+      "description": "Vodka, Peach Liqueur, Orange Juice, Cranberry Juice"
      }
     ]
    },
@@ -4317,37 +3969,37 @@
       "name": "Imperial Potion",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
+      "description": "Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
      },
      {
       "name": "Monkey Funky",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
+      "description": "Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
      },
      {
       "name": "Honeydew",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Melon Cordial, Mastiha, Prosecco"
+      "description": "Melon Cordial, Mastiha, Prosecco"
      },
      {
       "name": "Feeling Hot",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Pineapple Cordial, Jalape os Bitter, Cazadores Tequila"
+      "description": "Pineapple Cordial, Jalape os Bitter, Cazadores Tequila"
      },
      {
       "name": "Retro",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Cherry soda, Tia Maria, Otto s vermouth"
+      "description": "Cherry soda, Tia Maria, Otto s vermouth"
      },
      {
       "name": "Maroochi",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Mango & Macademia Nuts, Angostura Rum, Bitters"
+      "description": "Mango & Macademia Nuts, Angostura Rum, Bitters"
      }
     ]
    },
@@ -4358,25 +4010,25 @@
       "name": "Spicy Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Pepper, Spiced Cranberry Bitters, Tonic"
+      "description": "Gin, Pepper, Spiced Cranberry Bitters, Tonic"
      },
      {
       "name": "C G&T",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Cucumber, Fresh Bitters, Tonic"
+      "description": "Gin, Cucumber, Fresh Bitters, Tonic"
      },
      {
       "name": "Rhubarb & Ginger Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Rhubarb, Ginger, Tonic"
+      "description": "Gin, Rhubarb, Ginger, Tonic"
      },
      {
       "name": "Pink Gin",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
+      "description": "Gin, Hibiscus Syrup, Spiced Cranberry Bitters, Rosemary, Tonic"
      }
     ]
    },
@@ -4387,31 +4039,31 @@
       "name": "Virgin Mojito",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
+      "description": "Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
      },
      {
       "name": "Virgin Colada",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Coconut Cream, Pineapple Juice"
+      "description": "Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Baby Apple",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Apple Puree, Ginger, Lime Juice, Sugar Syrup"
+      "description": "Apple Puree, Ginger, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Wake me up",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Cherry Soda, Espresso"
+      "description": "Cherry Soda, Espresso"
      },
      {
       "name": "Sober Sips",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Red Fruit Shrub, Aperitiv0%, Soda"
+      "description": "Red Fruit Shrub, Aperitiv0%, Soda"
      }
     ]
    },
@@ -4422,19 +4074,19 @@
       "name": "Tropical Mix Smoothie",
       "allInclusive": "none",
       "price": 6,
-      "description": "€ 6.00 Pineapple, Mango, Papaya"
+      "description": "Pineapple, Mango, Papaya"
      },
      {
       "name": "Green Freak Smoothie",
       "allInclusive": "none",
       "price": 6,
-      "description": "€ 6.00 Spinach, Carrot, Orange, Pineapple"
+      "description": "Spinach, Carrot, Orange, Pineapple"
      },
      {
       "name": "Wild Forest Smoothie",
       "allInclusive": "none",
       "price": 6,
-      "description": "€ 6.00 Red Fruits, Berries"
+      "description": "Red Fruits, Berries"
      }
     ]
    }
@@ -4457,39 +4109,38 @@
       "name": "Cold Sandwiches",
       "allInclusive": "included",
       "price": 6.5,
-      "description": "€ 6.50 Panini with ham, cheese, green salad, tomato, mayonnaise"
+      "description": "Panini with ham, cheese, green salad, tomato, mayonnaise"
      },
      {
       "name": "Cold Sandwiches",
       "allInclusive": "included",
       "price": 8,
-      "description": "€ 8.00 Tuna salad sandwich, spring onions, sliced cucumber, lettuce"
+      "description": "Tuna salad sandwich, spring onions, sliced cucumber, lettuce"
      },
      {
       "name": "Salads",
       "allInclusive": "included",
       "price": 7.5,
-      "description": "€ 7.50 Traditional Greek salad"
+      "description": "Traditional Greek salad"
      },
      {
       "name": "Warm Snacks",
       "allInclusive": "discounted",
       "price": 14,
       "finalPrice": 9.8,
-      "description": "€ 14.00 Bao Bun burger with crispy chicken, coleslaw salad, tonkatsu sauce"
+      "description": "Bao Bun burger with crispy chicken, coleslaw salad, tonkatsu sauce"
      },
      {
       "name": "Warm Snacks",
       "allInclusive": "discounted",
       "price": 16,
       "finalPrice": 11.2,
-      "description": "€ 16.00 Black angus double burger, cheddar, pickles, tomato, bbq sauce"
+      "description": "Black angus double burger, cheddar, pickles, tomato, bbq sauce"
      },
      {
       "name": "Fresh seasonal fruits",
       "allInclusive": "included",
-      "price": 13,
-      "description": "€ 13.00"
+      "price": 13
      }
     ]
    },
@@ -4501,21 +4152,21 @@
       "allInclusive": "discounted",
       "price": 12,
       "finalPrice": 8.4,
-      "description": "€ 12.00 3pcs Salmon | 3 pcs Prawn"
+      "description": "3pcs Salmon | 3 pcs Prawn"
      },
      {
       "name": "Shake Avocado Ura Maki 8pcs",
       "allInclusive": "discounted",
       "price": 13,
       "finalPrice": 9.1,
-      "description": "€ 13.00 Salmon | Avocado | Roasted sesame seeds"
+      "description": "Salmon | Avocado | Roasted sesame seeds"
      },
      {
       "name": "Combo Ura Maki & Nigiri 10pcs",
       "allInclusive": "discounted",
       "price": 15,
       "finalPrice": 10.5,
-      "description": "€ 15.00 Salmon | Prawn | Tuna | Vegetables | Avocado | Roasted sesame seeds"
+      "description": "Salmon | Prawn | Tuna | Vegetables | Avocado | Roasted sesame seeds"
      }
     ]
    },
@@ -4525,26 +4176,22 @@
      {
       "name": "Still Water 500ml",
       "allInclusive": "included",
-      "price": 3,
-      "description": "€ 3.00"
+      "price": 3
      },
      {
       "name": "Ice Tea 250ml",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Sparkling Water 250ml",
       "allInclusive": "none",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Soft Drinks 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -4554,26 +4201,22 @@
      {
       "name": "Orange Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Apple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Pineapple Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Cranberry Juice 250ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      }
     ]
    },
@@ -4583,56 +4226,47 @@
      {
       "name": "Espresso",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Decaffeinated Coffee",
       "allInclusive": "included",
-      "price": 4,
-      "description": "€ 4.00"
+      "price": 4
      },
      {
       "name": "Filtered Coffee",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Tea",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Frappe",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Double Espresso",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Freddo Espresso",
       "allInclusive": "included",
-      "price": 5,
-      "description": "€ 5.00"
+      "price": 5
      },
      {
       "name": "Cappuccino",
       "allInclusive": "included",
-      "price": 5.2,
-      "description": "€ 5.20"
+      "price": 5.2
      },
      {
       "name": "Freddo Cappuccino",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      }
     ]
    },
@@ -4642,50 +4276,42 @@
      {
       "name": "Draught Lager 330ml",
       "allInclusive": "included",
-      "price": 4.5,
-      "description": "€ 4.50"
+      "price": 4.5
      },
      {
       "name": "Mythos Lager 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Mamos Pils 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Strongbow Apple Cider 330ml",
       "allInclusive": "none",
-      "price": 5.5,
-      "description": "€ 5.50"
+      "price": 5.5
      },
      {
       "name": "Non Alcohol Beer 330ml",
       "allInclusive": "included",
-      "price": 5.8,
-      "description": "€ 5.80"
+      "price": 5.8
      },
      {
       "name": "Gluten Free Beer 330ml",
       "allInclusive": "included",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Amstel Radler 330ml",
       "allInclusive": "none",
-      "price": 6.5,
-      "description": "€ 6.50"
+      "price": 6.5
      },
      {
       "name": "Sol Light Lager 330ml",
       "allInclusive": "none",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      }
     ]
    },
@@ -4695,26 +4321,22 @@
      {
       "name": "Smirnoff Red 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Tito’s 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Belvedere 40ml",
       "allInclusive": "none",
-      "price": 16,
-      "description": "€ 16.00"
+      "price": 16
      },
      {
       "name": "Grey Goose 40ml",
       "allInclusive": "none",
-      "price": 17,
-      "description": "€ 17.00"
+      "price": 17
      }
     ]
    },
@@ -4724,14 +4346,12 @@
      {
       "name": "Aperol 40ml",
       "allInclusive": "included",
-      "price": 7,
-      "description": "€ 7.00"
+      "price": 7
      },
      {
       "name": "Campari 40ml",
       "allInclusive": "included",
-      "price": 7.5,
-      "description": "€ 7.50"
+      "price": 7.5
      }
     ]
    },
@@ -4741,27 +4361,23 @@
      {
       "name": "Gordon's 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Beefeater 40ml",
       "allInclusive": "included",
-      "price": 9.5,
-      "description": "€ 9.50"
+      "price": 9.5
      },
      {
       "name": "Tanqueray 0% 40ml",
       "allInclusive": "included",
-      "price": 10,
-      "description": "€ 10.00"
+      "price": 10
      },
      {
       "name": "Tanqueray 40ml",
       "allInclusive": "discounted",
       "price": 10.5,
-      "finalPrice": 5.25,
-      "description": "€ 10.50"
+      "finalPrice": 5.25
      }
     ]
    },
@@ -4771,20 +4387,17 @@
      {
       "name": "Bacardi 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Havana Club 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      },
      {
       "name": "Captain Morgan 40ml",
       "allInclusive": "included",
-      "price": 9,
-      "description": "€ 9.00"
+      "price": 9
      }
     ]
    },
@@ -4794,20 +4407,17 @@
      {
       "name": "Moët Ice Imperial 750ml",
       "allInclusive": "none",
-      "price": 160,
-      "description": "€ 160.00"
+      "price": 160
      },
      {
       "name": "Veuve Clicquot Brut NV 750ml",
       "allInclusive": "none",
-      "price": 165,
-      "description": "€ 165.00"
+      "price": 165
      },
      {
       "name": "Veuve Clicquot Brut Rose NV 750ml",
       "allInclusive": "none",
-      "price": 180,
-      "description": "€ 180.00"
+      "price": 180
      }
     ]
    },
@@ -4817,26 +4427,22 @@
      {
       "name": "Sparkling Wine by Glass 150ml",
       "allInclusive": "included",
-      "price": 6,
-      "description": "€ 6.00"
+      "price": 6
      },
      {
       "name": "Sparkling Wine 750ml",
       "allInclusive": "included",
-      "price": 27,
-      "description": "€ 27.00"
+      "price": 27
      },
      {
       "name": "Rodos Sparkling Wine Brut or Demi Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      },
      {
       "name": "Rodos Sparkling Wine Rose Sec 750ml",
       "allInclusive": "none",
-      "price": 60,
-      "description": "€ 60.00"
+      "price": 60
      }
     ]
    },
@@ -4847,19 +4453,19 @@
       "name": "House Wine 187ml",
       "allInclusive": "included",
       "price": 6,
-      "description": "€ 6.00 White, Rose, Red"
+      "description": "White, Rose, Red"
      },
      {
       "name": "Emery Villare 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 Red"
+      "description": "Red"
      },
      {
       "name": "Techni Alipias 187ml",
       "allInclusive": "none",
       "price": 8,
-      "description": "€ 8.00 White, Rose"
+      "description": "White, Rose"
      }
     ]
    },
@@ -4870,25 +4476,25 @@
       "name": "Hugo Spritz",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Spumante, Elderflower, Soda"
+      "description": "Spumante, Elderflower, Soda"
      },
      {
       "name": "Bellini",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Peach Pur e, Spumante"
+      "description": "Peach Pur e, Spumante"
      },
      {
       "name": "Aperol Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Aperol, Spumante, Soda"
+      "description": "Aperol, Spumante, Soda"
      },
      {
       "name": "Greek Spritz",
       "allInclusive": "included",
       "price": 11,
-      "description": "€ 11.00 Otto's vermouth, Spumante, Tonic"
+      "description": "Otto's vermouth, Spumante, Tonic"
      }
     ]
    },
@@ -4899,25 +4505,25 @@
       "name": "Daiquiri",
       "allInclusive": "included",
       "price": 12,
-      "description": "€ 12.00 Rum, Lime Juice, Sugar Syrup"
+      "description": "Rum, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Berry Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Raspberry, Lime Juice, Sugar Syrup"
+      "description": "Rum, Raspberry, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Passion Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Passion Fruit, Lime Juice, Sugar Syrup"
+      "description": "Rum, Passion Fruit, Lime Juice, Sugar Syrup"
      },
      {
       "name": "Mango Daiquiri",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Rum, Mango, Lime Juice, Sugar Syrup"
+      "description": "Rum, Mango, Lime Juice, Sugar Syrup"
      }
     ]
    },
@@ -4928,25 +4534,25 @@
       "name": "Virgin Mojito",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
+      "description": "Lime Juice, Fresh Mint, Soda Water, Brown Sugar"
      },
      {
       "name": "Virgin Colada",
       "allInclusive": "included",
       "price": 10,
-      "description": "€ 10.00 Coconut Cream, Pineapple Juice"
+      "description": "Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Wake Me Up",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Cherry Soda, Espresso"
+      "description": "Cherry Soda, Espresso"
      },
      {
       "name": "Sober Sips",
       "allInclusive": "included",
       "price": 10.5,
-      "description": "€ 10.50 Red Fruit Shrub, Aperitiv0%, Soda"
+      "description": "Red Fruit Shrub, Aperitiv0%, Soda"
      }
     ]
    },
@@ -4957,31 +4563,31 @@
       "name": "Mojito",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Sugar, Lime, Soda, Fresh Mint"
+      "description": "Rum, Sugar, Lime, Soda, Fresh Mint"
      },
      {
       "name": "Cosmopolitan",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Triple Sec, Cranberry Juice, Lime Juice"
+      "description": "Vodka, Triple Sec, Cranberry Juice, Lime Juice"
      },
      {
       "name": "Pina Colada",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Rum, Coconut Cream, Pineapple Juice"
+      "description": "Rum, Coconut Cream, Pineapple Juice"
      },
      {
       "name": "Passion Fruit Caipiroska",
       "allInclusive": "included",
       "price": 12.5,
-      "description": "€ 12.50 Vodka, Lime Juice, Passion Fruit, Brown Sugar"
+      "description": "Vodka, Lime Juice, Passion Fruit, Brown Sugar"
      },
      {
       "name": "Paloma",
       "allInclusive": "included",
       "price": 13,
-      "description": "€ 13.00 Tequila, Lime Juice, Pink Grapefruit"
+      "description": "Tequila, Lime Juice, Pink Grapefruit"
      }
     ]
    },
@@ -4992,13 +4598,13 @@
       "name": "Imperial Potion",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
+      "description": "Vodka, Raspberry Pur e, Cranberry Juice, Lime Juice, Hibiscus Syrup"
      },
      {
       "name": "Monkey Funky",
       "allInclusive": "included",
       "price": 15,
-      "description": "€ 15.00 Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
+      "description": "Blended Rum, Ginger Syrup, Passion Fruit, Lime Juice"
      }
     ]
    }

@@ -234,9 +234,16 @@ async function captureVenue(v: VenueSource): Promise<CapturedVenue> {
       const priceRaw = html.match(/<span>([\s\S]*?)<\/span>/);
       const price = priceRaw ? parsePrice(stripTags(priceRaw[1])) : undefined;
 
-      // Description paragraphs sit after the title block.
-      const afterTitle = html.split('</div>').slice(1).join('</div>');
-      const description = stripTags(afterTitle) || undefined;
+      // Description is whatever is left once the title and price are removed.
+      //
+      // Splitting on "</div>" and taking the tail does NOT work: item-title
+      // contains a nested empty <div class="border-bottom">, so the price span
+      // survives into the tail and every item ended up with its own price
+      // repeated as its description.
+      const rest = html
+        .replace(/<h2>[\s\S]*?<\/h2>/g, '')
+        .replace(/<span>[\s\S]*?<\/span>/g, '');
+      const description = stripTags(rest) || undefined;
 
       const rate = v.aiRateByCategory?.[catName] ?? v.aiRate;
 
