@@ -25,9 +25,12 @@ export default function RootLayout() {
           contentStyle: { backgroundColor: theme.bg },
         }}
       >
-        <Stack.Screen name="index" options={{ title: 'Atlantica' }} />
+        {/* The tab bar owns its own headers. */}
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="settings" options={{ title: 'Reminders' }} />
         <Stack.Screen name="signin" options={{ title: 'Sign in', headerShown: false }} />
+        <Stack.Screen name="dining-info" options={{ title: 'Good to know' }} />
+        <Stack.Screen name="venue/[slug]" options={{ title: 'Venue' }} />
       </Stack>
     </SafeAreaProvider>
     </AuthProvider>

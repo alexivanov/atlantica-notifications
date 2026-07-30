@@ -19,8 +19,8 @@ import {
   ForbiddenError,
   fetchSchedule,
   getLocalPreferences,
-} from '../src/api';
-import { armReminders } from '../src/notifications';
+} from '../../src/api';
+import { armReminders } from '../../src/notifications';
 import {
   currentLiveActivity,
   endLiveActivity,
@@ -29,13 +29,13 @@ import {
   restoreLiveActivity,
   startLiveActivity,
   syncWidgetData,
-} from '../src/widget';
+} from '../../src/widget';
 import {
   formatDayHeading,
   formatRelative,
   resortDateOf,
   theme,
-} from '../src/theme';
+} from '../../src/theme';
 
 export default function ScheduleScreen() {
   const router = useRouter();

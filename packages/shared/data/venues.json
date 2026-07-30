@@ -1,0 +1,215 @@
+{
+  "_comment": "Hand-transcribed from the kiosk's Eat & Drink pages (category 1311). The hours there are prose, bilingual, with inconsistent dash characters, meal-period labels, and day exceptions buried in sentences -- parsing them would silently produce WRONG opening hours, which is worse than none. English only. `to: \"00:00\"` means midnight and is treated as the following day. Menus live in menus.json, captured separately.",
+  "_transcribedOn": "2026-07-30",
+  "venues": [
+    {
+      "slug": "agora",
+      "name": "Agora Restaurant",
+      "kind": "restaurant",
+      "menuKey": "agora",
+      "itemId": 3028,
+      "description": "Modern, minimal style serving breakfast, lunch and dinner. Full buffet with show cooking and a variety of local specialities. Occasional themed evening meals. Extensive wine selection.",
+      "periods": [
+        { "label": "Breakfast", "from": "07:30", "to": "10:30" },
+        { "label": "Lunch", "from": "12:30", "to": "14:00" },
+        { "label": "Dinner", "from": "18:30", "to": "21:00" }
+      ]
+    },
+    {
+      "slug": "ginger",
+      "name": "Ginger, Fusion Cuisine",
+      "kind": "restaurant",
+      "menuKey": "ginger",
+      "itemId": 3030,
+      "description": "Fusion dining — a culinary journey of extraordinary flavours.",
+      "extraCharge": true,
+      "reservationRequired": true,
+      "periods": [],
+      "hoursNote": "Evenings, by reservation. The kiosk publishes no fixed hours.",
+      "bookingUrl": "http://81.4.160.162:8090/Diningprokiosk/mobile/thirdpartyindex/1020/10030"
+    },
+    {
+      "slug": "mylos",
+      "name": "Mylos, Modern Greek Cuisine",
+      "kind": "restaurant",
+      "menuKey": "mylos",
+      "itemId": 3029,
+      "description": "Greek cuisine with a modern twist, from the freshest locally sourced ingredients. One of the selected Aegean Cuisine Restaurants, awarded Greek Cuisine and Flag in Life 2023.",
+      "extraCharge": true,
+      "reservationRequired": true,
+      "weatherPermitting": true,
+      "periods": [],
+      "hoursNote": "Evenings, by reservation. The kiosk publishes no fixed hours.",
+      "bookingUrl": "http://81.4.160.162:8090/Diningprokiosk/mobile/thirdpartyindex/1020/10029"
+    },
+    {
+      "slug": "bluebay",
+      "name": "Blue Bay, Fine Dining Restaurant",
+      "kind": "restaurant",
+      "menuKey": "bluebay",
+      "itemId": 3032,
+      "description": "Fine dining at Atlantica Imperial Residences. Awarded the FNL Star 2023 and Flag in Life 2023 & 2024, ranking among the top 200 restaurants in Greece.",
+      "extraCharge": true,
+      "reservationRequired": true,
+      "weatherPermitting": true,
+      "periods": [],
+      "hoursNote": "Evenings, by reservation. The kiosk publishes no fixed hours.",
+      "bookingUrl": "http://81.4.160.162:8090/Diningprokiosk/mobile/thirdpartyindex/1020/10031"
+    },
+    {
+      "slug": "bluebay-breakfast",
+      "name": "Blue Bay Breakfast",
+      "kind": "restaurant",
+      "itemId": 3031,
+      "description": "Custom-made egg recipes, wellness juices, Nespresso Premium coffee and aromatic teas, freshly prepared each morning.",
+      "restriction": "Red Carpet guests only",
+      "periods": [{ "label": "Breakfast", "from": "07:30", "to": "10:30" }]
+    },
+    {
+      "slug": "streetfood",
+      "name": "Street Food Lab",
+      "kind": "casual",
+      "menuKey": "streetfood",
+      "itemId": 3037,
+      "description": "Freshly made cold and warm sandwiches, salads and more. Next to the Agora main restaurant.",
+      "weatherPermitting": true,
+      "periods": [],
+      "hoursNote": "The kiosk publishes no fixed hours."
+    },
+    {
+      "slug": "lounge",
+      "name": "The Lounge Bar",
+      "kind": "bar",
+      "menuKey": "lounge",
+      "itemId": 5149,
+      "description": "Terrace views and drinks at any time of day. Occasionally live music in the evening.",
+      "periods": [
+        { "from": "10:00", "to": "00:00" },
+        { "label": "Light snack", "from": "12:00", "to": "17:00" },
+        { "label": "Coffee break", "from": "15:00", "to": "17:00" }
+      ]
+    },
+    {
+      "slug": "helios",
+      "name": "Helios Pool Bar",
+      "kind": "bar",
+      "menuKey": "helios",
+      "itemId": 5150,
+      "description": "Exotic cocktails, juices, alcoholic drinks, soft ice cream, coffee and tea by the pool.",
+      "weatherPermitting": true,
+      "periods": [
+        { "from": "10:00", "to": "00:00", "exceptDays": ["saturday"] },
+        { "from": "10:00", "to": "18:00", "days": ["saturday"] }
+      ]
+    },
+    {
+      "slug": "skybar",
+      "name": "Sky Bar",
+      "kind": "bar",
+      "menuKey": "skybar",
+      "itemId": 5396,
+      "description": "Soft and alcoholic drinks including cocktails, beers and wines, at the Imperial Residences.",
+      "restriction": "Red Carpet guests only until 18:00, open to all guests after",
+      "periods": [
+        { "from": "10:00", "to": "00:00" },
+        { "label": "Light snack", "from": "12:00", "to": "17:00" }
+      ]
+    },
+    {
+      "slug": "cove",
+      "name": "The Cove Beach Bar",
+      "kind": "bar",
+      "menuKey": "cove",
+      "itemId": 14752,
+      "description": "Seaside setting with refreshing drinks, light bites and chilled music by the water.",
+      "weatherPermitting": true,
+      "periods": [{ "from": "10:00", "to": "18:00" }]
+    },
+    {
+      "slug": "inroom",
+      "name": "In Room Services",
+      "kind": "info",
+      "menuKey": "inroom",
+      "itemId": 5622,
+      "description": "Rooms have a mini bar and coffee & tea facilities. For all-inclusive guests the mini bar is replenished daily with 2 beers, 2 Pepsi, 1 7Up, 1 juice, water, nuts and crisps. Half board guests may request one at extra charge. Free water stations are available around the hotel.",
+      "periods": []
+    }
+  ],
+
+  "themeNights": {
+    "_comment": "Agora's dinner buffet theme, by weekday. Same shape as the daytime activities grid.",
+    "monday": "With a breeze of Italy",
+    "tuesday": "Gala Dinner",
+    "wednesday": "Ethnic night",
+    "thursday": "Greek night",
+    "friday": "Asian night",
+    "saturday": "International Dinner",
+    "sunday": "International Dinner"
+  },
+
+  "specialEvents": [
+    {
+      "name": "Taste Greece 2026 — Ettore Botrini",
+      "chef": "Ettore Botrini",
+      "accolade": "Michelin Star",
+      "date": "2026-06-27",
+      "venue": "Blue Bay Restaurant",
+      "price": "€125 per person, excluding beverages",
+      "description": "Corfiot onion pie, swordfish carpaccio, Pasta Mista and Bourdeto, drawing on Greek-Italian heritage."
+    },
+    {
+      "name": "Taste Greece 2026 — Alexandros Tsiotinis",
+      "chef": "Alexandros Tsiotinis",
+      "accolade": "Michelin Star",
+      "date": "2026-07-31",
+      "venue": "Blue Bay Restaurant",
+      "price": "€120 per person, excluding beverages",
+      "description": "Octopus, fresh fish, grouper fillet and beef cheek through refined techniques and contemporary interpretation."
+    }
+  ],
+
+  "info": [
+    {
+      "slug": "dress-code",
+      "title": "Dress Code",
+      "itemId": 7763,
+      "pdf": "https://kioskcms.biz/storage/69178/Restaurant-Dress-Code-Sign.pdf"
+    },
+    {
+      "slug": "allergies",
+      "title": "Food Safety & Allergy Information",
+      "itemId": 8417,
+      "body": "Tell any outlet about preferences, allergies or dietary requirements and they will make arrangements.",
+      "pdfs": [
+        "https://kioskcms.biz/storage/88078/11.-Allergy-Information-ENG-G%CE%95R-1.pdf",
+        "https://kioskcms.biz/storage/88079/11.-Allergy-Information-ENG-G%CE%95R-2.pdf",
+        "https://kioskcms.biz/storage/88077/11.-Allergy-Information-ENG-G%CE%95R-3.pdf"
+      ]
+    },
+    {
+      "slug": "special-occasions",
+      "title": "Special Occasions",
+      "itemId": 11271,
+      "pdf": "https://kioskcms.biz/storage/82542/Special-Occasions-2026.pdf"
+    },
+    {
+      "slug": "early-breakfast",
+      "title": "Early Breakfast",
+      "itemId": 8727,
+      "body": "Book at reception one day ahead, before 18:00; delivered to your room that evening. Per person: strawberry & raspberry nut bar (0% sugar), rice rolls with cheese and olive oil (gluten free), cranberry and almond bar (gluten free), mixed nuts and dried fruits, sesame bar (0% sugar)."
+    },
+    {
+      "slug": "snack-pack",
+      "title": "Snack Pack",
+      "itemId": 8266,
+      "body": "For days out. Book one day ahead before 18:00 and collect next morning from the hostess in the main restaurant. Includes the early breakfast items plus a juice, water and fruit. €18.00 per pack for half board guests.",
+      "bookingUrl": "http://81.4.160.162:8090/Diningprokiosk/mobile/thirdpartyindex/1020/10032"
+    },
+    {
+      "slug": "all-inclusive",
+      "title": "All-Inclusive Upgrade",
+      "itemId": 7690,
+      "body": "Upgrade after arrival via reception. €65 per person per day for 3+ days, €70 per person per day for 1–2 days. Includes full board buffet, unlimited local and branded drinks 10:00–00:00, hot drinks, snacks 12:00–17:00, coffee break 15:00–17:00, one à la carte dinner per stay (reservation required), a picnic bag for days out, and a daily-replenished minibar. All-inclusive orders end at 00:00 and are strictly for personal use, with an allowance of 2 drinks per order."
+    }
+  ]
+}
