@@ -12,6 +12,7 @@ import {
 import * as AppleAuthentication from 'expo-apple-authentication';
 import { useRouter } from 'expo-router';
 import { useSignInWithApple } from '@clerk/expo/apple';
+import { useAuth } from '@clerk/expo';
 // The classic create/attempt flow lives under /legacy in Clerk v4; the default
 // export is the newer signals API. Legacy is the simpler fit for a plain
 // email-code screen and is still supported.
@@ -30,6 +31,7 @@ export default function SignInScreen() {
   const { signIn, setActive, isLoaded } = useSignIn();
   const { signUp, isLoaded: signUpLoaded } = useSignUp();
   const { startAppleAuthenticationFlow } = useSignInWithApple();
+  const { isSignedIn, signOut } = useAuth();
 
   const [email, setEmail] = useState('');
   const [code, setCode] = useState('');

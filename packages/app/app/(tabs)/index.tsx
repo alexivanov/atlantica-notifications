@@ -39,7 +39,7 @@ import {
 
 export default function ScheduleScreen() {
   const router = useRouter();
-  const { isLoaded, isSignedIn } = useAuth();
+  const { isLoaded, isSignedIn, signOut } = useAuth();
   const insets = useSafeAreaInsets();
 
   const [payload, setPayload] = useState<SchedulePayload | null>(null);
@@ -115,6 +115,11 @@ export default function ScheduleScreen() {
         setTracked(currentLiveActivity());
       } catch (err) {
         if (err instanceof AuthError) {
+          // The server rejected the token, so Clerk's cached session is stale.
+          // Clear it before showing the sign-in screen: leaving it active makes
+          // Clerk answer the next sign-in attempt with "You're already signed
+          // in", stranding the user on a login screen they cannot use.
+          await signOut();
           router.replace('/signin');
           return;
         }
@@ -133,7 +138,7 @@ export default function ScheduleScreen() {
         setRefreshing(false);
       }
     },
-    [router, isLoaded, isSignedIn],
+    [router, isLoaded, isSignedIn, signOut],
   );
 
   useEffect(() => {
